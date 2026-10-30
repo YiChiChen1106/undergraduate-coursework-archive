@@ -28,6 +28,7 @@ jobs:
           git clone --depth=1 https://github.com/YiChiChen1106/undergraduate-coursework-archive.git "$checkout_dir"
           cd "$checkout_dir"
           git config core.autocrlf false
+          git config core.filemode false
           git config user.name YiChiChen1106
           git config user.email 272391300+YiChiChen1106@users.noreply.github.com
           unzip -q -o "$archive_dir/undergraduate-coursework-public-2026-10-30.zip"
