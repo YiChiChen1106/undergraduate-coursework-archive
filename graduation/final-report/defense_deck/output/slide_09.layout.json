@@ -1,0 +1,1517 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/tjliyf",
+    "id": "tjliyf",
+    "slide": 9,
+    "layoutId": "2042a543-9850-4cab-9138-76ceac1c0217",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2042a543-9850-4cab-9138-76ceac1c0217",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3ylc7u5",
+      "id": "1",
+      "name": "slide-kicker",
+      "bbox": [
+        82,
+        58,
+        1756,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "Refinement after high-sensitivity prediction",
+      "textPreview": "Refinement after high-sensitivity prediction",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Refinement after high-sensitivity prediction"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Refinement after high-sensitivity prediction",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Refinement after high-sensitivity prediction",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ji5snelo",
+      "id": "2",
+      "name": "slide-title",
+      "bbox": [
+        82,
+        92,
+        1756,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Post-processing and clDice Exploration",
+      "textPreview": "Post-processing and clDice Exploration",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "fontSize": 48,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Post-processing and clDice Exploration"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Post-processing and clDice Exploration",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Post-processing and clDice Exploration",
+              "fontSize": 48,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uxc3ylc7",
+      "id": "3",
+      "name": "title-rule",
+      "bbox": [
+        82,
+        160,
+        180,
+        5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cfa9w3m",
+      "id": "4",
+      "name": "slide-cue",
+      "bbox": [
+        82,
+        174,
+        1756,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.3"
+      },
+      "geometry": "rect",
+      "text": "Talk track: Small isolated false positives are filtered at X = 20; clDice was explored but not retained.",
+      "textPreview": "Talk track: Small isolated false positives are filtered at X = 20; clDice was explored but not retained.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Talk track: Small isolated false positives are filtered at X = 20; clDice was explored but not retained."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Talk track: Small isolated false positives are filtered at X = 20; clDice was explored but not retained.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Talk track: Small isolated false positives are filtered at X = 20; clDice was explored but not retained.",
+              "fontSize": 17,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/tsvu9kni",
+      "id": "5",
+      "name": "post-threshold-chart",
+      "bbox": [
+        82,
+        223,
+        908.42,
+        799
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0"
+      },
+      "alt": "Post-processing threshold metrics",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "54f5185b-015e-463c-85b8-bf9acacf6da9",
+        "contentType": "image/png",
+        "byteLength": 207635
+      }
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6tovaho",
+      "id": "6",
+      "name": "post-claim",
+      "bbox": [
+        1032,
+        468,
+        806,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Two refinement ideas address what remains after MS-DSConv + CA.",
+      "textPreview": "Two refinement ideas address what remains after MS-DSConv + CA.",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Two refinement ideas address what remains after"
+          },
+          {
+            "index": 2,
+            "text": "MS-DSConv + CA."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Two refinement ideas address what remains after MS-DSConv + CA.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Two refinement ideas address what remains after MS-DSConv + CA.",
+              "fontSize": 34,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ulwval87",
+      "id": "7",
+      "name": "post-retained",
+      "bbox": [
+        1032.42,
+        570.9,
+        805.58,
+        93.6
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#EAF1F9",
+      "lineColor": "#EAF1F9",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18jqh0fe",
+      "id": "8",
+      "name": "post-retained-text",
+      "bbox": [
+        1056,
+        588,
+        758,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Retained: connected-component filtering at X = 20 removes small isolated false positives and gives F1 = 0.8027.",
+      "textPreview": "Retained: connected-component filtering at X = 20 removes small isolated false positives and gives F1 = 0.8027.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Retained: connected-component filtering at X = 20 removes small isolated"
+          },
+          {
+            "index": 2,
+            "text": "false positives and gives F1 = 0.8027."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Retained: connected-component filtering at X = 20 removes small isolated false positives and gives F1 = 0.8027.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Retained: connected-component filtering at X = 20 removes small isolated false positives and gives F1 = 0.8027.",
+              "fontSize": 24,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8nqxs72x",
+      "id": "9",
+      "name": "cldice-panel",
+      "bbox": [
+        1032.42,
+        686.5,
+        805.58,
+        91.2
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#F5EBCB",
+      "lineColor": "#F5EBCB",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/al87ed8b",
+      "id": "10",
+      "name": "cldice-text",
+      "bbox": [
+        1056,
+        704,
+        758,
+        56
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "Explored but not retained: clDice increases sensitivity in some settings, but lowers PR and F1-score under the representative X = 20 setting.",
+      "textPreview": "Explored but not retained: clDice increases sensitivity in some settings, but lowers PR and F1-score under the representative X = 20 sett...",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Explored but not retained: clDice increases sensitivity in some settings, but"
+          },
+          {
+            "index": 2,
+            "text": "lowers PR and F1-score under the representative X = 20 setting."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Explored but not retained: clDice increases sensitivity in some settings, but lowers PR and F1-score under the representative X = 20 setting.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Explored but not retained: clDice increases sensitivity in some settings, but lowers PR and F1-score under the representative X = 20 setting.",
+              "fontSize": 23,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z61032ls",
+      "id": "11",
+      "name": "brand-spacer",
+      "bbox": [
+        82,
+        34,
+        1518,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 1,
+      "resolvedTextStyle": {
+        "fontSize": 75,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 12,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/j6tovaho",
+      "id": "12",
+      "name": "glasgow-college-logo",
+      "bbox": [
+        1600,
+        34,
+        238,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1"
+      },
+      "alt": "Glasgow College UESTC logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "2cb446af-e7c6-4b12-a31f-ee2350f311dd",
+        "contentType": "image/png",
+        "byteLength": 281917
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "branded-slide-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "column",
+            "name": "slide8-root",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 164,
+              "height": 281
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.0.0",
+                "kind": "column",
+                "name": "title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 180,
+                  "height": 137
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "children": [
+                  {
+                    "path": "0.0.0.0",
+                    "kind": "text",
+                    "name": "slide-kicker",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "Refinement after high-sensitivity prediction",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/c3ylc7u5",
+                      "id": "1",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "kind": "text",
+                    "name": "slide-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 57.6
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 58
+                    },
+                    "children": [],
+                    "text": "Post-processing and clDice Exploration",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/ji5snelo",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "kind": "rule",
+                    "name": "title-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 180
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 180,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 160,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "children": [],
+                    "weight": 5,
+                    "element": {
+                      "aid": "sh/uxc3ylc7",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "kind": "text",
+                    "name": "slide-cue",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 20.4
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 174,
+                      "width": 1756,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "Talk track: Small isolated false positives are filtered at X = 20; clDice was explored but not retained.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/1cfa9w3m",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 10,
+                "effectiveGap": 10,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "items": [
+                  {
+                    "path": "0.0.0.0",
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.0.1",
+                "kind": "grid",
+                "name": "post-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 42,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                },
+                "children": [
+                  {
+                    "path": "0.0.1.0",
+                    "kind": "image",
+                    "name": "post-threshold-chart",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 0
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 908.42,
+                      "height": 799
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 908.42,
+                      "height": 799
+                    },
+                    "children": [],
+                    "source": {
+                      "kind": "dataUrl"
+                    },
+                    "fit": "contain",
+                    "alt": "Post-processing threshold metrics",
+                    "element": {
+                      "aid": "im/tsvu9kni",
+                      "id": "5",
+                      "kind": "image"
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "kind": "column",
+                    "name": "post-copy",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 213.2
+                    },
+                    "frame": {
+                      "left": 1032.42,
+                      "top": 223,
+                      "width": 805.58,
+                      "height": 799
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "kind": "text",
+                        "name": "post-claim",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 40.8
+                        },
+                        "frame": {
+                          "left": 1032.42,
+                          "top": 467.3,
+                          "width": 805.58,
+                          "height": 81.6
+                        },
+                        "snappedFrame": {
+                          "left": 1032,
+                          "top": 468,
+                          "width": 806,
+                          "height": 82
+                        },
+                        "children": [],
+                        "text": "Two refinement ideas address what remains after MS-DSConv + CA.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/j6tovaho",
+                          "id": "6",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "kind": "panel",
+                        "name": "post-retained",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 64.8
+                        },
+                        "frame": {
+                          "left": 1032.42,
+                          "top": 570.9,
+                          "width": 805.58,
+                          "height": 93.6
+                        },
+                        "snappedFrame": {
+                          "left": 1032.42,
+                          "top": 570.9,
+                          "width": 805.58,
+                          "height": 93.6
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.1.0",
+                            "kind": "text",
+                            "name": "post-retained-text",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 28.8
+                            },
+                            "frame": {
+                              "left": 1056.42,
+                              "top": 588.9,
+                              "width": 757.58,
+                              "height": 57.6
+                            },
+                            "snappedFrame": {
+                              "left": 1056,
+                              "top": 588,
+                              "width": 758,
+                              "height": 58
+                            },
+                            "children": [],
+                            "text": "Retained: connected-component filtering at X = 20 removes small isolated false positives and gives F1 = 0.8027.",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/18jqh0fe",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 18,
+                          "right": 24,
+                          "bottom": 18,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1056.42,
+                          "top": 588.9,
+                          "width": 757.58,
+                          "height": 57.6
+                        },
+                        "element": {
+                          "aid": "sh/ulwval87",
+                          "id": "7",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "kind": "panel",
+                        "name": "cldice-panel",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 63.6
+                        },
+                        "frame": {
+                          "left": 1032.42,
+                          "top": 686.5,
+                          "width": 805.58,
+                          "height": 91.2
+                        },
+                        "snappedFrame": {
+                          "left": 1032.42,
+                          "top": 686.5,
+                          "width": 805.58,
+                          "height": 91.2
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.2.0",
+                            "kind": "text",
+                            "name": "cldice-text",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 27.6
+                            },
+                            "frame": {
+                              "left": 1056.42,
+                              "top": 704.5,
+                              "width": 757.58,
+                              "height": 55.2
+                            },
+                            "snappedFrame": {
+                              "left": 1056,
+                              "top": 704,
+                              "width": 758,
+                              "height": 56
+                            },
+                            "children": [],
+                            "text": "Explored but not retained: clDice increases sensitivity in some settings, but lowers PR and F1-score under the representative X = 20 setting.",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/al87ed8b",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 18,
+                          "right": 24,
+                          "bottom": 18,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1056.42,
+                          "top": 704.5,
+                          "width": 757.58,
+                          "height": 55.2
+                        },
+                        "element": {
+                          "aid": "sh/8nqxs72x",
+                          "id": "9",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 22,
+                    "effectiveGap": 22,
+                    "justifyOffset": 244.3,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 1032.42,
+                      "top": 223,
+                      "width": 805.58,
+                      "height": 799
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "frame": {
+                          "left": 1032.42,
+                          "top": 467.3,
+                          "width": 805.58,
+                          "height": 81.6
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "frame": {
+                          "left": 1032.42,
+                          "top": 570.9,
+                          "width": 805.58,
+                          "height": 93.6
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "frame": {
+                          "left": 1032.42,
+                          "top": 686.5,
+                          "width": 805.58,
+                          "height": 91.2
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 42,
+                "rowGap": 0,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1.06
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 0.94
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  908.42,
+                  805.58
+                ],
+                "rowSizes": [
+                  799
+                ],
+                "cells": [
+                  {
+                    "path": "0.0.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 908.42,
+                      "height": 799
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1032.42,
+                      "top": 223,
+                      "width": 805.58,
+                      "height": 799
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 58,
+              "right": 82,
+              "bottom": 58,
+              "left": 82
+            },
+            "gap": 28,
+            "effectiveGap": 28,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 82,
+              "top": 58,
+              "width": 1756,
+              "height": 964
+            },
+            "items": [
+              {
+                "path": "0.0.0",
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                }
+              },
+              {
+                "path": "0.0.1",
+                "frame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "brand-mark-layer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 150
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "text",
+                "name": "brand-spacer",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 1
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "children": [],
+                "text": "",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/z61032ls",
+                  "id": "11",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.1.1",
+                "kind": "image",
+                "name": "glasgow-college-logo",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "snappedFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "contain",
+                "alt": "Glasgow College UESTC logo",
+                "element": {
+                  "aid": "im/j6tovaho",
+                  "id": "12",
+                  "kind": "image"
+                }
+              }
+            ],
+            "padding": {
+              "top": 34,
+              "right": 82,
+              "bottom": 34,
+              "left": 82
+            },
+            "columnGap": 0,
+            "rowGap": 0,
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 82,
+              "top": 34,
+              "width": 1756,
+              "height": 1012
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1
+              },
+              {
+                "mode": "fixed",
+                "value": 238
+              }
+            ],
+            "rows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "columnSizes": [
+              1518,
+              238
+            ],
+            "rowSizes": [
+              82,
+              930
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 82
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

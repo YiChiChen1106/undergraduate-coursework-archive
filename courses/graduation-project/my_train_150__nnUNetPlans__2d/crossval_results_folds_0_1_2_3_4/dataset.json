@@ -1,0 +1,178 @@
+{
+  "channel_names": {
+    "0": "Grayscale_PANet"
+  },
+  "labels": {
+    "background": 0,
+    "vessel": 1
+  },
+  "numTraining": 40,
+  "file_ending": ".nii.gz",
+  "name": "Dataset505_PAnet_DRIVE",
+  "reference": "DRIVE Dataset processed with PA-Net preprocessing",
+  "description": "Retinal vessel segmentation",
+  "release": "1.0",
+  "tensorImageSize": "3D",
+  "training": [
+    {
+      "image": "./imagesTr/10.nii.gz",
+      "label": "./labelsTr/10.nii.gz"
+    },
+    {
+      "image": "./imagesTr/11.nii.gz",
+      "label": "./labelsTr/11.nii.gz"
+    },
+    {
+      "image": "./imagesTr/12.nii.gz",
+      "label": "./labelsTr/12.nii.gz"
+    },
+    {
+      "image": "./imagesTr/13.nii.gz",
+      "label": "./labelsTr/13.nii.gz"
+    },
+    {
+      "image": "./imagesTr/14.nii.gz",
+      "label": "./labelsTr/14.nii.gz"
+    },
+    {
+      "image": "./imagesTr/15.nii.gz",
+      "label": "./labelsTr/15.nii.gz"
+    },
+    {
+      "image": "./imagesTr/16.nii.gz",
+      "label": "./labelsTr/16.nii.gz"
+    },
+    {
+      "image": "./imagesTr/17.nii.gz",
+      "label": "./labelsTr/17.nii.gz"
+    },
+    {
+      "image": "./imagesTr/18.nii.gz",
+      "label": "./labelsTr/18.nii.gz"
+    },
+    {
+      "image": "./imagesTr/19.nii.gz",
+      "label": "./labelsTr/19.nii.gz"
+    },
+    {
+      "image": "./imagesTr/1.nii.gz",
+      "label": "./labelsTr/1.nii.gz"
+    },
+    {
+      "image": "./imagesTr/20.nii.gz",
+      "label": "./labelsTr/20.nii.gz"
+    },
+    {
+      "image": "./imagesTr/21.nii.gz",
+      "label": "./labelsTr/21.nii.gz"
+    },
+    {
+      "image": "./imagesTr/22.nii.gz",
+      "label": "./labelsTr/22.nii.gz"
+    },
+    {
+      "image": "./imagesTr/23.nii.gz",
+      "label": "./labelsTr/23.nii.gz"
+    },
+    {
+      "image": "./imagesTr/24.nii.gz",
+      "label": "./labelsTr/24.nii.gz"
+    },
+    {
+      "image": "./imagesTr/25.nii.gz",
+      "label": "./labelsTr/25.nii.gz"
+    },
+    {
+      "image": "./imagesTr/26.nii.gz",
+      "label": "./labelsTr/26.nii.gz"
+    },
+    {
+      "image": "./imagesTr/27.nii.gz",
+      "label": "./labelsTr/27.nii.gz"
+    },
+    {
+      "image": "./imagesTr/28.nii.gz",
+      "label": "./labelsTr/28.nii.gz"
+    },
+    {
+      "image": "./imagesTr/29.nii.gz",
+      "label": "./labelsTr/29.nii.gz"
+    },
+    {
+      "image": "./imagesTr/2.nii.gz",
+      "label": "./labelsTr/2.nii.gz"
+    },
+    {
+      "image": "./imagesTr/30.nii.gz",
+      "label": "./labelsTr/30.nii.gz"
+    },
+    {
+      "image": "./imagesTr/31.nii.gz",
+      "label": "./labelsTr/31.nii.gz"
+    },
+    {
+      "image": "./imagesTr/32.nii.gz",
+      "label": "./labelsTr/32.nii.gz"
+    },
+    {
+      "image": "./imagesTr/33.nii.gz",
+      "label": "./labelsTr/33.nii.gz"
+    },
+    {
+      "image": "./imagesTr/34.nii.gz",
+      "label": "./labelsTr/34.nii.gz"
+    },
+    {
+      "image": "./imagesTr/35.nii.gz",
+      "label": "./labelsTr/35.nii.gz"
+    },
+    {
+      "image": "./imagesTr/36.nii.gz",
+      "label": "./labelsTr/36.nii.gz"
+    },
+    {
+      "image": "./imagesTr/37.nii.gz",
+      "label": "./labelsTr/37.nii.gz"
+    },
+    {
+      "image": "./imagesTr/38.nii.gz",
+      "label": "./labelsTr/38.nii.gz"
+    },
+    {
+      "image": "./imagesTr/39.nii.gz",
+      "label": "./labelsTr/39.nii.gz"
+    },
+    {
+      "image": "./imagesTr/3.nii.gz",
+      "label": "./labelsTr/3.nii.gz"
+    },
+    {
+      "image": "./imagesTr/40.nii.gz",
+      "label": "./labelsTr/40.nii.gz"
+    },
+    {
+      "image": "./imagesTr/4.nii.gz",
+      "label": "./labelsTr/4.nii.gz"
+    },
+    {
+      "image": "./imagesTr/5.nii.gz",
+      "label": "./labelsTr/5.nii.gz"
+    },
+    {
+      "image": "./imagesTr/6.nii.gz",
+      "label": "./labelsTr/6.nii.gz"
+    },
+    {
+      "image": "./imagesTr/7.nii.gz",
+      "label": "./labelsTr/7.nii.gz"
+    },
+    {
+      "image": "./imagesTr/8.nii.gz",
+      "label": "./labelsTr/8.nii.gz"
+    },
+    {
+      "image": "./imagesTr/9.nii.gz",
+      "label": "./labelsTr/9.nii.gz"
+    }
+  ]
+}

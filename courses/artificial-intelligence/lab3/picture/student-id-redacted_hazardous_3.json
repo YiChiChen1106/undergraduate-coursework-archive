@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "hazardous",
+      "points": [
+        [
+          12.121212121212466,
+          1045.4545454545453
+        ],
+        [
+          1715.1515151515155,
+          2806.060606060606
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "[student-id-redacted]_hazardous_3.jpg",
+  "imageHeight": 4000,
+  "imageWidth": 1800
+}

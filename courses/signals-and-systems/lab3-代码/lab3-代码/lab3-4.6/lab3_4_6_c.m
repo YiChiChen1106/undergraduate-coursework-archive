@@ -1,0 +1,30 @@
+clc
+clear all
+load ctftmod.mat;
+ydash=lsim(bf,af,dash,t(1:length(dash)));
+ydot=lsim(bf,af,dot,t(1:length(dot)));
+figure(1);
+subplot(2,2,1);
+plot(dash);
+xlabel('t');
+ylabel('dash');
+title('The figure of the signal dash');
+grid on;
+subplot(2,2,2);
+plot(dot);
+xlabel('t');
+ylabel('dot');
+title('The figure of the signal dot');
+grid on;
+subplot(2,2,3);
+plot(ydash);
+xlabel('t');
+ylabel('ydash');
+title('The figure of the output signal ydash');
+grid on;
+subplot(2,2,4);
+plot(ydot);
+xlabel('t');
+ylabel('ydot');
+title('Thefigure of the output signal ydot');
+grid on;

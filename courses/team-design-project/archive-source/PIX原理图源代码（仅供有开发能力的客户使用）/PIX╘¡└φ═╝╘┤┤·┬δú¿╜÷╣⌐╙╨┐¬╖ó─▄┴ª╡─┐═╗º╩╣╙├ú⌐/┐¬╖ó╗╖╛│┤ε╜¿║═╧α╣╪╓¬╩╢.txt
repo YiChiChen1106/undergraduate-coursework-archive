@@ -1,0 +1,10 @@
+PIXHAWK ardupilot开源代码：https://github.com/diydrones/ardupilot  
+如何编译arupilot代码：http://ardupilot.org/dev/docs/building-the-code.html
+PX4源码：https://github.com/PX4
+如何编译PX4固件：https://dev.px4.io/master/en/setup/building_px4.html
+
+1、如何用开源飞控PIXHAWK进行二次开发： https://www.zhihu.com/question/38874663 
+2、PIXhawk入门学习之Ubuntu下编译环境搭建： https://blog.csdn.net/yjn12315/article/details/61414253 
+3、PIX源码： http://pan.baidu.com/s/1sljSqDZ 
+4、pixhawk在linux（ubuntu16.04）下的环境搭建和源码编译 ： https://www.cnblogs.com/lovechen/p/5708893.html 
+5、win系统下编译:  https://blog.csdn.net/czyv587/article/details/51434076

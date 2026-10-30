@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../codeq/alu.v" \
+"../../../../../codeq/alu_mux.v" \
+"../../../../../codeq/control_unit.v" \
+"../../../../../codeq/cpu.v" \
+"../../../../../codeq/data_path.v" \
+"../../../../../codeq/ir.v" \
+"../../../../../codeq/pc.v" \
+"../../../../../codeq/reg_group.v" \
+"../../../../../codeq/register.v" \
+"../../../../../codeq/state_transition.v" \
+"../../../../../codeq/tb_cpu.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

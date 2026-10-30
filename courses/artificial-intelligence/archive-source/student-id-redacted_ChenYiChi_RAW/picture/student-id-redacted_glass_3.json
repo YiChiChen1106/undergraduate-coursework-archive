@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "glass",
+      "points": [
+        [
+          121.12903225806463,
+          194.19354838709677
+        ],
+        [
+          736.1827956989248,
+          940.4301075268817
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "[student-id-redacted]_glass_3.jpg",
+  "imageHeight": 1440,
+  "imageWidth": 810
+}

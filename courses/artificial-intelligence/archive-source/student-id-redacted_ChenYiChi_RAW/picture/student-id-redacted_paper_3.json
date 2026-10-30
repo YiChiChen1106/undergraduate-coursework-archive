@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "paper",
+      "points": [
+        [
+          65.71428571428555,
+          511.4285714285715
+        ],
+        [
+          879.9999999999998,
+          1608.5714285714287
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "[student-id-redacted]_paper_3.jpg",
+  "imageHeight": 1920,
+  "imageWidth": 1080
+}

@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "metal",
+      "points": [
+        [
+          678.487394957983,
+          40.84033613445381
+        ],
+        [
+          1211.[student-id-redacted],
+          985.3781512605043
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "[student-id-redacted]_metal_1.jpg",
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

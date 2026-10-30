@@ -1,0 +1,8 @@
+__ignore__
+paper
+metal
+plastic
+glass
+food
+hazardous
+electronic

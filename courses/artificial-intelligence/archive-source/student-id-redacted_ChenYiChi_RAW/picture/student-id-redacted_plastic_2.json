@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "plastic",
+      "points": [
+        [
+          237.80508474576277,
+          322.[student-id-redacted]
+        ],
+        [
+          1122.5508474576272,
+          1856.1440677966104
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "[student-id-redacted]_plastic_2.jpg",
+  "imageHeight": 2275,
+  "imageWidth": 1279
+}

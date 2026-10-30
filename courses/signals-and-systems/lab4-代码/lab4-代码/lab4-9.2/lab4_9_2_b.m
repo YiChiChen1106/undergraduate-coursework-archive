@@ -1,0 +1,32 @@
+clc 
+clear all
+w=-5:0.1:5;
+b=1;
+a1=[1 0 1];
+a2=[1 1/2 1];
+a3=[1 2 1];
+a4=[1 4 1];
+f1=freqs(b,a1,w);
+f2=freqs(b,a2,w);
+f3=freqs(b,a3,w);
+f4=freqs(b,a4,w);
+figure;
+plot(w,abs(f1));
+xlabel('w');
+ylabel('|H(jw)|');
+title('The magnitude of H1(jw)');
+figure;
+plot(w,abs(f2));
+xlabel('w');
+ylabel('|H(jw)|');
+title('The magnitude of H2(jw)');
+figure;
+plot(w,abs(f3));
+xlabel('w');
+ylabel('|H(jw)|');
+title('The magnitude of H3(jw)');
+figure;
+plot(w,abs(f4));
+xlabel('w');
+ylabel('|H(jw)|');
+title('The magnitude of H4(jw)');

@@ -1,0 +1,48 @@
+clc
+clear all
+x1=[ones(1,8)];
+x2=[ones(1,8) zeros(1,8)];
+x3=[ones(1,8) zeros(1,24)];
+X1=[x1 x1 x1 x1 x1 x1 x1 x1];
+X2=[x2 x2 x2 x2];
+X3=[x3 x3];
+figure(1);
+stem([0:63],X1);
+xlabel('n');
+ylabel('x1[n]');
+title('The figure of the signal x1[n]');
+grid on;
+figure(2);
+stem([0:63],X2);
+xlabel('n');
+ylabel('x2[n]');
+title('The figure of the signal x2[n]');
+grid on;
+figure(3);
+stem([0:63],X3);
+xlabel('n');
+ylabel('x3[n]');
+title('The figure of the signal x3[n]');
+grid on;
+%..........(e).........%
+a1=(1/8)*fft(x1);
+a2=(1/16)*fft(x2);
+a3=(1/32)*fft(x3);
+figure(4);
+stem([0:7],abs(a1));
+xlabel('k');
+ylabel('|a1k|');
+title('The plot of the magnitude of the DTFS coefficient sequences of the signal x1[n]');
+grid on;
+figure(5);
+stem([0:15],abs(a2));
+xlabel('k');
+ylabel('|a2k|');
+title('The plot of the magnitude of the DTFS coefficient sequences of the signal x2[n]');
+grid on;
+figure(6);
+stem([0:31],abs(a3));
+xlabel('k');
+ylabel('|a3k|');
+title('The plot of the magnitude of the DTFS coefficient sequences of the signal x3[n]');
+grid on;

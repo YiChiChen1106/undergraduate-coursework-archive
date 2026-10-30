@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "cardboard",
+      "points": [
+        [
+          88.8828828828829,
+          68.57657657657657
+        ],
+        [
+          383.027027027027,
+          308.66666666666663
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "cardboard132.jpg",
+  "imageHeight": 384,
+  "imageWidth": 512
+}

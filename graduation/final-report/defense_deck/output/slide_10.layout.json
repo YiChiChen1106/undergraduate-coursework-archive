@@ -1,0 +1,3293 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/p0jiy3",
+    "id": "p0jiy3",
+    "slide": 10,
+    "layoutId": "2042a543-9850-4cab-9138-76ceac1c0217",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2042a543-9850-4cab-9138-76ceac1c0217",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1cfa9w3m",
+      "id": "1",
+      "name": "slide-kicker",
+      "bbox": [
+        82,
+        58,
+        1756,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "Unified later-stage comparison",
+      "textPreview": "Unified later-stage comparison",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Unified later-stage comparison"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Unified later-stage comparison",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Unified later-stage comparison",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ulwval87",
+      "id": "2",
+      "name": "slide-title",
+      "bbox": [
+        82,
+        92,
+        1756,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Quantitative Results",
+      "textPreview": "Quantitative Results",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "fontSize": 48,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Quantitative Results"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Quantitative Results",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Quantitative Results",
+              "fontSize": 48,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6tovaho",
+      "id": "3",
+      "name": "title-rule",
+      "bbox": [
+        82,
+        160,
+        180,
+        5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3ylc7u5",
+      "id": "4",
+      "name": "slide-cue",
+      "bbox": [
+        82,
+        174,
+        1756,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.3"
+      },
+      "geometry": "rect",
+      "text": "Talk track: Final F1 improves from 0.7891 to 0.8027; SE increases while PR remains controlled.",
+      "textPreview": "Talk track: Final F1 improves from 0.7891 to 0.8027; SE increases while PR remains controlled.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Talk track: Final F1 improves from 0.7891 to 0.8027; SE increases while PR remains controlled."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Talk track: Final F1 improves from 0.7891 to 0.8027; SE increases while PR remains controlled.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Talk track: Final F1 improves from 0.7891 to 0.8027; SE increases while PR remains controlled.",
+              "fontSize": 17,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/pkzupwb2",
+      "id": "5",
+      "name": "f1-native-chart",
+      "bbox": [
+        82,
+        223,
+        985.55,
+        799
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0"
+      },
+      "chartType": "bar"
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uxc3ylc7",
+      "id": "6",
+      "name": "metric-value-Final F1-score",
+      "bbox": [
+        1110,
+        354,
+        728,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "0.8027",
+      "textPreview": "0.8027",
+      "resolvedFontSize": 56,
+      "resolvedTextStyle": {
+        "fontSize": 56,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0.8027"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0.8027",
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.8027",
+              "fontSize": 56,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ji5snelo",
+      "id": "7",
+      "name": "metric-label-Final F1-score",
+      "bbox": [
+        1110,
+        426,
+        728,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Final F1-score",
+      "textPreview": "Final F1-score",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Final F1-score"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Final F1-score",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Final F1-score",
+              "fontSize": 20,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8bat47y1",
+      "id": "8",
+      "name": "metric-sub-Final F1-score",
+      "bbox": [
+        1110,
+        454,
+        728,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "MS-DSConv + CA, X = 20",
+      "textPreview": "MS-DSConv + CA, X = 20",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MS-DSConv + CA, X = 20"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MS-DSConv + CA, X = 20",
+          "runs": [
+            {
+              "index": 1,
+              "text": "MS-DSConv + CA, X = 20",
+              "fontSize": 16,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1w7mp0bi",
+      "id": "9",
+      "name": "metric-value-Absolute F1 gain",
+      "bbox": [
+        1110,
+        498,
+        728,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "+0.0136",
+      "textPreview": "+0.0136",
+      "resolvedFontSize": 56,
+      "resolvedTextStyle": {
+        "fontSize": 56,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "+0.0136"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "+0.0136",
+          "runs": [
+            {
+              "index": 1,
+              "text": "+0.0136",
+              "fontSize": 56,
+              "color": "#C8A33A",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0z61032",
+      "id": "10",
+      "name": "metric-label-Absolute F1 gain",
+      "bbox": [
+        1110,
+        568,
+        728,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Absolute F1 gain",
+      "textPreview": "Absolute F1 gain",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Absolute F1 gain"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Absolute F1 gain",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Absolute F1 gain",
+              "fontSize": 20,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kf6dcbul",
+      "id": "11",
+      "name": "metric-sub-Absolute F1 gain",
+      "bbox": [
+        1110,
+        596,
+        728,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1.2"
+      },
+      "geometry": "rect",
+      "text": "vs. later-stage nnU-Net baseline",
+      "textPreview": "vs. later-stage nnU-Net baseline",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "vs. later-stage nnU-Net baseline"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "vs. later-stage nnU-Net baseline",
+          "runs": [
+            {
+              "index": 1,
+              "text": "vs. later-stage nnU-Net baseline",
+              "fontSize": 16,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vu9knih4",
+      "id": "12",
+      "name": "evidence-table-SE / PR trade-off",
+      "bbox": [
+        1109.55,
+        639.5,
+        728.45,
+        169.2
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#DDE3EF",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/29gr2p8n",
+      "id": "13",
+      "name": "evidence-table-label-SE / PR trade-off",
+      "bbox": [
+        1128,
+        654,
+        692,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.0"
+      },
+      "geometry": "rect",
+      "text": "SE / PR trade-off",
+      "textPreview": "SE / PR trade-off",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SE / PR trade-off"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SE / PR trade-off",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SE / PR trade-off",
+              "fontSize": 16,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d8bat47y",
+      "id": "14",
+      "name": "evidence-table-cell-SE / PR trade-off-0-0",
+      "bbox": [
+        1138,
+        688,
+        306,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "Model",
+      "textPreview": "Model",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Model"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Model",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Model",
+              "fontSize": 14,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/knih4byh",
+      "id": "15",
+      "name": "evidence-table-cell-SE / PR trade-off-0-1",
+      "bbox": [
+        1444,
+        688,
+        184,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "SE",
+      "textPreview": "SE",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SE",
+          "runs": [
+            {
+              "index": 1,
+              "text": "SE",
+              "fontSize": 14,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v6psfil0",
+      "id": "16",
+      "name": "evidence-table-cell-SE / PR trade-off-0-2",
+      "bbox": [
+        1626,
+        688,
+        184,
+        20
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "PR",
+      "textPreview": "PR",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "PR"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "PR",
+          "runs": [
+            {
+              "index": 1,
+              "text": "PR",
+              "fontSize": 14,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2lszqtcj",
+      "id": "17",
+      "name": "evidence-table-cell-SE / PR trade-off-1-0",
+      "bbox": [
+        1138,
+        722,
+        306,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Baseline",
+      "textPreview": "Baseline",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Baseline"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Baseline",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Baseline",
+              "fontSize": 16,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcbulwva",
+      "id": "18",
+      "name": "evidence-table-cell-SE / PR trade-off-1-1",
+      "bbox": [
+        1444,
+        722,
+        184,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "0.7627",
+      "textPreview": "0.7627",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0.7627"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0.7627",
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.7627",
+              "fontSize": 16,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kre1w7mp",
+      "id": "19",
+      "name": "evidence-table-cell-SE / PR trade-off-1-2",
+      "bbox": [
+        1626,
+        722,
+        184,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.1.2"
+      },
+      "geometry": "rect",
+      "text": "0.8238",
+      "textPreview": "0.8238",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0.8238"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0.8238",
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.8238",
+              "fontSize": 16,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzupwb2h",
+      "id": "20",
+      "name": "evidence-table-cell-SE / PR trade-off-2-0",
+      "bbox": [
+        1138,
+        762,
+        306,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.2.0"
+      },
+      "geometry": "rect",
+      "text": "Final",
+      "textPreview": "Final",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Final"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Final",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Final",
+              "fontSize": 16,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9knih4by",
+      "id": "21",
+      "name": "evidence-table-cell-SE / PR trade-off-2-1",
+      "bbox": [
+        1444,
+        762,
+        184,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "0.8059",
+      "textPreview": "0.8059",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0.8059"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0.8059",
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.8059",
+              "fontSize": 16,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2t83itgf",
+      "id": "22",
+      "name": "evidence-table-cell-SE / PR trade-off-2-2",
+      "bbox": [
+        1626,
+        762,
+        184,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.1.2.2"
+      },
+      "geometry": "rect",
+      "text": "0.8035",
+      "textPreview": "0.8035",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0.8035"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0.8035",
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.8035",
+              "fontSize": 16,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/re1w7mp0",
+      "id": "23",
+      "name": "result-caveat",
+      "bbox": [
+        1110,
+        832,
+        728,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.3"
+      },
+      "geometry": "rect",
+      "text": "The improvement is modest, but it is obtained under the same later-stage protocol and follows a consistent SE-PR trade-off.",
+      "textPreview": "The improvement is modest, but it is obtained under the same later-stage protocol and follows a consistent SE-PR trade-off.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The improvement is modest, but it is obtained under the same later-stage"
+          },
+          {
+            "index": 2,
+            "text": "protocol and follows a consistent SE-PR trade-off."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The improvement is modest, but it is obtained under the same later-stage protocol and follows a consistent SE-PR trade-off.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "The improvement is modest, but it is obtained under the same later-stage protocol and follows a consistent SE-PR trade-off.",
+              "fontSize": 24,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kb6xkf6d",
+      "id": "24",
+      "name": "brand-spacer",
+      "bbox": [
+        82,
+        34,
+        1518,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 1,
+      "resolvedTextStyle": {
+        "fontSize": 75,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 25,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/ahoza1gv",
+      "id": "25",
+      "name": "glasgow-college-logo",
+      "bbox": [
+        1600,
+        34,
+        238,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1"
+      },
+      "alt": "Glasgow College UESTC logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "b61556b8-faac-47bd-b95a-099fc3c495a1",
+        "contentType": "image/png",
+        "byteLength": 281917
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "branded-slide-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "column",
+            "name": "slide9-root",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 164,
+              "height": 281
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.0.0",
+                "kind": "column",
+                "name": "title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 180,
+                  "height": 137
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "children": [
+                  {
+                    "path": "0.0.0.0",
+                    "kind": "text",
+                    "name": "slide-kicker",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "Unified later-stage comparison",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/1cfa9w3m",
+                      "id": "1",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "kind": "text",
+                    "name": "slide-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 57.6
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 58
+                    },
+                    "children": [],
+                    "text": "Quantitative Results",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/ulwval87",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "kind": "rule",
+                    "name": "title-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 180
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 180,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 160,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "children": [],
+                    "weight": 5,
+                    "element": {
+                      "aid": "sh/j6tovaho",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "kind": "text",
+                    "name": "slide-cue",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 20.4
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 174,
+                      "width": 1756,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "Talk track: Final F1 improves from 0.7891 to 0.8027; SE increases while PR remains controlled.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/c3ylc7u5",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 10,
+                "effectiveGap": 10,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "items": [
+                  {
+                    "path": "0.0.0.0",
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.0.1",
+                "kind": "grid",
+                "name": "results-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 42,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                },
+                "children": [
+                  {
+                    "path": "0.0.1.0",
+                    "kind": "chart",
+                    "name": "f1-native-chart",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 0
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 985.55,
+                      "height": 799
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 985.55,
+                      "height": 799
+                    },
+                    "children": [],
+                    "chartType": "bar",
+                    "title": "F1-score across representative models",
+                    "element": {
+                      "aid": "ch/pkzupwb2",
+                      "id": "5",
+                      "kind": "chart"
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "kind": "column",
+                    "name": "result-metrics",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 506.8
+                    },
+                    "frame": {
+                      "left": 1109.55,
+                      "top": 223,
+                      "width": 728.45,
+                      "height": 799
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "kind": "column",
+                        "name": "metric-Final F1-score",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 118.4
+                        },
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 354.7,
+                          "width": 728.45,
+                          "height": 118.4
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "kind": "text",
+                            "name": "metric-value-Final F1-score",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 67.2
+                            },
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 354.7,
+                              "width": 728.45,
+                              "height": 67.2
+                            },
+                            "snappedFrame": {
+                              "left": 1110,
+                              "top": 354,
+                              "width": 728,
+                              "height": 68
+                            },
+                            "children": [],
+                            "text": "0.8027",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/uxc3ylc7",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "kind": "text",
+                            "name": "metric-label-Final F1-score",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 24
+                            },
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 425.9,
+                              "width": 728.45,
+                              "height": 24
+                            },
+                            "snappedFrame": {
+                              "left": 1110,
+                              "top": 426,
+                              "width": 728,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Final F1-score",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/ji5snelo",
+                              "id": "7",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.2",
+                            "kind": "text",
+                            "name": "metric-sub-Final F1-score",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 19.2
+                            },
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 453.9,
+                              "width": 728.45,
+                              "height": 19.2
+                            },
+                            "snappedFrame": {
+                              "left": 1110,
+                              "top": 454,
+                              "width": 728,
+                              "height": 20
+                            },
+                            "children": [],
+                            "text": "MS-DSConv + CA, X = 20",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/8bat47y1",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 4,
+                        "effectiveGap": 4,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1109.55,
+                          "top": 354.7,
+                          "width": 728.45,
+                          "height": 118.4
+                        },
+                        "items": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 354.7,
+                              "width": 728.45,
+                              "height": 67.2
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 425.9,
+                              "width": 728.45,
+                              "height": 24
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.2",
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 453.9,
+                              "width": 728.45,
+                              "height": 19.2
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "kind": "column",
+                        "name": "metric-Absolute F1 gain",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 118.4
+                        },
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 497.1,
+                          "width": 728.45,
+                          "height": 118.4
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.1.0",
+                            "kind": "text",
+                            "name": "metric-value-Absolute F1 gain",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 67.2
+                            },
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 497.1,
+                              "width": 728.45,
+                              "height": 67.2
+                            },
+                            "snappedFrame": {
+                              "left": 1110,
+                              "top": 498,
+                              "width": 728,
+                              "height": 68
+                            },
+                            "children": [],
+                            "text": "+0.0136",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/1w7mp0bi",
+                              "id": "9",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.1.1",
+                            "kind": "text",
+                            "name": "metric-label-Absolute F1 gain",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 24
+                            },
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 568.3,
+                              "width": 728.45,
+                              "height": 24
+                            },
+                            "snappedFrame": {
+                              "left": 1110,
+                              "top": 568,
+                              "width": 728,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Absolute F1 gain",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/d0z61032",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.1.2",
+                            "kind": "text",
+                            "name": "metric-sub-Absolute F1 gain",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 19.2
+                            },
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 596.3,
+                              "width": 728.45,
+                              "height": 19.2
+                            },
+                            "snappedFrame": {
+                              "left": 1110,
+                              "top": 596,
+                              "width": 728,
+                              "height": 20
+                            },
+                            "children": [],
+                            "text": "vs. later-stage nnU-Net baseline",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/kf6dcbul",
+                              "id": "11",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 4,
+                        "effectiveGap": 4,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1109.55,
+                          "top": 497.1,
+                          "width": 728.45,
+                          "height": 118.4
+                        },
+                        "items": [
+                          {
+                            "path": "0.0.1.1.1.0",
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 497.1,
+                              "width": 728.45,
+                              "height": 67.2
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.1.1",
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 568.3,
+                              "width": 728.45,
+                              "height": 24
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.1.2",
+                            "frame": {
+                              "left": 1109.55,
+                              "top": 596.3,
+                              "width": 728.45,
+                              "height": 19.2
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "kind": "panel",
+                        "name": "evidence-table-SE / PR trade-off",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 169.2
+                        },
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 639.5,
+                          "width": 728.45,
+                          "height": 169.2
+                        },
+                        "snappedFrame": {
+                          "left": 1109.55,
+                          "top": 639.5,
+                          "width": 728.45,
+                          "height": 169.2
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.2.0",
+                            "kind": "column",
+                            "name": "evidence-table-stack-SE / PR trade-off",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 141.2
+                            },
+                            "frame": {
+                              "left": 1127.55,
+                              "top": 653.5,
+                              "width": 692.45,
+                              "height": 141.2
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.2.0.0",
+                                "kind": "text",
+                                "name": "evidence-table-label-SE / PR trade-off",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 19.2
+                                },
+                                "frame": {
+                                  "left": 1127.55,
+                                  "top": 653.5,
+                                  "width": 692.45,
+                                  "height": 19.2
+                                },
+                                "snappedFrame": {
+                                  "left": 1128,
+                                  "top": 654,
+                                  "width": 692,
+                                  "height": 20
+                                },
+                                "children": [],
+                                "text": "SE / PR trade-off",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/29gr2p8n",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.2.0.1",
+                                "kind": "column",
+                                "name": "evidence-table-body-SE / PR trade-off",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 114
+                                },
+                                "frame": {
+                                  "left": 1127.55,
+                                  "top": 680.7,
+                                  "width": 692.45,
+                                  "height": 114
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.0.1.1.2.0.1.0",
+                                    "kind": "grid",
+                                    "name": "evidence-table-row-SE / PR trade-off-0",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "fixed",
+                                        "value": 34
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 20,
+                                      "height": 30.8
+                                    },
+                                    "frame": {
+                                      "left": 1127.55,
+                                      "top": 680.7,
+                                      "width": 692.45,
+                                      "height": 34
+                                    },
+                                    "children": [
+                                      {
+                                        "path": "0.0.1.1.2.0.1.0.0",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-0-0",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 16.8
+                                        },
+                                        "frame": {
+                                          "left": 1137.55,
+                                          "top": 687.7,
+                                          "width": 305.66,
+                                          "height": 20
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1138,
+                                          "top": 688,
+                                          "width": 306,
+                                          "height": 20
+                                        },
+                                        "children": [],
+                                        "text": "Model",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/d8bat47y",
+                                          "id": "14",
+                                          "kind": "shape"
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.0.1",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-0-1",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 16.8
+                                        },
+                                        "frame": {
+                                          "left": 1443.21,
+                                          "top": 687.7,
+                                          "width": 183.4,
+                                          "height": 20
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1444,
+                                          "top": 688,
+                                          "width": 184,
+                                          "height": 20
+                                        },
+                                        "children": [],
+                                        "text": "SE",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/knih4byh",
+                                          "id": "15",
+                                          "kind": "shape"
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.0.2",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-0-2",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 16.8
+                                        },
+                                        "frame": {
+                                          "left": 1626.6,
+                                          "top": 687.7,
+                                          "width": 183.4,
+                                          "height": 20
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1626,
+                                          "top": 688,
+                                          "width": 184,
+                                          "height": 20
+                                        },
+                                        "children": [],
+                                        "text": "PR",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/v6psfil0",
+                                          "id": "16",
+                                          "kind": "shape"
+                                        }
+                                      }
+                                    ],
+                                    "padding": {
+                                      "top": 7,
+                                      "right": 10,
+                                      "bottom": 7,
+                                      "left": 10
+                                    },
+                                    "columnGap": 0,
+                                    "rowGap": 0,
+                                    "alignItems": "stretch",
+                                    "justifyItems": "stretch",
+                                    "contentFrame": {
+                                      "left": 1137.55,
+                                      "top": 687.7,
+                                      "width": 672.45,
+                                      "height": 20
+                                    },
+                                    "columns": [
+                                      {
+                                        "mode": "fr",
+                                        "value": 1.25
+                                      },
+                                      {
+                                        "mode": "fr",
+                                        "value": 0.75
+                                      },
+                                      {
+                                        "mode": "fr",
+                                        "value": 0.75
+                                      }
+                                    ],
+                                    "autoRows": "auto",
+                                    "resolvedRows": [
+                                      "auto"
+                                    ],
+                                    "columnSizes": [
+                                      305.66,
+                                      183.4,
+                                      183.4
+                                    ],
+                                    "rowSizes": [
+                                      20
+                                    ],
+                                    "cells": [
+                                      {
+                                        "path": "0.0.1.1.2.0.1.0.0",
+                                        "column": 0,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1137.55,
+                                          "top": 687.7,
+                                          "width": 305.66,
+                                          "height": 20
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.0.1",
+                                        "column": 1,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1443.21,
+                                          "top": 687.7,
+                                          "width": 183.4,
+                                          "height": 20
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.0.2",
+                                        "column": 2,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1626.6,
+                                          "top": 687.7,
+                                          "width": 183.4,
+                                          "height": 20
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.0.1.1",
+                                    "kind": "grid",
+                                    "name": "evidence-table-row-SE / PR trade-off-1",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "fixed",
+                                        "value": 40
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 20,
+                                      "height": 33.2
+                                    },
+                                    "frame": {
+                                      "left": 1127.55,
+                                      "top": 714.7,
+                                      "width": 692.45,
+                                      "height": 40
+                                    },
+                                    "children": [
+                                      {
+                                        "path": "0.0.1.1.2.0.1.1.0",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-1-0",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 19.2
+                                        },
+                                        "frame": {
+                                          "left": 1137.55,
+                                          "top": 721.7,
+                                          "width": 305.66,
+                                          "height": 26
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1138,
+                                          "top": 722,
+                                          "width": 306,
+                                          "height": 26
+                                        },
+                                        "children": [],
+                                        "text": "Baseline",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/2lszqtcj",
+                                          "id": "17",
+                                          "kind": "shape"
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.1.1",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-1-1",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 19.2
+                                        },
+                                        "frame": {
+                                          "left": 1443.21,
+                                          "top": 721.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1444,
+                                          "top": 722,
+                                          "width": 184,
+                                          "height": 26
+                                        },
+                                        "children": [],
+                                        "text": "0.7627",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/dcbulwva",
+                                          "id": "18",
+                                          "kind": "shape"
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.1.2",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-1-2",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 19.2
+                                        },
+                                        "frame": {
+                                          "left": 1626.6,
+                                          "top": 721.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1626,
+                                          "top": 722,
+                                          "width": 184,
+                                          "height": 26
+                                        },
+                                        "children": [],
+                                        "text": "0.8238",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/kre1w7mp",
+                                          "id": "19",
+                                          "kind": "shape"
+                                        }
+                                      }
+                                    ],
+                                    "padding": {
+                                      "top": 7,
+                                      "right": 10,
+                                      "bottom": 7,
+                                      "left": 10
+                                    },
+                                    "columnGap": 0,
+                                    "rowGap": 0,
+                                    "alignItems": "stretch",
+                                    "justifyItems": "stretch",
+                                    "contentFrame": {
+                                      "left": 1137.55,
+                                      "top": 721.7,
+                                      "width": 672.45,
+                                      "height": 26
+                                    },
+                                    "columns": [
+                                      {
+                                        "mode": "fr",
+                                        "value": 1.25
+                                      },
+                                      {
+                                        "mode": "fr",
+                                        "value": 0.75
+                                      },
+                                      {
+                                        "mode": "fr",
+                                        "value": 0.75
+                                      }
+                                    ],
+                                    "autoRows": "auto",
+                                    "resolvedRows": [
+                                      "auto"
+                                    ],
+                                    "columnSizes": [
+                                      305.66,
+                                      183.4,
+                                      183.4
+                                    ],
+                                    "rowSizes": [
+                                      26
+                                    ],
+                                    "cells": [
+                                      {
+                                        "path": "0.0.1.1.2.0.1.1.0",
+                                        "column": 0,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1137.55,
+                                          "top": 721.7,
+                                          "width": 305.66,
+                                          "height": 26
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.1.1",
+                                        "column": 1,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1443.21,
+                                          "top": 721.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.1.2",
+                                        "column": 2,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1626.6,
+                                          "top": 721.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.0.1.2",
+                                    "kind": "grid",
+                                    "name": "evidence-table-row-SE / PR trade-off-2",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "fixed",
+                                        "value": 40
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 20,
+                                      "height": 33.2
+                                    },
+                                    "frame": {
+                                      "left": 1127.55,
+                                      "top": 754.7,
+                                      "width": 692.45,
+                                      "height": 40
+                                    },
+                                    "children": [
+                                      {
+                                        "path": "0.0.1.1.2.0.1.2.0",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-2-0",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 19.2
+                                        },
+                                        "frame": {
+                                          "left": 1137.55,
+                                          "top": 761.7,
+                                          "width": 305.66,
+                                          "height": 26
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1138,
+                                          "top": 762,
+                                          "width": 306,
+                                          "height": 26
+                                        },
+                                        "children": [],
+                                        "text": "Final",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/kzupwb2h",
+                                          "id": "20",
+                                          "kind": "shape"
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.2.1",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-2-1",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 19.2
+                                        },
+                                        "frame": {
+                                          "left": 1443.21,
+                                          "top": 761.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1444,
+                                          "top": 762,
+                                          "width": 184,
+                                          "height": 26
+                                        },
+                                        "children": [],
+                                        "text": "0.8059",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/9knih4by",
+                                          "id": "21",
+                                          "kind": "shape"
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.2.2",
+                                        "kind": "text",
+                                        "name": "evidence-table-cell-SE / PR trade-off-2-2",
+                                        "requestedSize": {
+                                          "width": {
+                                            "mode": "fill",
+                                            "value": 1
+                                          },
+                                          "height": {
+                                            "mode": "hug"
+                                          }
+                                        },
+                                        "intrinsicSize": {
+                                          "width": 0,
+                                          "height": 19.2
+                                        },
+                                        "frame": {
+                                          "left": 1626.6,
+                                          "top": 761.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        },
+                                        "snappedFrame": {
+                                          "left": 1626,
+                                          "top": 762,
+                                          "width": 184,
+                                          "height": 26
+                                        },
+                                        "children": [],
+                                        "text": "0.8035",
+                                        "transform": "none",
+                                        "element": {
+                                          "aid": "sh/2t83itgf",
+                                          "id": "22",
+                                          "kind": "shape"
+                                        }
+                                      }
+                                    ],
+                                    "padding": {
+                                      "top": 7,
+                                      "right": 10,
+                                      "bottom": 7,
+                                      "left": 10
+                                    },
+                                    "columnGap": 0,
+                                    "rowGap": 0,
+                                    "alignItems": "stretch",
+                                    "justifyItems": "stretch",
+                                    "contentFrame": {
+                                      "left": 1137.55,
+                                      "top": 761.7,
+                                      "width": 672.45,
+                                      "height": 26
+                                    },
+                                    "columns": [
+                                      {
+                                        "mode": "fr",
+                                        "value": 1.25
+                                      },
+                                      {
+                                        "mode": "fr",
+                                        "value": 0.75
+                                      },
+                                      {
+                                        "mode": "fr",
+                                        "value": 0.75
+                                      }
+                                    ],
+                                    "autoRows": "auto",
+                                    "resolvedRows": [
+                                      "auto"
+                                    ],
+                                    "columnSizes": [
+                                      305.66,
+                                      183.4,
+                                      183.4
+                                    ],
+                                    "rowSizes": [
+                                      26
+                                    ],
+                                    "cells": [
+                                      {
+                                        "path": "0.0.1.1.2.0.1.2.0",
+                                        "column": 0,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1137.55,
+                                          "top": 761.7,
+                                          "width": 305.66,
+                                          "height": 26
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.2.1",
+                                        "column": 1,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1443.21,
+                                          "top": 761.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        }
+                                      },
+                                      {
+                                        "path": "0.0.1.1.2.0.1.2.2",
+                                        "column": 2,
+                                        "row": 0,
+                                        "columnSpan": 1,
+                                        "rowSpan": 1,
+                                        "cellFrame": {
+                                          "left": 1626.6,
+                                          "top": 761.7,
+                                          "width": 183.4,
+                                          "height": 26
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 0,
+                                "effectiveGap": 0,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 1127.55,
+                                  "top": 680.7,
+                                  "width": 692.45,
+                                  "height": 114
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.0.1.1.2.0.1.0",
+                                    "frame": {
+                                      "left": 1127.55,
+                                      "top": 680.7,
+                                      "width": 692.45,
+                                      "height": 34
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.0.1.1",
+                                    "frame": {
+                                      "left": 1127.55,
+                                      "top": 714.7,
+                                      "width": 692.45,
+                                      "height": 40
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.0.1.2",
+                                    "frame": {
+                                      "left": 1127.55,
+                                      "top": 754.7,
+                                      "width": 692.45,
+                                      "height": 40
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 8,
+                            "effectiveGap": 8,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1127.55,
+                              "top": 653.5,
+                              "width": 692.45,
+                              "height": 141.2
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.1.2.0.0",
+                                "frame": {
+                                  "left": 1127.55,
+                                  "top": 653.5,
+                                  "width": 692.45,
+                                  "height": 19.2
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.2.0.1",
+                                "frame": {
+                                  "left": 1127.55,
+                                  "top": 680.7,
+                                  "width": 692.45,
+                                  "height": 114
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 14,
+                          "right": 18,
+                          "bottom": 14,
+                          "left": 18
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1127.55,
+                          "top": 653.5,
+                          "width": 692.45,
+                          "height": 141.2
+                        },
+                        "element": {
+                          "aid": "sh/vu9knih4",
+                          "id": "12",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.3",
+                        "kind": "text",
+                        "name": "result-caveat",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 28.8
+                        },
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 832.7,
+                          "width": 728.45,
+                          "height": 57.6
+                        },
+                        "snappedFrame": {
+                          "left": 1110,
+                          "top": 832,
+                          "width": 728,
+                          "height": 58
+                        },
+                        "children": [],
+                        "text": "The improvement is modest, but it is obtained under the same later-stage protocol and follows a consistent SE-PR trade-off.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/re1w7mp0",
+                          "id": "23",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 24,
+                    "effectiveGap": 24,
+                    "justifyOffset": 131.7,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 1109.55,
+                      "top": 223,
+                      "width": 728.45,
+                      "height": 799
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 354.7,
+                          "width": 728.45,
+                          "height": 118.4
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 497.1,
+                          "width": 728.45,
+                          "height": 118.4
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 639.5,
+                          "width": 728.45,
+                          "height": 169.2
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.3",
+                        "frame": {
+                          "left": 1109.55,
+                          "top": 832.7,
+                          "width": 728.45,
+                          "height": 57.6
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 42,
+                "rowGap": 0,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1.15
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 0.85
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  985.55,
+                  728.45
+                ],
+                "rowSizes": [
+                  799
+                ],
+                "cells": [
+                  {
+                    "path": "0.0.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 985.55,
+                      "height": 799
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1109.55,
+                      "top": 223,
+                      "width": 728.45,
+                      "height": 799
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 58,
+              "right": 82,
+              "bottom": 58,
+              "left": 82
+            },
+            "gap": 28,
+            "effectiveGap": 28,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 82,
+              "top": 58,
+              "width": 1756,
+              "height": 964
+            },
+            "items": [
+              {
+                "path": "0.0.0",
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                }
+              },
+              {
+                "path": "0.0.1",
+                "frame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "brand-mark-layer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 150
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "text",
+                "name": "brand-spacer",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 1
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "children": [],
+                "text": "",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/kb6xkf6d",
+                  "id": "24",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.1.1",
+                "kind": "image",
+                "name": "glasgow-college-logo",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "snappedFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "contain",
+                "alt": "Glasgow College UESTC logo",
+                "element": {
+                  "aid": "im/ahoza1gv",
+                  "id": "25",
+                  "kind": "image"
+                }
+              }
+            ],
+            "padding": {
+              "top": 34,
+              "right": 82,
+              "bottom": 34,
+              "left": 82
+            },
+            "columnGap": 0,
+            "rowGap": 0,
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 82,
+              "top": 34,
+              "width": 1756,
+              "height": 1012
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1
+              },
+              {
+                "mode": "fixed",
+                "value": 238
+              }
+            ],
+            "rows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "columnSizes": [
+              1518,
+              238
+            ],
+            "rowSizes": [
+              82,
+              930
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 82
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

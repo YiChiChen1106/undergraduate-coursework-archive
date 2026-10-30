@@ -1,0 +1,6 @@
+name: NNU-Net2
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+prefix: D:\anaconda\envs\NNU-Net2

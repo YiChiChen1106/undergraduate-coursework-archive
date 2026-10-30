@@ -1,0 +1,154 @@
+{
+  "foreground_mean": {
+    "Dice": 0.7881973017414984,
+    "FN": 5122.875,
+    "FP": 3814.625,
+    "IoU": 0.6506616372542373,
+    "TN": 236597.0,
+    "TP": 16609.5,
+    "n_pred": 20424.125,
+    "n_ref": 21732.375
+  },
+  "mean": {
+    "1": {
+      "Dice": 0.7881973017414984,
+      "FN": 5122.875,
+      "FP": 3814.625,
+      "IoU": 0.6506616372542373,
+      "TN": 236597.0,
+      "TP": 16609.5,
+      "n_pred": 20424.125,
+      "n_ref": 21732.375
+    }
+  },
+  "metric_per_case": [
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.8101123019332342,
+          "FN": 3203,
+          "FP": 4203,
+          "IoU": 0.6808308912256508,
+          "TN": 238940,
+          "TP": 15798,
+          "n_pred": 20001,
+          "n_ref": 19001
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\10.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\10.nii.gz"
+    },
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.7737344258614883,
+          "FN": 6794,
+          "FP": 3285,
+          "IoU": 0.6309680726420621,
+          "TN": 234832,
+          "TP": 17233,
+          "n_pred": 20518,
+          "n_ref": 24027
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\22.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\22.nii.gz"
+    },
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.7915761454602391,
+          "FN": 8181,
+          "FP": 2468,
+          "IoU": 0.6550484273266172,
+          "TN": 231273,
+          "TP": 20222,
+          "n_pred": 22690,
+          "n_ref": 28403
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\36.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\36.nii.gz"
+    },
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.7877290607310755,
+          "FN": 3534,
+          "FP": 5316,
+          "IoU": 0.6497962090934273,
+          "TN": 236873,
+          "TP": 16421,
+          "n_pred": 21737,
+          "n_ref": 19955
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\40.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\40.nii.gz"
+    },
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.7821638406719835,
+          "FN": 7165,
+          "FP": 2586,
+          "IoU": 0.64225703489012,
+          "TN": 234887,
+          "TP": 17506,
+          "n_pred": 20092,
+          "n_ref": 24671
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\6.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\6.nii.gz"
+    },
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.8107606200510691,
+          "FN": 3225,
+          "FP": 4112,
+          "IoU": 0.6817472022208727,
+          "TN": 239090,
+          "TP": 15717,
+          "n_pred": 19829,
+          "n_ref": 18942
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\7.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\7.nii.gz"
+    },
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.773636509894353,
+          "FN": 3225,
+          "FP": 5217,
+          "IoU": 0.6308378520202904,
+          "TN": 239276,
+          "TP": 14426,
+          "n_pred": 19643,
+          "n_ref": 17651
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\8.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\8.nii.gz"
+    },
+    {
+      "metrics": {
+        "1": {
+          "Dice": 0.7758655093285444,
+          "FN": 5656,
+          "FP": 3330,
+          "IoU": 0.633807408614858,
+          "TN": 237605,
+          "TP": 15553,
+          "n_pred": 18883,
+          "n_ref": 21209
+        }
+      },
+      "prediction_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_results\\Dataset505_PAnet_DRIVE\\my_train_150__nnUNetPlans__2d\\fold_4\\validation\\9.nii.gz",
+      "reference_file": "F:\\shiwangmo\\nnUNet\\nnUNetFrame\\nnUNet_preprocessed\\Dataset505_PAnet_DRIVE\\gt_segmentations\\9.nii.gz"
+    }
+  ]
+}

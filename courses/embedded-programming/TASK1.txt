@@ -1,0 +1,47 @@
+#include "mbed.h"
+#include <cstdio>
+
+#define I2CSDA D0
+#define I2CSDL D1
+
+
+I2C TMP102(I2CSDA,I2CSDL);
+
+const int TMP102Address = 0x48;// TMP102 address
+char ConfigRegisterTMP102[3];//config register
+char TemperatureRegister[2];//Temperanture Register
+float Temperature;
+
+void ConfigureTMP102()
+{
+    ConfigRegisterTMP102[0] = 0x01;
+    ConfigRegisterTMP102[1] = 0x60;
+    ConfigRegisterTMP102[2] = 0xA0;
+    TMP102.write(TMP102Address<<1, ConfigRegisterTMP102,3);//write 3 bytes
+}
+
+// main() runs in its own thread in the OS
+int main(){
+
+    unsigned short M;
+    char L;
+    ConfigureTMP102();
+    ConfigRegisterTMP102[0] = 0x00;//point to the tmp register
+    TMP102.write(TMP102Address<<1, ConfigRegisterTMP102,1);
+    printf("Initiating Temperature Reading..\n\r");
+
+    while(1){
+        TMP102.read(TMP102Address<<1, TemperatureRegister,2);//read 2 bytes
+
+        M = TemperatureRegister[0]<<4;
+        
+        L = TemperatureRegister[1]>>4;
+
+        M = M + L;
+        Temperature = 0.0625*M;
+
+        printf("Temperature = %u\n\r",M);
+        printf("Temperature in Celsius= %.3f\n\r",Temperature);
+        thread_sleep_for(500);
+    }
+}

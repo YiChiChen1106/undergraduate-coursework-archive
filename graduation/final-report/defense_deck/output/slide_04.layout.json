@@ -1,0 +1,3862 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/0winer",
+    "id": "0winer",
+    "slide": 4,
+    "layoutId": "2042a543-9850-4cab-9138-76ceac1c0217",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2042a543-9850-4cab-9138-76ceac1c0217",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcj6tova",
+      "id": "1",
+      "name": "slide-kicker",
+      "bbox": [
+        82,
+        58,
+        1756,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.4"
+      },
+      "geometry": "rect",
+      "text": "Baseline foundation",
+      "textPreview": "Baseline foundation",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Baseline foundation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Baseline foundation",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Baseline foundation",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/il0rqd4v",
+      "id": "2",
+      "name": "slide-title",
+      "bbox": [
+        82,
+        92,
+        1756,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "From U-Net to nnU-Net Baseline",
+      "textPreview": "From U-Net to nnU-Net Baseline",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "fontSize": 48,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "From U-Net to nnU-Net Baseline"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "From U-Net to nnU-Net Baseline",
+          "runs": [
+            {
+              "index": 1,
+              "text": "From U-Net to nnU-Net Baseline",
+              "fontSize": 48,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b6xkf6dc",
+      "id": "3",
+      "name": "title-rule",
+      "bbox": [
+        82,
+        160,
+        180,
+        5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0je9cvix",
+      "id": "4",
+      "name": "slide-cue",
+      "bbox": [
+        82,
+        174,
+        1756,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.3"
+      },
+      "geometry": "rect",
+      "text": "Talk track: U-Net provides the structure; nnU-Net is self-configuring and already reaches baseline F1 = 0.7891.",
+      "textPreview": "Talk track: U-Net provides the structure; nnU-Net is self-configuring and already reaches baseline F1 = 0.7891.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Talk track: U-Net provides the structure; nnU-Net is self-configuring and already reaches baseline F1 = 0.7891."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Talk track: U-Net provides the structure; nnU-Net is self-configuring and already reaches baseline F1 = 0.7891.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Talk track: U-Net provides the structure; nnU-Net is self-configuring and already reaches baseline F1 = 0.7891.",
+              "fontSize": 17,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t47y1kre",
+      "id": "5",
+      "name": "unet-accent",
+      "bbox": [
+        84,
+        224,
+        9,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#2F5FA8",
+      "lineColor": "#2F5FA8",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/idonyd0z",
+      "id": "6",
+      "name": "unet-title",
+      "bbox": [
+        108,
+        226,
+        832,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "U-Net",
+      "textPreview": "U-Net",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "U-Net"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "U-Net",
+          "runs": [
+            {
+              "index": 1,
+              "text": "U-Net",
+              "fontSize": 34,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/byhgn29g",
+      "id": "7",
+      "name": "unet-image-panel",
+      "bbox": [
+        82,
+        285,
+        856,
+        510
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#DDE3EF",
+      "lineWidth": 1
+    },
+    {
+      "order": 8,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/lkjm1cfa",
+      "id": "8",
+      "name": "unet-architecture",
+      "bbox": [
+        100,
+        303,
+        820,
+        474
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.1.0"
+      },
+      "alt": "U-Net encoder-decoder architecture",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "649e4e72-545d-4ede-a7e1-94d3d01f3e14",
+        "contentType": "image/png",
+        "byteLength": 262256
+      }
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0bi9s36",
+      "id": "9",
+      "name": "bullet-dot-0",
+      "bbox": [
+        82,
+        814,
+        22,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.2.0.0"
+      },
+      "geometry": "rect",
+      "text": "•",
+      "textPreview": "•",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "•",
+          "runs": [
+            {
+              "index": 1,
+              "text": "•",
+              "fontSize": 21,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0nuxc3y",
+      "id": "10",
+      "name": "bullet-text-0",
+      "bbox": [
+        118,
+        814,
+        820,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.2.0.1"
+      },
+      "geometry": "rect",
+      "text": "Encoder extracts semantic features; decoder recovers spatial resolution.",
+      "textPreview": "Encoder extracts semantic features; decoder recovers spatial resolution.",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Encoder extracts semantic features; decoder recovers spatial resolution."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Encoder extracts semantic features; decoder recovers spatial resolution.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Encoder extracts semantic features; decoder recovers spatial resolution.",
+              "fontSize": 21,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fu18jqh",
+      "id": "11",
+      "name": "bullet-dot-1",
+      "bbox": [
+        82,
+        854,
+        22,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "•",
+      "textPreview": "•",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "•",
+          "runs": [
+            {
+              "index": 1,
+              "text": "•",
+              "fontSize": 21,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fu18jqh0",
+      "id": "12",
+      "name": "bullet-text-1",
+      "bbox": [
+        118,
+        854,
+        820,
+        26
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.2.1.1"
+      },
+      "geometry": "rect",
+      "text": "Skip connections help preserve local detail for segmentation.",
+      "textPreview": "Skip connections help preserve local detail for segmentation.",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Skip connections help preserve local detail for segmentation."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Skip connections help preserve local detail for segmentation.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Skip connections help preserve local detail for segmentation.",
+              "fontSize": 21,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m94fu18j",
+      "id": "13",
+      "name": "nnunet-accent",
+      "bbox": [
+        984,
+        224,
+        9,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xobm58z2",
+      "id": "14",
+      "name": "nnunet-title",
+      "bbox": [
+        1008,
+        226,
+        832,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "nnU-Net",
+      "textPreview": "nnU-Net",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "nnU-Net"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "nnU-Net",
+          "runs": [
+            {
+              "index": 1,
+              "text": "nnU-Net",
+              "fontSize": 34,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83itgfml",
+      "id": "15",
+      "name": "nnunet-claim",
+      "bbox": [
+        982,
+        286,
+        856,
+        72
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "A self-configuring segmentation framework built around U-Net-style designs.",
+      "textPreview": "A self-configuring segmentation framework built around U-Net-style designs.",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A self-configuring segmentation framework built around U-Net-style"
+          },
+          {
+            "index": 2,
+            "text": "designs."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A self-configuring segmentation framework built around U-Net-style designs.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "A self-configuring segmentation framework built around U-Net-style designs.",
+              "fontSize": 30,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fil0rqd4",
+      "id": "16",
+      "name": "step-Dataset fingerprint",
+      "bbox": [
+        982,
+        376,
+        254.32,
+        142
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#F8FAFD",
+      "lineColor": "#DDE3EF",
+      "lineWidth": 1
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxs72x4n",
+      "id": "17",
+      "name": "step-label-Dataset fingerprint",
+      "bbox": [
+        1004,
+        394,
+        210,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "Dataset fingerprint",
+      "textPreview": "Dataset fingerprint",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dataset fingerprint"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dataset fingerprint",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dataset fingerprint",
+              "fontSize": 24,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xkf6dcbu",
+      "id": "18",
+      "name": "step-body-Dataset fingerprint",
+      "bbox": [
+        1004,
+        430,
+        210,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Reads data properties and task setting.",
+      "textPreview": "Reads data properties and task setting.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Reads data properties and"
+          },
+          {
+            "index": 2,
+            "text": "task setting."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Reads data properties and task setting.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Reads data properties and task setting.",
+              "fontSize": 18,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4zidonyd",
+      "id": "19",
+      "name": "nnunet-arrow-1",
+      "bbox": [
+        1248,
+        412,
+        22,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.1"
+      },
+      "geometry": "rect",
+      "text": "->",
+      "textPreview": "->",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "-"
+          },
+          {
+            "index": 2,
+            "text": ">"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "->",
+          "runs": [
+            {
+              "index": 1,
+              "text": "->",
+              "fontSize": 28,
+              "color": "#C8A33A",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0fepkzup",
+      "id": "20",
+      "name": "step-Auto configuration",
+      "bbox": [
+        1282.84,
+        376,
+        254.32,
+        142
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#F5EBCB",
+      "lineColor": "#DDE3EF",
+      "lineWidth": 1
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0bi9s36",
+      "id": "21",
+      "name": "step-label-Auto configuration",
+      "bbox": [
+        1304,
+        394,
+        210,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.2.0.0"
+      },
+      "geometry": "rect",
+      "text": "Auto configuration",
+      "textPreview": "Auto configuration",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Auto configuration"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Auto configuration",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Auto configuration",
+              "fontSize": 24,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i9s36hcr",
+      "id": "22",
+      "name": "step-body-Auto configuration",
+      "bbox": [
+        1304,
+        430,
+        210,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.2.0.1"
+      },
+      "geometry": "rect",
+      "text": "Adapts preprocessing, patch size, and training plan.",
+      "textPreview": "Adapts preprocessing, patch size, and training plan.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Adapts preprocessing, patch"
+          },
+          {
+            "index": 2,
+            "text": "size, and training plan."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Adapts preprocessing, patch size, and training plan.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Adapts preprocessing, patch size, and training plan.",
+              "fontSize": 18,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bulwval8",
+      "id": "23",
+      "name": "nnunet-arrow-2",
+      "bbox": [
+        1550,
+        412,
+        22,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.3"
+      },
+      "geometry": "rect",
+      "text": "->",
+      "textPreview": "->",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "-"
+          },
+          {
+            "index": 2,
+            "text": ">"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "->",
+          "runs": [
+            {
+              "index": 1,
+              "text": "->",
+              "fontSize": 28,
+              "color": "#C8A33A",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/032lszqt",
+      "id": "24",
+      "name": "step-Strong baseline",
+      "bbox": [
+        1583.68,
+        376,
+        254.32,
+        142
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.4"
+      },
+      "geometry": "rect",
+      "fillColor": "#EAF1F9",
+      "lineColor": "#DDE3EF",
+      "lineWidth": 1
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tovahoza",
+      "id": "25",
+      "name": "step-label-Strong baseline",
+      "bbox": [
+        1606,
+        394,
+        210,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.4.0.0"
+      },
+      "geometry": "rect",
+      "text": "Strong baseline",
+      "textPreview": "Strong baseline",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Strong baseline"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Strong baseline",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Strong baseline",
+              "fontSize": 24,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ixczed8v",
+      "id": "26",
+      "name": "step-body-Strong baseline",
+      "bbox": [
+        1606,
+        430,
+        210,
+        44
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2.4.0.1"
+      },
+      "geometry": "rect",
+      "text": "Provides a controlled reference for later changes.",
+      "textPreview": "Provides a controlled reference for later changes.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Provides a controlled"
+          },
+          {
+            "index": 2,
+            "text": "reference for later changes."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Provides a controlled reference for later changes.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Provides a controlled reference for later changes.",
+              "fontSize": 18,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bi9s36hc",
+      "id": "27",
+      "name": "nnunet-position-panel",
+      "bbox": [
+        982,
+        535,
+        856,
+        100
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.3"
+      },
+      "geometry": "rect",
+      "fillColor": "#EAF1F9",
+      "lineColor": "#EAF1F9",
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0rqd4vmt",
+      "id": "28",
+      "name": "nnunet-position",
+      "bbox": [
+        1006,
+        556,
+        808,
+        60
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.3.0"
+      },
+      "geometry": "rect",
+      "text": "Project position: keep nnU-Net v2 as the baseline, then test task-oriented structural changes for fine vessels.",
+      "textPreview": "Project position: keep nnU-Net v2 as the baseline, then test task-oriented structural changes for fine vessels.",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Project position: keep nnU-Net v2 as the baseline, then test task-oriented"
+          },
+          {
+            "index": 2,
+            "text": "structural changes for fine vessels."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Project position: keep nnU-Net v2 as the baseline, then test task-oriented structural changes for fine vessels.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Project position: keep nnU-Net v2 as the baseline, then test task-oriented structural changes for fine vessels.",
+              "fontSize": 25,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcj6tova",
+      "id": "29",
+      "name": "nnunet-closing",
+      "bbox": [
+        982,
+        654,
+        856,
+        54
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.4"
+      },
+      "geometry": "rect",
+      "text": "This makes the later comparison stricter: useful gains must appear on top of an already strong framework.",
+      "textPreview": "This makes the later comparison stricter: useful gains must appear on top of an already strong framework.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "This makes the later comparison stricter: useful gains must appear on top of an already strong"
+          },
+          {
+            "index": 2,
+            "text": "framework."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "This makes the later comparison stricter: useful gains must appear on top of an already strong framework.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "This makes the later comparison stricter: useful gains must appear on top of an already strong framework.",
+              "fontSize": 22,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6tovaho",
+      "id": "30",
+      "name": "brand-spacer",
+      "bbox": [
+        82,
+        34,
+        1518,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 1,
+      "resolvedTextStyle": {
+        "fontSize": 75,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 31,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/d8bat47y",
+      "id": "31",
+      "name": "glasgow-college-logo",
+      "bbox": [
+        1600,
+        34,
+        238,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1"
+      },
+      "alt": "Glasgow College UESTC logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "d650a8bd-5254-4249-827a-14e5a5f366c4",
+        "contentType": "image/png",
+        "byteLength": 281917
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "branded-slide-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "column",
+            "name": "slide4-foundation-root",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 164,
+              "height": 281
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.0.0",
+                "kind": "column",
+                "name": "title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 180,
+                  "height": 137
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "children": [
+                  {
+                    "path": "0.0.0.0",
+                    "kind": "text",
+                    "name": "slide-kicker",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "Baseline foundation",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/tcj6tova",
+                      "id": "1",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "kind": "text",
+                    "name": "slide-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 57.6
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 58
+                    },
+                    "children": [],
+                    "text": "From U-Net to nnU-Net Baseline",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/il0rqd4v",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "kind": "rule",
+                    "name": "title-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 180
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 180,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 160,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "children": [],
+                    "weight": 5,
+                    "element": {
+                      "aid": "sh/b6xkf6dc",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "kind": "text",
+                    "name": "slide-cue",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 20.4
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 174,
+                      "width": 1756,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "Talk track: U-Net provides the structure; nnU-Net is self-configuring and already reaches baseline F1 = 0.7891.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/0je9cvix",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 10,
+                "effectiveGap": 10,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "items": [
+                  {
+                    "path": "0.0.0.0",
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.0.1",
+                "kind": "grid",
+                "name": "unet-nnunet-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 44,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                },
+                "children": [
+                  {
+                    "path": "0.0.1.0",
+                    "kind": "column",
+                    "name": "unet-side",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 656.4
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 856,
+                      "height": 799
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.0.0",
+                        "kind": "row",
+                        "name": "unet-side-heading",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 25,
+                          "height": 44
+                        },
+                        "frame": {
+                          "left": 82,
+                          "top": 223,
+                          "width": 856,
+                          "height": 44
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.0.0.0",
+                            "kind": "shape",
+                            "name": "unet-accent",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 9
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 44
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 9,
+                              "height": 44
+                            },
+                            "frame": {
+                              "left": 82,
+                              "top": 224,
+                              "width": 9,
+                              "height": 44
+                            },
+                            "snappedFrame": {
+                              "left": 84,
+                              "top": 224,
+                              "width": 9,
+                              "height": 44
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/t47y1kre",
+                              "id": "5",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.0.0.1",
+                            "kind": "text",
+                            "name": "unet-title",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 40.8
+                            },
+                            "frame": {
+                              "left": 107,
+                              "top": 226,
+                              "width": 831,
+                              "height": 40
+                            },
+                            "snappedFrame": {
+                              "left": 108,
+                              "top": 226,
+                              "width": 832,
+                              "height": 40
+                            },
+                            "children": [],
+                            "text": "U-Net",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/idonyd0z",
+                              "id": "6",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 16,
+                        "effectiveGap": 16,
+                        "justifyOffset": 0,
+                        "align": "center",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 82,
+                          "top": 223,
+                          "width": 856,
+                          "height": 44
+                        },
+                        "items": [
+                          {
+                            "path": "0.0.1.0.0.0",
+                            "frame": {
+                              "left": 82,
+                              "top": 224,
+                              "width": 9,
+                              "height": 44
+                            }
+                          },
+                          {
+                            "path": "0.0.1.0.0.1",
+                            "frame": {
+                              "left": 107,
+                              "top": 226,
+                              "width": 831,
+                              "height": 40
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.0.1.0.1",
+                        "kind": "panel",
+                        "name": "unet-image-panel",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 510
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 36,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 82,
+                          "top": 285,
+                          "width": 856,
+                          "height": 510
+                        },
+                        "snappedFrame": {
+                          "left": 82,
+                          "top": 285,
+                          "width": 856,
+                          "height": 510
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.0.1.0",
+                            "kind": "image",
+                            "name": "unet-architecture",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "fill",
+                                "value": 1
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 0
+                            },
+                            "frame": {
+                              "left": 100,
+                              "top": 303,
+                              "width": 820,
+                              "height": 474
+                            },
+                            "snappedFrame": {
+                              "left": 100,
+                              "top": 303,
+                              "width": 820,
+                              "height": 474
+                            },
+                            "children": [],
+                            "source": {
+                              "kind": "dataUrl"
+                            },
+                            "fit": "contain",
+                            "alt": "U-Net encoder-decoder architecture",
+                            "element": {
+                              "aid": "im/lkjm1cfa",
+                              "id": "8",
+                              "kind": "image"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 18,
+                          "right": 18,
+                          "bottom": 18,
+                          "left": 18
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 100,
+                          "top": 303,
+                          "width": 820,
+                          "height": 474
+                        },
+                        "element": {
+                          "aid": "sh/byhgn29g",
+                          "id": "7",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.2",
+                        "kind": "column",
+                        "name": "bullet-list",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 66.4
+                        },
+                        "frame": {
+                          "left": 82,
+                          "top": 813,
+                          "width": 856,
+                          "height": 66.4
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.0.2.0",
+                            "kind": "row",
+                            "name": "bullet-0",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 36,
+                              "height": 25.2
+                            },
+                            "frame": {
+                              "left": 82,
+                              "top": 813,
+                              "width": 856,
+                              "height": 25.2
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.0.2.0.0",
+                                "kind": "text",
+                                "name": "bullet-dot-0",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 22
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 22,
+                                  "height": 25.2
+                                },
+                                "frame": {
+                                  "left": 82,
+                                  "top": 813,
+                                  "width": 22,
+                                  "height": 25.2
+                                },
+                                "snappedFrame": {
+                                  "left": 82,
+                                  "top": 814,
+                                  "width": 22,
+                                  "height": 26
+                                },
+                                "children": [],
+                                "text": "•",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/p0bi9s36",
+                                  "id": "9",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.2.0.1",
+                                "kind": "text",
+                                "name": "bullet-text-0",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 25.2
+                                },
+                                "frame": {
+                                  "left": 118,
+                                  "top": 813,
+                                  "width": 820,
+                                  "height": 25.2
+                                },
+                                "snappedFrame": {
+                                  "left": 118,
+                                  "top": 814,
+                                  "width": 820,
+                                  "height": 26
+                                },
+                                "children": [],
+                                "text": "Encoder extracts semantic features; decoder recovers spatial resolution.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/x0nuxc3y",
+                                  "id": "10",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 14,
+                            "effectiveGap": 14,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 82,
+                              "top": 813,
+                              "width": 856,
+                              "height": 25.2
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.0.2.0.0",
+                                "frame": {
+                                  "left": 82,
+                                  "top": 813,
+                                  "width": 22,
+                                  "height": 25.2
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.2.0.1",
+                                "frame": {
+                                  "left": 118,
+                                  "top": 813,
+                                  "width": 820,
+                                  "height": 25.2
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "path": "0.0.1.0.2.1",
+                            "kind": "row",
+                            "name": "bullet-1",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 36,
+                              "height": 25.2
+                            },
+                            "frame": {
+                              "left": 82,
+                              "top": 854.2,
+                              "width": 856,
+                              "height": 25.2
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.0.2.1.0",
+                                "kind": "text",
+                                "name": "bullet-dot-1",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 22
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 22,
+                                  "height": 25.2
+                                },
+                                "frame": {
+                                  "left": 82,
+                                  "top": 854.2,
+                                  "width": 22,
+                                  "height": 25.2
+                                },
+                                "snappedFrame": {
+                                  "left": 82,
+                                  "top": 854,
+                                  "width": 22,
+                                  "height": 26
+                                },
+                                "children": [],
+                                "text": "•",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/4fu18jqh",
+                                  "id": "11",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.2.1.1",
+                                "kind": "text",
+                                "name": "bullet-text-1",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 25.2
+                                },
+                                "frame": {
+                                  "left": 118,
+                                  "top": 854.2,
+                                  "width": 820,
+                                  "height": 25.2
+                                },
+                                "snappedFrame": {
+                                  "left": 118,
+                                  "top": 854,
+                                  "width": 820,
+                                  "height": 26
+                                },
+                                "children": [],
+                                "text": "Skip connections help preserve local detail for segmentation.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/fu18jqh0",
+                                  "id": "12",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 14,
+                            "effectiveGap": 14,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 82,
+                              "top": 854.2,
+                              "width": 856,
+                              "height": 25.2
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.0.2.1.0",
+                                "frame": {
+                                  "left": 82,
+                                  "top": 854.2,
+                                  "width": 22,
+                                  "height": 25.2
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.2.1.1",
+                                "frame": {
+                                  "left": 118,
+                                  "top": 854.2,
+                                  "width": 820,
+                                  "height": 25.2
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 16,
+                        "effectiveGap": 16,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 82,
+                          "top": 813,
+                          "width": 856,
+                          "height": 66.4
+                        },
+                        "items": [
+                          {
+                            "path": "0.0.1.0.2.0",
+                            "frame": {
+                              "left": 82,
+                              "top": 813,
+                              "width": 856,
+                              "height": 25.2
+                            }
+                          },
+                          {
+                            "path": "0.0.1.0.2.1",
+                            "frame": {
+                              "left": 82,
+                              "top": 854.2,
+                              "width": 856,
+                              "height": 25.2
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 18,
+                    "effectiveGap": 18,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 856,
+                      "height": 799
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.0.0",
+                        "frame": {
+                          "left": 82,
+                          "top": 223,
+                          "width": 856,
+                          "height": 44
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.1",
+                        "frame": {
+                          "left": 82,
+                          "top": 285,
+                          "width": 856,
+                          "height": 510
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.2",
+                        "frame": {
+                          "left": 82,
+                          "top": 813,
+                          "width": 856,
+                          "height": 66.4
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "kind": "column",
+                    "name": "nnunet-side",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 390.4
+                    },
+                    "frame": {
+                      "left": 982,
+                      "top": 223,
+                      "width": 856,
+                      "height": 799
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "kind": "row",
+                        "name": "nnunet-side-heading",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 25,
+                          "height": 44
+                        },
+                        "frame": {
+                          "left": 982,
+                          "top": 223,
+                          "width": 856,
+                          "height": 44
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "kind": "shape",
+                            "name": "nnunet-accent",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fixed",
+                                "value": 9
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 44
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 9,
+                              "height": 44
+                            },
+                            "frame": {
+                              "left": 982,
+                              "top": 224,
+                              "width": 9,
+                              "height": 44
+                            },
+                            "snappedFrame": {
+                              "left": 984,
+                              "top": 224,
+                              "width": 9,
+                              "height": 44
+                            },
+                            "children": [],
+                            "geometry": "rect",
+                            "element": {
+                              "aid": "sh/m94fu18j",
+                              "id": "13",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "kind": "text",
+                            "name": "nnunet-title",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 40.8
+                            },
+                            "frame": {
+                              "left": 1007,
+                              "top": 226,
+                              "width": 831,
+                              "height": 40
+                            },
+                            "snappedFrame": {
+                              "left": 1008,
+                              "top": 226,
+                              "width": 832,
+                              "height": 40
+                            },
+                            "children": [],
+                            "text": "nnU-Net",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/xobm58z2",
+                              "id": "14",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 16,
+                        "effectiveGap": 16,
+                        "justifyOffset": 0,
+                        "align": "center",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 982,
+                          "top": 223,
+                          "width": 856,
+                          "height": 44
+                        },
+                        "items": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "frame": {
+                              "left": 982,
+                              "top": 224,
+                              "width": 9,
+                              "height": 44
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "frame": {
+                              "left": 1007,
+                              "top": 226,
+                              "width": 831,
+                              "height": 40
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "kind": "text",
+                        "name": "nnunet-claim",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 982,
+                          "top": 285,
+                          "width": 856,
+                          "height": 72
+                        },
+                        "snappedFrame": {
+                          "left": 982,
+                          "top": 286,
+                          "width": 856,
+                          "height": 72
+                        },
+                        "children": [],
+                        "text": "A self-configuring segmentation framework built around U-Net-style designs.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/83itgfml",
+                          "id": "15",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "kind": "grid",
+                        "name": "nnunet-flow",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 93.04,
+                          "height": 142
+                        },
+                        "frame": {
+                          "left": 982,
+                          "top": 375,
+                          "width": 856,
+                          "height": 142
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.2.0",
+                            "kind": "panel",
+                            "name": "step-Dataset fingerprint",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 142
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 36
+                            },
+                            "frame": {
+                              "left": 982,
+                              "top": 376,
+                              "width": 254.32,
+                              "height": 142
+                            },
+                            "snappedFrame": {
+                              "left": 982,
+                              "top": 376,
+                              "width": 254.32,
+                              "height": 142
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.2.0.0",
+                                "kind": "column",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 58.4
+                                },
+                                "frame": {
+                                  "left": 1004,
+                                  "top": 394,
+                                  "width": 210.32,
+                                  "height": 106
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.0.1.1.2.0.0.0",
+                                    "kind": "text",
+                                    "name": "step-label-Dataset fingerprint",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 28.8
+                                    },
+                                    "frame": {
+                                      "left": 1004,
+                                      "top": 394,
+                                      "width": 210.32,
+                                      "height": 28.8
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1004,
+                                      "top": 394,
+                                      "width": 210,
+                                      "height": 30
+                                    },
+                                    "children": [],
+                                    "text": "Dataset fingerprint",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/qxs72x4n",
+                                      "id": "17",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.0.0.1",
+                                    "kind": "text",
+                                    "name": "step-body-Dataset fingerprint",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 21.6
+                                    },
+                                    "frame": {
+                                      "left": 1004,
+                                      "top": 430.8,
+                                      "width": 210.32,
+                                      "height": 43.2
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1004,
+                                      "top": 430,
+                                      "width": 210,
+                                      "height": 44
+                                    },
+                                    "children": [],
+                                    "text": "Reads data properties and task setting.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/xkf6dcbu",
+                                      "id": "18",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 8,
+                                "effectiveGap": 8,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 1004,
+                                  "top": 394,
+                                  "width": 210.32,
+                                  "height": 106
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.0.1.1.2.0.0.0",
+                                    "frame": {
+                                      "left": 1004,
+                                      "top": 394,
+                                      "width": 210.32,
+                                      "height": 28.8
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.0.0.1",
+                                    "frame": {
+                                      "left": 1004,
+                                      "top": 430.8,
+                                      "width": 210.32,
+                                      "height": 43.2
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 18,
+                              "right": 22,
+                              "bottom": 18,
+                              "left": 22
+                            },
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1004,
+                              "top": 394,
+                              "width": 210.32,
+                              "height": 106
+                            },
+                            "element": {
+                              "aid": "sh/fil0rqd4",
+                              "id": "16",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.1",
+                            "kind": "text",
+                            "name": "nnunet-arrow-1",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "hug"
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 22.52,
+                              "height": 33.6
+                            },
+                            "frame": {
+                              "left": 1248.32,
+                              "top": 412,
+                              "width": 22.52,
+                              "height": 68
+                            },
+                            "snappedFrame": {
+                              "left": 1248,
+                              "top": 412,
+                              "width": 22,
+                              "height": 68
+                            },
+                            "children": [],
+                            "text": "->",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/4zidonyd",
+                              "id": "19",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.2",
+                            "kind": "panel",
+                            "name": "step-Auto configuration",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 142
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 36
+                            },
+                            "frame": {
+                              "left": 1282.84,
+                              "top": 376,
+                              "width": 254.32,
+                              "height": 142
+                            },
+                            "snappedFrame": {
+                              "left": 1282.84,
+                              "top": 376,
+                              "width": 254.32,
+                              "height": 142
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.2.2.0",
+                                "kind": "column",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 58.4
+                                },
+                                "frame": {
+                                  "left": 1304.84,
+                                  "top": 394,
+                                  "width": 210.32,
+                                  "height": 106
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.0.1.1.2.2.0.0",
+                                    "kind": "text",
+                                    "name": "step-label-Auto configuration",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 28.8
+                                    },
+                                    "frame": {
+                                      "left": 1304.84,
+                                      "top": 394,
+                                      "width": 210.32,
+                                      "height": 28.8
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1304,
+                                      "top": 394,
+                                      "width": 210,
+                                      "height": 30
+                                    },
+                                    "children": [],
+                                    "text": "Auto configuration",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/p0bi9s36",
+                                      "id": "21",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.2.0.1",
+                                    "kind": "text",
+                                    "name": "step-body-Auto configuration",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 21.6
+                                    },
+                                    "frame": {
+                                      "left": 1304.84,
+                                      "top": 430.8,
+                                      "width": 210.32,
+                                      "height": 43.2
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1304,
+                                      "top": 430,
+                                      "width": 210,
+                                      "height": 44
+                                    },
+                                    "children": [],
+                                    "text": "Adapts preprocessing, patch size, and training plan.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/i9s36hcr",
+                                      "id": "22",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 8,
+                                "effectiveGap": 8,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 1304.84,
+                                  "top": 394,
+                                  "width": 210.32,
+                                  "height": 106
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.0.1.1.2.2.0.0",
+                                    "frame": {
+                                      "left": 1304.84,
+                                      "top": 394,
+                                      "width": 210.32,
+                                      "height": 28.8
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.2.0.1",
+                                    "frame": {
+                                      "left": 1304.84,
+                                      "top": 430.8,
+                                      "width": 210.32,
+                                      "height": 43.2
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 18,
+                              "right": 22,
+                              "bottom": 18,
+                              "left": 22
+                            },
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1304.84,
+                              "top": 394,
+                              "width": 210.32,
+                              "height": 106
+                            },
+                            "element": {
+                              "aid": "sh/0fepkzup",
+                              "id": "20",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.3",
+                            "kind": "text",
+                            "name": "nnunet-arrow-2",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "hug"
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 22.52,
+                              "height": 33.6
+                            },
+                            "frame": {
+                              "left": 1549.16,
+                              "top": 412,
+                              "width": 22.52,
+                              "height": 68
+                            },
+                            "snappedFrame": {
+                              "left": 1550,
+                              "top": 412,
+                              "width": 22,
+                              "height": 68
+                            },
+                            "children": [],
+                            "text": "->",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/bulwval8",
+                              "id": "23",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.4",
+                            "kind": "panel",
+                            "name": "step-Strong baseline",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "fixed",
+                                "value": 142
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 44,
+                              "height": 36
+                            },
+                            "frame": {
+                              "left": 1583.68,
+                              "top": 376,
+                              "width": 254.32,
+                              "height": 142
+                            },
+                            "snappedFrame": {
+                              "left": 1583.68,
+                              "top": 376,
+                              "width": 254.32,
+                              "height": 142
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.2.4.0",
+                                "kind": "column",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 58.4
+                                },
+                                "frame": {
+                                  "left": 1605.68,
+                                  "top": 394,
+                                  "width": 210.32,
+                                  "height": 106
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.0.1.1.2.4.0.0",
+                                    "kind": "text",
+                                    "name": "step-label-Strong baseline",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 28.8
+                                    },
+                                    "frame": {
+                                      "left": 1605.68,
+                                      "top": 394,
+                                      "width": 210.32,
+                                      "height": 28.8
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1606,
+                                      "top": 394,
+                                      "width": 210,
+                                      "height": 30
+                                    },
+                                    "children": [],
+                                    "text": "Strong baseline",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/tovahoza",
+                                      "id": "25",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.4.0.1",
+                                    "kind": "text",
+                                    "name": "step-body-Strong baseline",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 21.6
+                                    },
+                                    "frame": {
+                                      "left": 1605.68,
+                                      "top": 430.8,
+                                      "width": 210.32,
+                                      "height": 43.2
+                                    },
+                                    "snappedFrame": {
+                                      "left": 1606,
+                                      "top": 430,
+                                      "width": 210,
+                                      "height": 44
+                                    },
+                                    "children": [],
+                                    "text": "Provides a controlled reference for later changes.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/ixczed8v",
+                                      "id": "26",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 8,
+                                "effectiveGap": 8,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 1605.68,
+                                  "top": 394,
+                                  "width": 210.32,
+                                  "height": 106
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.0.1.1.2.4.0.0",
+                                    "frame": {
+                                      "left": 1605.68,
+                                      "top": 394,
+                                      "width": 210.32,
+                                      "height": 28.8
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.1.2.4.0.1",
+                                    "frame": {
+                                      "left": 1605.68,
+                                      "top": 430.8,
+                                      "width": 210.32,
+                                      "height": 43.2
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 18,
+                              "right": 22,
+                              "bottom": 18,
+                              "left": 22
+                            },
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 1605.68,
+                              "top": 394,
+                              "width": 210.32,
+                              "height": 106
+                            },
+                            "element": {
+                              "aid": "sh/032lszqt",
+                              "id": "24",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "columnGap": 12,
+                        "rowGap": 0,
+                        "alignItems": "center",
+                        "justifyItems": "stretch",
+                        "contentFrame": {
+                          "left": 982,
+                          "top": 375,
+                          "width": 856,
+                          "height": 142
+                        },
+                        "columns": [
+                          {
+                            "mode": "fr",
+                            "value": 1
+                          },
+                          "auto",
+                          {
+                            "mode": "fr",
+                            "value": 1
+                          },
+                          "auto",
+                          {
+                            "mode": "fr",
+                            "value": 1
+                          }
+                        ],
+                        "autoRows": "auto",
+                        "resolvedRows": [
+                          "auto"
+                        ],
+                        "columnSizes": [
+                          254.32,
+                          22.52,
+                          254.32,
+                          22.52,
+                          254.32
+                        ],
+                        "rowSizes": [
+                          142
+                        ],
+                        "cells": [
+                          {
+                            "path": "0.0.1.1.2.0",
+                            "column": 0,
+                            "row": 0,
+                            "columnSpan": 1,
+                            "rowSpan": 1,
+                            "cellFrame": {
+                              "left": 982,
+                              "top": 375,
+                              "width": 254.32,
+                              "height": 142
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.1",
+                            "column": 1,
+                            "row": 0,
+                            "columnSpan": 1,
+                            "rowSpan": 1,
+                            "cellFrame": {
+                              "left": 1248.32,
+                              "top": 375,
+                              "width": 22.52,
+                              "height": 142
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.2",
+                            "column": 2,
+                            "row": 0,
+                            "columnSpan": 1,
+                            "rowSpan": 1,
+                            "cellFrame": {
+                              "left": 1282.84,
+                              "top": 375,
+                              "width": 254.32,
+                              "height": 142
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.3",
+                            "column": 3,
+                            "row": 0,
+                            "columnSpan": 1,
+                            "rowSpan": 1,
+                            "cellFrame": {
+                              "left": 1549.16,
+                              "top": 375,
+                              "width": 22.52,
+                              "height": 142
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.2.4",
+                            "column": 4,
+                            "row": 0,
+                            "columnSpan": 1,
+                            "rowSpan": 1,
+                            "cellFrame": {
+                              "left": 1583.68,
+                              "top": 375,
+                              "width": 254.32,
+                              "height": 142
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.0.1.1.3",
+                        "kind": "panel",
+                        "name": "nnunet-position-panel",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 70
+                        },
+                        "frame": {
+                          "left": 982,
+                          "top": 535,
+                          "width": 856,
+                          "height": 100
+                        },
+                        "snappedFrame": {
+                          "left": 982,
+                          "top": 535,
+                          "width": 856,
+                          "height": 100
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.3.0",
+                            "kind": "text",
+                            "name": "nnunet-position",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 30
+                            },
+                            "frame": {
+                              "left": 1006,
+                              "top": 555,
+                              "width": 808,
+                              "height": 60
+                            },
+                            "snappedFrame": {
+                              "left": 1006,
+                              "top": 556,
+                              "width": 808,
+                              "height": 60
+                            },
+                            "children": [],
+                            "text": "Project position: keep nnU-Net v2 as the baseline, then test task-oriented structural changes for fine vessels.",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/0rqd4vmt",
+                              "id": "28",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 20,
+                          "right": 24,
+                          "bottom": 20,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1006,
+                          "top": 555,
+                          "width": 808,
+                          "height": 60
+                        },
+                        "element": {
+                          "aid": "sh/bi9s36hc",
+                          "id": "27",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.4",
+                        "kind": "text",
+                        "name": "nnunet-closing",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 26.4
+                        },
+                        "frame": {
+                          "left": 982,
+                          "top": 653,
+                          "width": 856,
+                          "height": 52.8
+                        },
+                        "snappedFrame": {
+                          "left": 982,
+                          "top": 654,
+                          "width": 856,
+                          "height": 54
+                        },
+                        "children": [],
+                        "text": "This makes the later comparison stricter: useful gains must appear on top of an already strong framework.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/tcj6tova",
+                          "id": "29",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 18,
+                    "effectiveGap": 18,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 982,
+                      "top": 223,
+                      "width": 856,
+                      "height": 799
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "frame": {
+                          "left": 982,
+                          "top": 223,
+                          "width": 856,
+                          "height": 44
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "frame": {
+                          "left": 982,
+                          "top": 285,
+                          "width": 856,
+                          "height": 72
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "frame": {
+                          "left": 982,
+                          "top": 375,
+                          "width": 856,
+                          "height": 142
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.3",
+                        "frame": {
+                          "left": 982,
+                          "top": 535,
+                          "width": 856,
+                          "height": 100
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.4",
+                        "frame": {
+                          "left": 982,
+                          "top": 653,
+                          "width": 856,
+                          "height": 52.8
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 44,
+                "rowGap": 0,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  856,
+                  856
+                ],
+                "rowSizes": [
+                  799
+                ],
+                "cells": [
+                  {
+                    "path": "0.0.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 82,
+                      "top": 223,
+                      "width": 856,
+                      "height": 799
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 982,
+                      "top": 223,
+                      "width": 856,
+                      "height": 799
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 58,
+              "right": 82,
+              "bottom": 58,
+              "left": 82
+            },
+            "gap": 28,
+            "effectiveGap": 28,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 82,
+              "top": 58,
+              "width": 1756,
+              "height": 964
+            },
+            "items": [
+              {
+                "path": "0.0.0",
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                }
+              },
+              {
+                "path": "0.0.1",
+                "frame": {
+                  "left": 82,
+                  "top": 223,
+                  "width": 1756,
+                  "height": 799
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "brand-mark-layer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 150
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "text",
+                "name": "brand-spacer",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 1
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "children": [],
+                "text": "",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/j6tovaho",
+                  "id": "30",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.1.1",
+                "kind": "image",
+                "name": "glasgow-college-logo",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "snappedFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "contain",
+                "alt": "Glasgow College UESTC logo",
+                "element": {
+                  "aid": "im/d8bat47y",
+                  "id": "31",
+                  "kind": "image"
+                }
+              }
+            ],
+            "padding": {
+              "top": 34,
+              "right": 82,
+              "bottom": 34,
+              "left": 82
+            },
+            "columnGap": 0,
+            "rowGap": 0,
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 82,
+              "top": 34,
+              "width": 1756,
+              "height": 1012
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1
+              },
+              {
+                "mode": "fixed",
+                "value": 238
+              }
+            ],
+            "rows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "columnSizes": [
+              1518,
+              238
+            ],
+            "rowSizes": [
+              82,
+              930
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 82
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

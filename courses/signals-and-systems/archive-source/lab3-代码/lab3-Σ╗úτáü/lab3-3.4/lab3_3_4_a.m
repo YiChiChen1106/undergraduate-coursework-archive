@@ -1,0 +1,38 @@
+clc
+clear all
+n=-20:100;
+x1=exp(1i*pi*n/4);
+x2=sin(pi*n/8+pi/16);
+x3=(9/10).^n;
+x4=n+1;
+figure(1);
+subplot(2,1,1);
+stem(n,real(x1));
+xlabel('n');
+ylabel('The real component of x1[n]');
+title('The figure of the real component of the signal x1[n]');
+grid on;
+subplot(2,1,2);
+stem(n,imag(x1));
+xlabel('n');
+ylabel('The imaginary component of x1[n]');
+title('The figure of the imaginary component of the signal x1[n]');
+grid on;
+figure(2);
+stem(n,x2);
+xlabel('n');
+ylabel('x2[n]');
+title('The figure of the signal x2[n]');
+grid on;
+figure(3);
+stem(n,x3);
+xlabel('n');
+ylabel('x3[n]');
+title('The figure of the signal x3[n]');
+grid on;
+figure(4);
+stem(n,x4);
+xlabel('n');
+ylabel('x4[n]');
+title('The figure of the signal x4[n]');
+grid on;

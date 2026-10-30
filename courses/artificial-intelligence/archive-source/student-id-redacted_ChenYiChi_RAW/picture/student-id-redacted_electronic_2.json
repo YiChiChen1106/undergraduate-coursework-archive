@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "electronic",
+      "points": [
+        [
+          409.579831932773,
+          17.31092436974792
+        ],
+        [
+          1563.361344537815,
+          1071.09243697479
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "[student-id-redacted]_electronic_2.jpg",
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

@@ -1,0 +1,31 @@
+clc
+clear
+t=[0:0.5:10];
+x=Heaviside(t-2);
+b=1;
+a=[1 2];
+y=lsim(b,a,x,t);
+figure(1);
+plot(t,y,'k--');
+xlabel('t');
+ylabel('y(t)');
+title('The response of dy(t)/dt=-2y(t)+x(t) to x(t)=u(t-2)');
+grid on;
+t1=[0:1:10];
+b1=1;
+a1=[1 2];
+s=step(b1,a1,t1);
+h=impulse(b1,a1,t1);
+figure(2);
+subplot(2,1,1);
+plot(t1,s);
+xlabel('t');
+ylabel('s(t)');
+title('The step response of dy(t)/dt=-2y(t)+x(t)');
+grid on;
+subplot(2,1,2);
+plot(t1,h);
+xlabel('t');
+ylabel('h(t)');
+title('The impulse response of dy(t)/dt=-2y(t)+x(t)');
+grid on;

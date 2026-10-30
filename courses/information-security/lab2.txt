@@ -1,0 +1,246 @@
+% 主程序 - UESTC4036 信息安全实验
+clear; clc; close all; %%% 修改部分: 增加 close all 来关闭旧的绘图窗口
+
+% ==================== 计算密钥 k ====================
+guid1 = [student-id-redacted];
+guid2 = [student-id-redacted];
+sum_guid = guid1 + guid2;
+fprintf('GUID相加结果: %d\n', sum_guid);
+
+current_sum = sum_guid;
+while current_sum >= 25
+    digits = num2str(current_sum) - '0';
+    current_sum = sum(digits);
+    fprintf('各位数字相加: %d\n', current_sum);
+end
+k = current_sum;
+fprintf('最终密钥 k = %d\n\n', k);
+
+% ==================== 主程序执行部分 ====================
+
+% 明文文本
+plaintext = ['In this section and the next, we examine a sampling of what might be called classical ', ...
+             'encryption techniques. A study of these techniques enables us to illustrate the basic ', ...
+             'approaches to symmetric encryption used today and the types of cryptanalytic attacks ', ...
+             'that must be anticipated. The two basic building blocks of all encryption techniques ', ...
+             'are substitution and transposition. We examine these in the next two sections. Finally, ', ...
+             'we discuss a system that combines both substitution and transposition.A substitution ', ...
+             'technique is one in which the letters of plaintext are replaced by other letters or by ', ...
+             'numbers or symbols. If the plaintext is viewed as a sequence of bits, then substitution ', ...
+             'involves replacing plaintext bit patterns with ciphertext bit patterns.'];
+
+% 任务1: 加密
+ciphertext = caesar_encrypt(plaintext, k);
+fprintf('=== 任务1: 凯撒密码加密 ===\n');
+fprintf('加密结果(前200个字符):\n');
+disp(ciphertext(1:200));
+fprintf('\n');
+
+% 任务2: 暴力破解
+fprintf('=== 任务2: 暴力破解凯撒密码 ===\n');
+brute_force_caesar(ciphertext(1:100));
+fprintf('\n');
+
+% 任务3: 频率分析
+fprintf('=== 任务3: 频率分析破解 ===\n');
+% 1. 分析明文并绘图
+analyze_and_plot_frequency(plaintext, 'Plaintext');
+% 2. 分析密文并绘图
+analyze_and_plot_frequency(ciphertext, 'Ciphertext');
+% 3. 密码破解分析
+frequency_analysis_crack(ciphertext);
+fprintf('\n');
+
+% 任务4: Playfair矩阵生成
+fprintf('=== 任务4: Playfair矩阵生成 ===\n'); %%% 修改部分: 任务标题修正为4
+
+%%% 新增部分: 补充手册要求的关键词 "exceeding" %%%
+fprintf('关键词 "exceeding" 生成的Playfair矩阵:\n');
+matrix_exceeding = generate_playfair_matrix('exceeding');
+disp(matrix_exceeding);
+fprintf('\n');
+
+fprintf('关键词 "Security" 生成的Playfair矩阵:\n');
+matrix1 = generate_playfair_matrix('Security');
+disp(matrix1);
+fprintf('\n');
+
+fprintf('姓名 "JiangHaozhe" 生成的Playfair矩阵:\n');
+matrix2 = generate_playfair_matrix('JiangHaozhe');
+disp(matrix2);
+fprintf('\n');
+
+% 验证加密和解密
+fprintf('=== 加密解密验证 ===\n');
+test_text = 'hello world';
+encrypted = caesar_encrypt(test_text, k);
+fprintf('原文: %s\n', test_text);
+fprintf('加密: %s\n', encrypted);
+decrypted = caesar_decrypt(encrypted, k);
+fprintf('解密: %s\n', decrypted);
+fprintf('解密是否正确: %s\n', string(strcmp(test_text, decrypted)));
+
+% ==================== 函数定义部分 ====================
+
+function ciphertext = caesar_encrypt(plaintext, k)
+    % 凯撒加密函数
+    plaintext = lower(plaintext);
+    ciphertext = '';
+    
+    for i = 1:length(plaintext)
+        char_i = plaintext(i);
+        
+        if char_i >= 'a' && char_i <= 'z'
+            p = char_i - 'a';
+            c = mod(p + k, 26);
+            cipher_char = char('a' + c);
+            ciphertext = [ciphertext, cipher_char];
+        else
+            ciphertext = [ciphertext, char_i];
+        end
+    end
+end
+
+function brute_force_caesar(ciphertext)
+    % 暴力破解函数
+    fprintf('开始暴力破解凯撒密码...\n\n');
+    
+    for test_k = 1:25
+        decrypted_text = caesar_decrypt(ciphertext, test_k); % 使用解密函数简化代码
+        
+        % 显示所有结果或只显示部分
+        if test_k <= 5 || test_k == 12 || test_k == 25
+            fprintf('k = %2d: %s\n\n', test_k, decrypted_text(1:min(100, length(decrypted_text))));
+        end
+    end
+    
+    fprintf('暴力破解完成。请检查 k=12 的结果是否为有意义的文本。\n');
+end
+
+%%% 新增部分: 用于频率统计和绘图的通用函数 %%%
+function analyze_and_plot_frequency(text_input, title_text)
+    % 该函数统计给定文本的字母频率并绘制条形图
+    
+    % 统计字母频率
+    letter_count = zeros(1, 26);
+    total_letters = 0;
+    text_input = lower(text_input);
+    
+    for i = 1:length(text_input)
+        char_i = text_input(i);
+        if char_i >= 'a' && char_i <= 'z'
+            index = char_i - 'a' + 1;
+            letter_count(index) = letter_count(index) + 1;
+            total_letters = total_letters + 1;
+        end
+    end
+    
+    % 计算频率百分比
+    frequency = (letter_count / total_letters) * 100;
+    
+    % 绘制条形图
+    figure; % 创建一个新的图形窗口
+    bar(frequency);
+    title(['Frequency Analysis of ', title_text]);
+    xlabel('Alphabet');
+    ylabel('Frequency (%)');
+    xticks(1:26);
+    xticklabels('a':'z');
+    grid on;
+    
+    fprintf('已生成 "%s" 的频率分析条形图。\n', title_text);
+end
+
+%%% 修改部分: 将原有的 frequency_analysis 函数拆分为两个，这个用于破解 %%%
+function frequency_analysis_crack(ciphertext)
+    % 频率分析破解函数
+    fprintf('开始频率分析破解...\n');
+    
+    % 统计字母频率
+    letter_count = zeros(1, 26);
+    total_letters = 0;
+    
+    for i = 1:length(ciphertext)
+        char_i = ciphertext(i);
+        if char_i >= 'a' && char_i <= 'z'
+            index = char_i - 'a' + 1;
+            letter_count(index) = letter_count(index) + 1;
+            total_letters = total_letters + 1;
+        end
+    end
+    
+    frequency = (letter_count / total_letters) * 100;
+    
+    % 找到出现频率最高的字母
+    [max_freq, max_index] = max(frequency);
+    most_frequent_char = char('a' + max_index - 1);
+    fprintf('密文中出现频率最高的字母: %c (%.2f%%)\n', most_frequent_char, max_freq);
+    
+    % 假设英语中最常见的字母是'e'，计算k值
+    k_guess1 = mod((most_frequent_char - 'a') - ('e' - 'a'), 26);
+    fprintf('假设 %c 对应 e, 推测 k = %d\n', most_frequent_char, k_guess1);
+    
+    % 假设英语中第二常见的字母是't'，计算k值
+    k_guess2 = mod((most_frequent_char - 'a') - ('t' - 'a'), 26);
+    fprintf('假设 %c 对应 t, 推测 k = %d\n', most_frequent_char, k_guess2);
+    
+    % 使用推测的k值进行解密
+    fprintf('\n使用推测的k值解密:\n');
+    decrypted1 = caesar_decrypt(ciphertext(1:100), k_guess1);
+    fprintf('k=%d: %s\n\n', k_guess1, decrypted1);
+    
+    decrypted2 = caesar_decrypt(ciphertext(1:100), k_guess2);
+    fprintf('k=%d: %s\n\n', k_guess2, decrypted2);
+    
+    fprintf('频率分析破解完成。请检查哪个k值能产生有意义的文本。\n');
+end
+
+function playfair_matrix = generate_playfair_matrix(keyword)
+    % Playfair矩阵生成函数
+    keyword = upper(strrep(keyword, ' ', ''));
+    keyword = strrep(keyword, 'J', 'I');
+    alphabet = 'ABCDEFGHIKLMNOPQRSTUVWXYZ';
+    
+    matrix_str = '';
+    
+    % 添加关键词字母（去除重复）
+    for i = 1:length(keyword)
+        current_char = keyword(i);
+        if ~contains(matrix_str, current_char)
+            matrix_str = [matrix_str, current_char];
+        end
+    end
+    
+    % 添加字母表中剩余的字母
+    for i = 1:length(alphabet)
+        current_char = alphabet(i);
+        if ~contains(matrix_str, current_char)
+            matrix_str = [matrix_str, current_char];
+        end
+    end
+    
+    % 重塑为5x5矩阵
+    playfair_matrix = reshape(matrix_str, 5, 5)';
+end
+
+function decrypted_text = caesar_decrypt(ciphertext, k)
+    % 凯撒解密函数
+    ciphertext = lower(ciphertext);
+    decrypted_text = '';
+    
+    for i = 1:length(ciphertext)
+        char_i = ciphertext(i);
+        
+        if char_i >= 'a' && char_i <= 'z'
+            c = char_i - 'a';
+            p = mod(c - k, 26);
+            if p < 0
+                p = p + 26;
+            end
+            decrypted_char = char('a' + p);
+            decrypted_text = [decrypted_text, decrypted_char];
+        else
+            decrypted_text = [decrypted_text, char_i];
+        end
+    end
+end

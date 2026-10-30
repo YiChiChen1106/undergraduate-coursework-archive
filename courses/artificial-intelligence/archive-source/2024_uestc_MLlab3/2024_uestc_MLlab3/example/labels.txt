@@ -1,0 +1,6 @@
+__ignore__
+bottle
+metal
+glass
+paper
+cardboard

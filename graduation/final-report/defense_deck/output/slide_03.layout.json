@@ -1,0 +1,3207 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ipn120",
+    "id": "ipn120",
+    "slide": 3,
+    "layoutId": "2042a543-9850-4cab-9138-76ceac1c0217",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2042a543-9850-4cab-9138-76ceac1c0217",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83itgfml",
+      "id": "1",
+      "name": "slide-kicker",
+      "bbox": [
+        82,
+        58,
+        1756,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "Problem definition",
+      "textPreview": "Problem definition",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Problem definition"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Problem definition",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Problem definition",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fil0rqd4",
+      "id": "2",
+      "name": "slide-title",
+      "bbox": [
+        82,
+        92,
+        1756,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Task Challenges in Fine Vessel Segmentation",
+      "textPreview": "Task Challenges in Fine Vessel Segmentation",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "fontSize": 48,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Task Challenges in Fine Vessel Segmentation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Task Challenges in Fine Vessel Segmentation",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Task Challenges in Fine Vessel Segmentation",
+              "fontSize": 48,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxs72x4n",
+      "id": "3",
+      "name": "title-rule",
+      "bbox": [
+        82,
+        160,
+        180,
+        5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0nuxc3y",
+      "id": "4",
+      "name": "slide-cue",
+      "bbox": [
+        82,
+        174,
+        1756,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.3"
+      },
+      "geometry": "rect",
+      "text": "Talk track: Fine vessels have low contrast and complex shapes, so recovery and false-positive control must be balanced.",
+      "textPreview": "Talk track: Fine vessels have low contrast and complex shapes, so recovery and false-positive control must be balanced.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Talk track: Fine vessels have low contrast and complex shapes, so recovery and false-positive control must be balanced."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Talk track: Fine vessels have low contrast and complex shapes, so recovery and false-positive control must be balanced.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Talk track: Fine vessels have low contrast and complex shapes, so recovery and false-positive control must be balanced.",
+              "fontSize": 17,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fu18jqh",
+      "id": "5",
+      "name": "challenge-original-panel",
+      "bbox": [
+        82,
+        274.5,
+        854,
+        340
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#DDE3EF",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/epkzupwb",
+      "id": "6",
+      "name": "orig-image",
+      "bbox": [
+        102,
+        294,
+        300,
+        300
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.0.0.0"
+      },
+      "alt": "Original fundus image",
+      "contentType": "image/jpeg",
+      "asset": {
+        "assetId": "e58e20b4-4e90-4337-8e1a-13ebd370b444",
+        "contentType": "image/jpeg",
+        "byteLength": 13050
+      }
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m94fu18j",
+      "id": "7",
+      "name": "challenge-original-label",
+      "bbox": [
+        424,
+        400,
+        492,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.0.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Original fundus image",
+      "textPreview": "Original fundus image",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Original fundus image"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Original fundus image",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Original fundus image",
+              "fontSize": 25,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xc3ylc7u",
+      "id": "8",
+      "name": "challenge-original-desc",
+      "bbox": [
+        424,
+        438,
+        492,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.0.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Fine peripheral vessels are weak and partly hidden by background texture.",
+      "textPreview": "Fine peripheral vessels are weak and partly hidden by background texture.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fine peripheral vessels are weak and partly hidden by"
+          },
+          {
+            "index": 2,
+            "text": "background texture."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fine peripheral vessels are weak and partly hidden by background texture.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fine peripheral vessels are weak and partly hidden by background texture.",
+              "fontSize": 20,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4r65wjud",
+      "id": "9",
+      "name": "challenge-clahe-panel",
+      "bbox": [
+        82,
+        636.5,
+        854,
+        340
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#E3ECF8",
+      "lineColor": "#E3ECF8",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/9w3m94fu",
+      "id": "10",
+      "name": "clahe-image",
+      "bbox": [
+        102,
+        656,
+        300,
+        300
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.1.0.0"
+      },
+      "alt": "Contrast-enhanced fundus image",
+      "contentType": "image/jpeg",
+      "asset": {
+        "assetId": "748a4806-9f77-4889-9b1f-e7a07040bf17",
+        "contentType": "image/jpeg",
+        "byteLength": 21145
+      }
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/za1gvy90",
+      "id": "11",
+      "name": "challenge-clahe-label",
+      "bbox": [
+        424,
+        762,
+        492,
+        30
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "Contrast-enhanced view",
+      "textPreview": "Contrast-enhanced view",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Contrast-enhanced view"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Contrast-enhanced view",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Contrast-enhanced view",
+              "fontSize": 25,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/svu9knih",
+      "id": "12",
+      "name": "challenge-clahe-desc",
+      "bbox": [
+        424,
+        800,
+        492,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Preprocessing can make vessels clearer, but segmentation still needs structural modeling.",
+      "textPreview": "Preprocessing can make vessels clearer, but segmentation still needs structural modeling.",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Preprocessing can make vessels clearer, but segmentation"
+          },
+          {
+            "index": 2,
+            "text": "still needs structural modeling."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Preprocessing can make vessels clearer, but segmentation still needs structural modeling.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Preprocessing can make vessels clearer, but segmentation still needs structural modeling.",
+              "fontSize": 20,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgn29gr2",
+      "id": "13",
+      "name": "bullet-dot-0",
+      "bbox": [
+        984,
+        400,
+        22,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "•",
+      "textPreview": "•",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "•",
+          "runs": [
+            {
+              "index": 1,
+              "text": "•",
+              "fontSize": 28,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a1gvy90j",
+      "id": "14",
+      "name": "bullet-text-0",
+      "bbox": [
+        1020,
+        400,
+        818,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Thin peripheral vessels are low-contrast and easily confused with background texture.",
+      "textPreview": "Thin peripheral vessels are low-contrast and easily confused with background texture.",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Thin peripheral vessels are low-contrast and easily confused with"
+          },
+          {
+            "index": 2,
+            "text": "background texture."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Thin peripheral vessels are low-contrast and easily confused with background texture.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Thin peripheral vessels are low-contrast and easily confused with background texture.",
+              "fontSize": 28,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zidonyd0",
+      "id": "15",
+      "name": "bullet-dot-1",
+      "bbox": [
+        984,
+        484,
+        22,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.1.0"
+      },
+      "geometry": "rect",
+      "text": "•",
+      "textPreview": "•",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "•",
+          "runs": [
+            {
+              "index": 1,
+              "text": "•",
+              "fontSize": 28,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s36hcrmh",
+      "id": "16",
+      "name": "bullet-text-1",
+      "bbox": [
+        1020,
+        484,
+        818,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.1.1"
+      },
+      "geometry": "rect",
+      "text": "Curved branches, bifurcations, and local discontinuities require structural continuity modeling.",
+      "textPreview": "Curved branches, bifurcations, and local discontinuities require structural continuity modeling.",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Curved branches, bifurcations, and local discontinuities require"
+          },
+          {
+            "index": 2,
+            "text": "structural continuity modeling."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Curved branches, bifurcations, and local discontinuities require structural continuity modeling.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Curved branches, bifurcations, and local discontinuities require structural continuity modeling.",
+              "fontSize": 28,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hoza1gvy",
+      "id": "17",
+      "name": "bullet-dot-2",
+      "bbox": [
+        984,
+        568,
+        22,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.2.0"
+      },
+      "geometry": "rect",
+      "text": "•",
+      "textPreview": "•",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "•",
+          "runs": [
+            {
+              "index": 1,
+              "text": "•",
+              "fontSize": 28,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a5gbq1or",
+      "id": "18",
+      "name": "bullet-text-2",
+      "bbox": [
+        1020,
+        568,
+        818,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.2.1"
+      },
+      "geometry": "rect",
+      "text": "Higher sensitivity often introduces scattered false positives, so SE and PR must be balanced.",
+      "textPreview": "Higher sensitivity often introduces scattered false positives, so SE and PR must be balanced.",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Higher sensitivity often introduces scattered false positives, so SE and"
+          },
+          {
+            "index": 2,
+            "text": "PR must be balanced."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Higher sensitivity often introduces scattered false positives, so SE and PR must be balanced.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Higher sensitivity often introduces scattered false positives, so SE and PR must be balanced.",
+              "fontSize": 28,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3m94fu18",
+      "id": "19",
+      "name": "bullet-dot-3",
+      "bbox": [
+        984,
+        650,
+        22,
+        34
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.3.0"
+      },
+      "geometry": "rect",
+      "text": "•",
+      "textPreview": "•",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "•"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "•",
+          "runs": [
+            {
+              "index": 1,
+              "text": "•",
+              "fontSize": 28,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vixczed8",
+      "id": "20",
+      "name": "bullet-text-3",
+      "bbox": [
+        1020,
+        650,
+        818,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.3.1"
+      },
+      "geometry": "rect",
+      "text": "A mature baseline such as nnU-Net leaves limited room for superficial improvements.",
+      "textPreview": "A mature baseline such as nnU-Net leaves limited room for superficial improvements.",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A mature baseline such as nnU-Net leaves limited room for superficial"
+          },
+          {
+            "index": 2,
+            "text": "improvements."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A mature baseline such as nnU-Net leaves limited room for superficial improvements.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "A mature baseline such as nnU-Net leaves limited room for superficial improvements.",
+              "fontSize": 28,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2x4nap4r",
+      "id": "21",
+      "name": "challenge-emphasis",
+      "bbox": [
+        984,
+        745.5,
+        854,
+        104.8
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#EAF1F9",
+      "lineColor": "#EAF1F9",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/donyd0z6",
+      "id": "22",
+      "name": "challenge-emphasis-text",
+      "bbox": [
+        1008,
+        766,
+        806,
+        66
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1.0"
+      },
+      "geometry": "rect",
+      "text": "Core research question: what structural changes still produce useful gains on top of nnU-Net?",
+      "textPreview": "Core research question: what structural changes still produce useful gains on top of nnU-Net?",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "fontSize": 27,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Core research question: what structural changes still produce useful"
+          },
+          {
+            "index": 2,
+            "text": "gains on top of nnU-Net?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Core research question: what structural changes still produce useful gains on top of nnU-Net?",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Core research question: what structural changes still produce useful gains on top of nnU-Net?",
+              "fontSize": 27,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3q5o7qp",
+      "id": "23",
+      "name": "brand-spacer",
+      "bbox": [
+        82,
+        34,
+        1518,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 1,
+      "resolvedTextStyle": {
+        "fontSize": 75,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 24,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/wfyxobm5",
+      "id": "24",
+      "name": "glasgow-college-logo",
+      "bbox": [
+        1600,
+        34,
+        238,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1"
+      },
+      "alt": "Glasgow College UESTC logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "df01c8aa-fb57-4172-a067-1888a1173f7b",
+        "contentType": "image/png",
+        "byteLength": 281917
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "branded-slide-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "column",
+            "name": "slide3-root",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 164,
+              "height": 287
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.0.0",
+                "kind": "column",
+                "name": "title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 180,
+                  "height": 137
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "children": [
+                  {
+                    "path": "0.0.0.0",
+                    "kind": "text",
+                    "name": "slide-kicker",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "Problem definition",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/83itgfml",
+                      "id": "1",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "kind": "text",
+                    "name": "slide-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 57.6
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 58
+                    },
+                    "children": [],
+                    "text": "Task Challenges in Fine Vessel Segmentation",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/fil0rqd4",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "kind": "rule",
+                    "name": "title-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 180
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 180,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 160,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "children": [],
+                    "weight": 5,
+                    "element": {
+                      "aid": "sh/qxs72x4n",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "kind": "text",
+                    "name": "slide-cue",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 20.4
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 174,
+                      "width": 1756,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "Talk track: Fine vessels have low contrast and complex shapes, so recovery and false-positive control must be balanced.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/x0nuxc3y",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 10,
+                "effectiveGap": 10,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                },
+                "items": [
+                  {
+                    "path": "0.0.0.0",
+                    "frame": {
+                      "left": 82,
+                      "top": 58,
+                      "width": 1756,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "frame": {
+                      "left": 82,
+                      "top": 92,
+                      "width": 1756,
+                      "height": 57.6
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "frame": {
+                      "left": 82,
+                      "top": 159.6,
+                      "width": 180,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "frame": {
+                      "left": 82,
+                      "top": 174.6,
+                      "width": 1756,
+                      "height": 20.4
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.0.1",
+                "kind": "grid",
+                "name": "challenge-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 48,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 229,
+                  "width": 1756,
+                  "height": 793
+                },
+                "children": [
+                  {
+                    "path": "0.0.1.0",
+                    "kind": "column",
+                    "name": "challenge-images",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 702
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 229,
+                      "width": 854,
+                      "height": 793
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.0.0",
+                        "kind": "panel",
+                        "name": "challenge-original-panel",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 340
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 40,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 82,
+                          "top": 274.5,
+                          "width": 854,
+                          "height": 340
+                        },
+                        "snappedFrame": {
+                          "left": 82,
+                          "top": 274.5,
+                          "width": 854,
+                          "height": 340
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.0.0.0",
+                            "kind": "row",
+                            "name": "challenge-original-row",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "fill",
+                                "value": 1
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 322,
+                              "height": 300
+                            },
+                            "frame": {
+                              "left": 102,
+                              "top": 292.5,
+                              "width": 814,
+                              "height": 304
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.0.0.0.0",
+                                "kind": "image",
+                                "name": "orig-image",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 300
+                                  },
+                                  "height": {
+                                    "mode": "fixed",
+                                    "value": 300
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 300,
+                                  "height": 300
+                                },
+                                "frame": {
+                                  "left": 102,
+                                  "top": 294,
+                                  "width": 300,
+                                  "height": 300
+                                },
+                                "snappedFrame": {
+                                  "left": 102,
+                                  "top": 294,
+                                  "width": 300,
+                                  "height": 300
+                                },
+                                "children": [],
+                                "source": {
+                                  "kind": "dataUrl"
+                                },
+                                "fit": "cover",
+                                "alt": "Original fundus image",
+                                "element": {
+                                  "aid": "im/epkzupwb",
+                                  "id": "6",
+                                  "kind": "image"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.0.0.1",
+                                "kind": "column",
+                                "name": "challenge-original-copy",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 62
+                                },
+                                "frame": {
+                                  "left": 424,
+                                  "top": 400,
+                                  "width": 492,
+                                  "height": 88
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.0.1.0.0.0.1.0",
+                                    "kind": "text",
+                                    "name": "challenge-original-label",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 30
+                                    },
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 400,
+                                      "width": 492,
+                                      "height": 30
+                                    },
+                                    "snappedFrame": {
+                                      "left": 424,
+                                      "top": 400,
+                                      "width": 492,
+                                      "height": 30
+                                    },
+                                    "children": [],
+                                    "text": "Original fundus image",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/m94fu18j",
+                                      "id": "7",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.0.0.0.1.1",
+                                    "kind": "text",
+                                    "name": "challenge-original-desc",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 24
+                                    },
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 438,
+                                      "width": 492,
+                                      "height": 48
+                                    },
+                                    "snappedFrame": {
+                                      "left": 424,
+                                      "top": 438,
+                                      "width": 492,
+                                      "height": 48
+                                    },
+                                    "children": [],
+                                    "text": "Fine peripheral vessels are weak and partly hidden by background texture.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/xc3ylc7u",
+                                      "id": "8",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 8,
+                                "effectiveGap": 8,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 424,
+                                  "top": 400,
+                                  "width": 492,
+                                  "height": 88
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.0.1.0.0.0.1.0",
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 400,
+                                      "width": 492,
+                                      "height": 30
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.0.0.0.1.1",
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 438,
+                                      "width": 492,
+                                      "height": 48
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 22,
+                            "effectiveGap": 22,
+                            "justifyOffset": 0,
+                            "align": "center",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 102,
+                              "top": 292.5,
+                              "width": 814,
+                              "height": 304
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.0.0.0.0",
+                                "frame": {
+                                  "left": 102,
+                                  "top": 294,
+                                  "width": 300,
+                                  "height": 300
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.0.0.1",
+                                "frame": {
+                                  "left": 424,
+                                  "top": 400,
+                                  "width": 492,
+                                  "height": 88
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 18,
+                          "right": 20,
+                          "bottom": 18,
+                          "left": 20
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 102,
+                          "top": 292.5,
+                          "width": 814,
+                          "height": 304
+                        },
+                        "element": {
+                          "aid": "sh/4fu18jqh",
+                          "id": "5",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.1",
+                        "kind": "panel",
+                        "name": "challenge-clahe-panel",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 340
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 40,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 82,
+                          "top": 636.5,
+                          "width": 854,
+                          "height": 340
+                        },
+                        "snappedFrame": {
+                          "left": 82,
+                          "top": 636.5,
+                          "width": 854,
+                          "height": 340
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.0.1.0",
+                            "kind": "row",
+                            "name": "challenge-clahe-row",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "fill",
+                                "value": 1
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 322,
+                              "height": 300
+                            },
+                            "frame": {
+                              "left": 102,
+                              "top": 654.5,
+                              "width": 814,
+                              "height": 304
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.0.1.0.0",
+                                "kind": "image",
+                                "name": "clahe-image",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 300
+                                  },
+                                  "height": {
+                                    "mode": "fixed",
+                                    "value": 300
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 300,
+                                  "height": 300
+                                },
+                                "frame": {
+                                  "left": 102,
+                                  "top": 656,
+                                  "width": 300,
+                                  "height": 300
+                                },
+                                "snappedFrame": {
+                                  "left": 102,
+                                  "top": 656,
+                                  "width": 300,
+                                  "height": 300
+                                },
+                                "children": [],
+                                "source": {
+                                  "kind": "dataUrl"
+                                },
+                                "fit": "cover",
+                                "alt": "Contrast-enhanced fundus image",
+                                "element": {
+                                  "aid": "im/9w3m94fu",
+                                  "id": "10",
+                                  "kind": "image"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.1.0.1",
+                                "kind": "column",
+                                "name": "challenge-clahe-copy",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 62
+                                },
+                                "frame": {
+                                  "left": 424,
+                                  "top": 762,
+                                  "width": 492,
+                                  "height": 88
+                                },
+                                "children": [
+                                  {
+                                    "path": "0.0.1.0.1.0.1.0",
+                                    "kind": "text",
+                                    "name": "challenge-clahe-label",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 30
+                                    },
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 762,
+                                      "width": 492,
+                                      "height": 30
+                                    },
+                                    "snappedFrame": {
+                                      "left": 424,
+                                      "top": 762,
+                                      "width": 492,
+                                      "height": 30
+                                    },
+                                    "children": [],
+                                    "text": "Contrast-enhanced view",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/za1gvy90",
+                                      "id": "11",
+                                      "kind": "shape"
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.0.1.0.1.1",
+                                    "kind": "text",
+                                    "name": "challenge-clahe-desc",
+                                    "requestedSize": {
+                                      "width": {
+                                        "mode": "fill",
+                                        "value": 1
+                                      },
+                                      "height": {
+                                        "mode": "hug"
+                                      }
+                                    },
+                                    "intrinsicSize": {
+                                      "width": 0,
+                                      "height": 24
+                                    },
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 800,
+                                      "width": 492,
+                                      "height": 48
+                                    },
+                                    "snappedFrame": {
+                                      "left": 424,
+                                      "top": 800,
+                                      "width": 492,
+                                      "height": 48
+                                    },
+                                    "children": [],
+                                    "text": "Preprocessing can make vessels clearer, but segmentation still needs structural modeling.",
+                                    "transform": "none",
+                                    "element": {
+                                      "aid": "sh/svu9knih",
+                                      "id": "12",
+                                      "kind": "shape"
+                                    }
+                                  }
+                                ],
+                                "padding": {
+                                  "top": 0,
+                                  "right": 0,
+                                  "bottom": 0,
+                                  "left": 0
+                                },
+                                "gap": 8,
+                                "effectiveGap": 8,
+                                "justifyOffset": 0,
+                                "align": "start",
+                                "justify": "start",
+                                "contentFrame": {
+                                  "left": 424,
+                                  "top": 762,
+                                  "width": 492,
+                                  "height": 88
+                                },
+                                "items": [
+                                  {
+                                    "path": "0.0.1.0.1.0.1.0",
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 762,
+                                      "width": 492,
+                                      "height": 30
+                                    }
+                                  },
+                                  {
+                                    "path": "0.0.1.0.1.0.1.1",
+                                    "frame": {
+                                      "left": 424,
+                                      "top": 800,
+                                      "width": 492,
+                                      "height": 48
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 22,
+                            "effectiveGap": 22,
+                            "justifyOffset": 0,
+                            "align": "center",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 102,
+                              "top": 654.5,
+                              "width": 814,
+                              "height": 304
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.0.1.0.0",
+                                "frame": {
+                                  "left": 102,
+                                  "top": 656,
+                                  "width": 300,
+                                  "height": 300
+                                }
+                              },
+                              {
+                                "path": "0.0.1.0.1.0.1",
+                                "frame": {
+                                  "left": 424,
+                                  "top": 762,
+                                  "width": 492,
+                                  "height": 88
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 18,
+                          "right": 20,
+                          "bottom": 18,
+                          "left": 20
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 102,
+                          "top": 654.5,
+                          "width": 814,
+                          "height": 304
+                        },
+                        "element": {
+                          "aid": "sh/4r65wjud",
+                          "id": "9",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 22,
+                    "effectiveGap": 22,
+                    "justifyOffset": 45.5,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 82,
+                      "top": 229,
+                      "width": 854,
+                      "height": 793
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.0.0",
+                        "frame": {
+                          "left": 82,
+                          "top": 274.5,
+                          "width": 854,
+                          "height": 340
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.1",
+                        "frame": {
+                          "left": 82,
+                          "top": 636.5,
+                          "width": 854,
+                          "height": 340
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "kind": "column",
+                    "name": "challenge-copy",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 282.8
+                    },
+                    "frame": {
+                      "left": 984,
+                      "top": 229,
+                      "width": 854,
+                      "height": 793
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "kind": "column",
+                        "name": "bullet-list",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 182.4
+                        },
+                        "frame": {
+                          "left": 984,
+                          "top": 400.7,
+                          "width": 854,
+                          "height": 316.8
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "kind": "row",
+                            "name": "bullet-0",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 36,
+                              "height": 33.6
+                            },
+                            "frame": {
+                              "left": 984,
+                              "top": 400.7,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.0.0.0",
+                                "kind": "text",
+                                "name": "bullet-dot-0",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 22
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 984,
+                                  "top": 400.7,
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "snappedFrame": {
+                                  "left": 984,
+                                  "top": 400,
+                                  "width": 22,
+                                  "height": 34
+                                },
+                                "children": [],
+                                "text": "•",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/hgn29gr2",
+                                  "id": "13",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.0.1",
+                                "kind": "text",
+                                "name": "bullet-text-0",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 400.7,
+                                  "width": 818,
+                                  "height": 67.2
+                                },
+                                "snappedFrame": {
+                                  "left": 1020,
+                                  "top": 400,
+                                  "width": 818,
+                                  "height": 68
+                                },
+                                "children": [],
+                                "text": "Thin peripheral vessels are low-contrast and easily confused with background texture.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/a1gvy90j",
+                                  "id": "14",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 14,
+                            "effectiveGap": 14,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 984,
+                              "top": 400.7,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.1.0.0.0",
+                                "frame": {
+                                  "left": 984,
+                                  "top": 400.7,
+                                  "width": 22,
+                                  "height": 33.6
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.0.1",
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 400.7,
+                                  "width": 818,
+                                  "height": 67.2
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "kind": "row",
+                            "name": "bullet-1",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 36,
+                              "height": 33.6
+                            },
+                            "frame": {
+                              "left": 984,
+                              "top": 483.9,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.0.1.0",
+                                "kind": "text",
+                                "name": "bullet-dot-1",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 22
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 984,
+                                  "top": 483.9,
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "snappedFrame": {
+                                  "left": 984,
+                                  "top": 484,
+                                  "width": 22,
+                                  "height": 34
+                                },
+                                "children": [],
+                                "text": "•",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/zidonyd0",
+                                  "id": "15",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.1.1",
+                                "kind": "text",
+                                "name": "bullet-text-1",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 483.9,
+                                  "width": 818,
+                                  "height": 67.2
+                                },
+                                "snappedFrame": {
+                                  "left": 1020,
+                                  "top": 484,
+                                  "width": 818,
+                                  "height": 68
+                                },
+                                "children": [],
+                                "text": "Curved branches, bifurcations, and local discontinuities require structural continuity modeling.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/s36hcrmh",
+                                  "id": "16",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 14,
+                            "effectiveGap": 14,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 984,
+                              "top": 483.9,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.1.0.1.0",
+                                "frame": {
+                                  "left": 984,
+                                  "top": 483.9,
+                                  "width": 22,
+                                  "height": 33.6
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.1.1",
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 483.9,
+                                  "width": 818,
+                                  "height": 67.2
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "path": "0.0.1.1.0.2",
+                            "kind": "row",
+                            "name": "bullet-2",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 36,
+                              "height": 33.6
+                            },
+                            "frame": {
+                              "left": 984,
+                              "top": 567.1,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.0.2.0",
+                                "kind": "text",
+                                "name": "bullet-dot-2",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 22
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 984,
+                                  "top": 567.1,
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "snappedFrame": {
+                                  "left": 984,
+                                  "top": 568,
+                                  "width": 22,
+                                  "height": 34
+                                },
+                                "children": [],
+                                "text": "•",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/hoza1gvy",
+                                  "id": "17",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.2.1",
+                                "kind": "text",
+                                "name": "bullet-text-2",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 567.1,
+                                  "width": 818,
+                                  "height": 67.2
+                                },
+                                "snappedFrame": {
+                                  "left": 1020,
+                                  "top": 568,
+                                  "width": 818,
+                                  "height": 68
+                                },
+                                "children": [],
+                                "text": "Higher sensitivity often introduces scattered false positives, so SE and PR must be balanced.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/a5gbq1or",
+                                  "id": "18",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 14,
+                            "effectiveGap": 14,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 984,
+                              "top": 567.1,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.1.0.2.0",
+                                "frame": {
+                                  "left": 984,
+                                  "top": 567.1,
+                                  "width": 22,
+                                  "height": 33.6
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.2.1",
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 567.1,
+                                  "width": 818,
+                                  "height": 67.2
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "path": "0.0.1.1.0.3",
+                            "kind": "row",
+                            "name": "bullet-3",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 36,
+                              "height": 33.6
+                            },
+                            "frame": {
+                              "left": 984,
+                              "top": 650.3,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "children": [
+                              {
+                                "path": "0.0.1.1.0.3.0",
+                                "kind": "text",
+                                "name": "bullet-dot-3",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fixed",
+                                    "value": 22
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 984,
+                                  "top": 650.3,
+                                  "width": 22,
+                                  "height": 33.6
+                                },
+                                "snappedFrame": {
+                                  "left": 984,
+                                  "top": 650,
+                                  "width": 22,
+                                  "height": 34
+                                },
+                                "children": [],
+                                "text": "•",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/3m94fu18",
+                                  "id": "19",
+                                  "kind": "shape"
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.3.1",
+                                "kind": "text",
+                                "name": "bullet-text-3",
+                                "requestedSize": {
+                                  "width": {
+                                    "mode": "fill",
+                                    "value": 1
+                                  },
+                                  "height": {
+                                    "mode": "hug"
+                                  }
+                                },
+                                "intrinsicSize": {
+                                  "width": 0,
+                                  "height": 33.6
+                                },
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 650.3,
+                                  "width": 818,
+                                  "height": 67.2
+                                },
+                                "snappedFrame": {
+                                  "left": 1020,
+                                  "top": 650,
+                                  "width": 818,
+                                  "height": 68
+                                },
+                                "children": [],
+                                "text": "A mature baseline such as nnU-Net leaves limited room for superficial improvements.",
+                                "transform": "none",
+                                "element": {
+                                  "aid": "sh/vixczed8",
+                                  "id": "20",
+                                  "kind": "shape"
+                                }
+                              }
+                            ],
+                            "padding": {
+                              "top": 0,
+                              "right": 0,
+                              "bottom": 0,
+                              "left": 0
+                            },
+                            "gap": 14,
+                            "effectiveGap": 14,
+                            "justifyOffset": 0,
+                            "align": "start",
+                            "justify": "start",
+                            "contentFrame": {
+                              "left": 984,
+                              "top": 650.3,
+                              "width": 854,
+                              "height": 67.2
+                            },
+                            "items": [
+                              {
+                                "path": "0.0.1.1.0.3.0",
+                                "frame": {
+                                  "left": 984,
+                                  "top": 650.3,
+                                  "width": 22,
+                                  "height": 33.6
+                                }
+                              },
+                              {
+                                "path": "0.0.1.1.0.3.1",
+                                "frame": {
+                                  "left": 1020,
+                                  "top": 650.3,
+                                  "width": 818,
+                                  "height": 67.2
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 16,
+                        "effectiveGap": 16,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 984,
+                          "top": 400.7,
+                          "width": 854,
+                          "height": 316.8
+                        },
+                        "items": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "frame": {
+                              "left": 984,
+                              "top": 400.7,
+                              "width": 854,
+                              "height": 67.2
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "frame": {
+                              "left": 984,
+                              "top": 483.9,
+                              "width": 854,
+                              "height": 67.2
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.2",
+                            "frame": {
+                              "left": 984,
+                              "top": 567.1,
+                              "width": 854,
+                              "height": 67.2
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.3",
+                            "frame": {
+                              "left": 984,
+                              "top": 650.3,
+                              "width": 854,
+                              "height": 67.2
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "kind": "panel",
+                        "name": "challenge-emphasis",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 48,
+                          "height": 72.4
+                        },
+                        "frame": {
+                          "left": 984,
+                          "top": 745.5,
+                          "width": 854,
+                          "height": 104.8
+                        },
+                        "snappedFrame": {
+                          "left": 984,
+                          "top": 745.5,
+                          "width": 854,
+                          "height": 104.8
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.1.0",
+                            "kind": "text",
+                            "name": "challenge-emphasis-text",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 32.4
+                            },
+                            "frame": {
+                              "left": 1008,
+                              "top": 765.5,
+                              "width": 806,
+                              "height": 64.8
+                            },
+                            "snappedFrame": {
+                              "left": 1008,
+                              "top": 766,
+                              "width": 806,
+                              "height": 66
+                            },
+                            "children": [],
+                            "text": "Core research question: what structural changes still produce useful gains on top of nnU-Net?",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/donyd0z6",
+                              "id": "22",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 20,
+                          "right": 24,
+                          "bottom": 20,
+                          "left": 24
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1008,
+                          "top": 765.5,
+                          "width": 806,
+                          "height": 64.8
+                        },
+                        "element": {
+                          "aid": "sh/2x4nap4r",
+                          "id": "21",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 28,
+                    "effectiveGap": 28,
+                    "justifyOffset": 171.7,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 984,
+                      "top": 229,
+                      "width": 854,
+                      "height": 793
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "frame": {
+                          "left": 984,
+                          "top": 400.7,
+                          "width": 854,
+                          "height": 316.8
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "frame": {
+                          "left": 984,
+                          "top": 745.5,
+                          "width": 854,
+                          "height": 104.8
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 48,
+                "rowGap": 0,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 229,
+                  "width": 1756,
+                  "height": 793
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  854,
+                  854
+                ],
+                "rowSizes": [
+                  793
+                ],
+                "cells": [
+                  {
+                    "path": "0.0.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 82,
+                      "top": 229,
+                      "width": 854,
+                      "height": 793
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 984,
+                      "top": 229,
+                      "width": 854,
+                      "height": 793
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 58,
+              "right": 82,
+              "bottom": 58,
+              "left": 82
+            },
+            "gap": 34,
+            "effectiveGap": 34,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 82,
+              "top": 58,
+              "width": 1756,
+              "height": 964
+            },
+            "items": [
+              {
+                "path": "0.0.0",
+                "frame": {
+                  "left": 82,
+                  "top": 58,
+                  "width": 1756,
+                  "height": 137
+                }
+              },
+              {
+                "path": "0.0.1",
+                "frame": {
+                  "left": 82,
+                  "top": 229,
+                  "width": 1756,
+                  "height": 793
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "brand-mark-layer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 150
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "text",
+                "name": "brand-spacer",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 1
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "children": [],
+                "text": "",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/k3q5o7qp",
+                  "id": "23",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.1.1",
+                "kind": "image",
+                "name": "glasgow-college-logo",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "snappedFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "contain",
+                "alt": "Glasgow College UESTC logo",
+                "element": {
+                  "aid": "im/wfyxobm5",
+                  "id": "24",
+                  "kind": "image"
+                }
+              }
+            ],
+            "padding": {
+              "top": 34,
+              "right": 82,
+              "bottom": 34,
+              "left": 82
+            },
+            "columnGap": 0,
+            "rowGap": 0,
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 82,
+              "top": 34,
+              "width": 1756,
+              "height": 1012
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1
+              },
+              {
+                "mode": "fixed",
+                "value": 238
+              }
+            ],
+            "rows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "columnSizes": [
+              1518,
+              238
+            ],
+            "rowSizes": [
+              82,
+              930
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 82
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+% (1)	Prove the system is not time-invariant
+n=[-10:10];
+x1=[zeros(1,10) 1 zeros(1,10)];
+x2=[zeros(1,8) 1 zeros(1,12)];
+figure(1);
+subplot(2,2,1);
+stem(n,x1);xlabel('n');ylabel('x1[n]');title('The figure of the signal x1[n]');
+grid on;
+subplot(2,2,2);
+stem(n,x2);xlabel('n');ylabel('x2[n]');title('The figure of the signal x[n+2]');
+grid on;
+y1=n.*x1;
+subplot(2,2,3);
+stem(n,y1);xlabel('n');ylabel('y1[n]');title('The figure of the signal y1[n]');
+grid on;
+y2=n.*x2;
+subplot(2,2,4);
+stem(n,y2);xlabel('n');ylabel('y2[n]');title('The figure of the signal y2[n]');
+grid on;
+y3=(n+2).*x2;
+figure(2);
+stem(n,y3);xlabel('n');ylabel('y1[n+2]');title('The figure of the signal y1[n+2]');
+grid on;

@@ -1,0 +1,2115 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/s1uykq",
+    "id": "s1uykq",
+    "slide": 2,
+    "layoutId": "2042a543-9850-4cab-9138-76ceac1c0217",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2042a543-9850-4cab-9138-76ceac1c0217",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/crmhk3q5",
+      "id": "1",
+      "name": "slide-kicker",
+      "bbox": [
+        82,
+        56,
+        1756,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "Clinical value of vessel segmentation",
+      "textPreview": "Clinical value of vessel segmentation",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Clinical value of vessel segmentation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Clinical value of vessel segmentation",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Clinical value of vessel segmentation",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6tovaho",
+      "id": "2",
+      "name": "slide-title",
+      "bbox": [
+        82,
+        90,
+        1756,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Clinical Significance and Use Scenario",
+      "textPreview": "Clinical Significance and Use Scenario",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "fontSize": 48,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Clinical Significance and Use Scenario"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Clinical Significance and Use Scenario",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Clinical Significance and Use Scenario",
+              "fontSize": 48,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ulwval87",
+      "id": "3",
+      "name": "title-rule",
+      "bbox": [
+        82,
+        158,
+        180,
+        5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1kre1w7m",
+      "id": "4",
+      "name": "slide-cue",
+      "bbox": [
+        82,
+        172,
+        1756,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.3"
+      },
+      "geometry": "rect",
+      "text": "Talk track: Fundus imaging is non-invasive; segmentation creates a vessel map for CAD features and doctor review.",
+      "textPreview": "Talk track: Fundus imaging is non-invasive; segmentation creates a vessel map for CAD features and doctor review.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Talk track: Fundus imaging is non-invasive; segmentation creates a vessel map for CAD features and doctor review."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Talk track: Fundus imaging is non-invasive; segmentation creates a vessel map for CAD features and doctor review.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Talk track: Fundus imaging is non-invasive; segmentation creates a vessel map for CAD features and doctor review.",
+              "fontSize": 17,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c3ylc7u5",
+      "id": "5",
+      "name": "clinical-claim",
+      "bbox": [
+        82,
+        216,
+        1756,
+        40
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Clinical support, not automatic diagnosis.",
+      "textPreview": "Clinical support, not automatic diagnosis.",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "fontSize": 32,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Clinical support, not automatic diagnosis."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Clinical support, not automatic diagnosis.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Clinical support, not automatic diagnosis.",
+              "fontSize": 32,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/2t83itgf",
+      "id": "6",
+      "name": "clinical-workflow-miccai",
+      "bbox": [
+        82,
+        275.4,
+        1756,
+        492
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.2"
+      },
+      "alt": "Workflow from fundus image acquisition to vessel segmentation, feature extraction, CAD suggestion, doctor review, and patient management",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "3939cb60-023a-4600-a50c-8854e962af25",
+        "contentType": "image/png",
+        "byteLength": 1096018
+      }
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uxc3ylc7",
+      "id": "7",
+      "name": "stage-fundus",
+      "bbox": [
+        112,
+        790,
+        272,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.3.0"
+      },
+      "geometry": "rect",
+      "text": "Fundus\nImage",
+      "textPreview": "Fundus | Image",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fundus"
+          },
+          {
+            "index": 2,
+            "text": "Image"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fundus",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fundus",
+              "fontSize": 20,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "text": "Image",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Image",
+              "fontSize": 20,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1w7mp0bi",
+      "id": "8",
+      "name": "stage-segmentation",
+      "bbox": [
+        398,
+        790,
+        272,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.3.1"
+      },
+      "geometry": "rect",
+      "text": "Vessel\nSegmentation",
+      "textPreview": "Vessel | Segmentation",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Vessel"
+          },
+          {
+            "index": 2,
+            "text": "Segmentation"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Vessel",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Vessel",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "text": "Segmentation",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Segmentation",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8bat47y1",
+      "id": "9",
+      "name": "stage-features",
+      "bbox": [
+        682,
+        790,
+        272,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.3.2"
+      },
+      "geometry": "rect",
+      "text": "Vascular Feature\nExtraction",
+      "textPreview": "Vascular Feature | Extraction",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Vascular Feature"
+          },
+          {
+            "index": 2,
+            "text": "Extraction"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Vascular Feature",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Vascular Feature",
+              "fontSize": 20,
+              "color": "#2A4F8F",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "text": "Extraction",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Extraction",
+              "fontSize": 20,
+              "color": "#2A4F8F",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "10",
+      "name": "stage-cad",
+      "bbox": [
+        968,
+        790,
+        272,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.3.3"
+      },
+      "geometry": "rect",
+      "text": "CAD Risk /\nDisease Suggestion",
+      "textPreview": "CAD Risk / | Disease Suggestion",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CAD Risk /"
+          },
+          {
+            "index": 2,
+            "text": "Disease Suggestion"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CAD Risk /",
+          "runs": [
+            {
+              "index": 1,
+              "text": "CAD Risk /",
+              "fontSize": 20,
+              "color": "#C8A33A",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "text": "Disease Suggestion",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Disease Suggestion",
+              "fontSize": 20,
+              "color": "#C8A33A",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "11",
+      "name": "stage-review",
+      "bbox": [
+        1252,
+        790,
+        272,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.3.4"
+      },
+      "geometry": "rect",
+      "text": "Doctor\nReview",
+      "textPreview": "Doctor | Review",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Doctor"
+          },
+          {
+            "index": 2,
+            "text": "Review"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Doctor",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Doctor",
+              "fontSize": 20,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "text": "Review",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Review",
+              "fontSize": 20,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czed8v6p",
+      "id": "12",
+      "name": "stage-management",
+      "bbox": [
+        1538,
+        790,
+        272,
+        48
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.3.5"
+      },
+      "geometry": "rect",
+      "text": "Patient\nManagement",
+      "textPreview": "Patient | Management",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Patient"
+          },
+          {
+            "index": 2,
+            "text": "Management"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Patient",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Patient",
+              "fontSize": 20,
+              "color": "#3F7D55",
+              "bold": true
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "text": "Management",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Management",
+              "fontSize": 20,
+              "color": "#3F7D55",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kb6xkf6",
+      "id": "13",
+      "name": "clinical-takeaway-left",
+      "bbox": [
+        82,
+        860,
+        852,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.4.0"
+      },
+      "geometry": "rect",
+      "text": "Segmentation provides the measurable vessel map used by later CAD modules.",
+      "textPreview": "Segmentation provides the measurable vessel map used by later CAD modules.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Segmentation provides the measurable vessel map used by later CAD modules."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Segmentation provides the measurable vessel map used by later CAD modules.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Segmentation provides the measurable vessel map used by later CAD modules.",
+              "fontSize": 22,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u54zidon",
+      "id": "14",
+      "name": "clinical-takeaway-right",
+      "bbox": [
+        988,
+        860,
+        852,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.4.1"
+      },
+      "geometry": "rect",
+      "text": "Final diagnosis and patient decisions remain under doctor supervision.",
+      "textPreview": "Final diagnosis and patient decisions remain under doctor supervision.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Final diagnosis and patient decisions remain under doctor supervision."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Final diagnosis and patient decisions remain under doctor supervision.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Final diagnosis and patient decisions remain under doctor supervision.",
+              "fontSize": 22,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqxs72x4",
+      "id": "15",
+      "name": "brand-spacer",
+      "bbox": [
+        82,
+        34,
+        1518,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 1,
+      "resolvedTextStyle": {
+        "fontSize": 75,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 16,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/z25kb6xk",
+      "id": "16",
+      "name": "glasgow-college-logo",
+      "bbox": [
+        1600,
+        34,
+        238,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1"
+      },
+      "alt": "Glasgow College UESTC logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "f9941a41-7c68-4a99-b057-3b2b24f64d21",
+        "contentType": "image/png",
+        "byteLength": 281917
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "branded-slide-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "column",
+            "name": "slide2-root",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 164,
+              "height": 941.8
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.0.0",
+                "kind": "column",
+                "name": "title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 180,
+                  "height": 137
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 56,
+                  "width": 1756,
+                  "height": 137
+                },
+                "children": [
+                  {
+                    "path": "0.0.0.0",
+                    "kind": "text",
+                    "name": "slide-kicker",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 56,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 56,
+                      "width": 1756,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "Clinical value of vessel segmentation",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/crmhk3q5",
+                      "id": "1",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "kind": "text",
+                    "name": "slide-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 57.6
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 90,
+                      "width": 1756,
+                      "height": 57.6
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 90,
+                      "width": 1756,
+                      "height": 58
+                    },
+                    "children": [],
+                    "text": "Clinical Significance and Use Scenario",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/j6tovaho",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "kind": "rule",
+                    "name": "title-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 180
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 180,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 157.6,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 158,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "children": [],
+                    "weight": 5,
+                    "element": {
+                      "aid": "sh/ulwval87",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "kind": "text",
+                    "name": "slide-cue",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 20.4
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 172.6,
+                      "width": 1756,
+                      "height": 20.4
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 172,
+                      "width": 1756,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "Talk track: Fundus imaging is non-invasive; segmentation creates a vessel map for CAD features and doctor review.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/1kre1w7m",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 10,
+                "effectiveGap": 10,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 56,
+                  "width": 1756,
+                  "height": 137
+                },
+                "items": [
+                  {
+                    "path": "0.0.0.0",
+                    "frame": {
+                      "left": 82,
+                      "top": 56,
+                      "width": 1756,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "frame": {
+                      "left": 82,
+                      "top": 90,
+                      "width": 1756,
+                      "height": 57.6
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "frame": {
+                      "left": 82,
+                      "top": 157.6,
+                      "width": 180,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "frame": {
+                      "left": 82,
+                      "top": 172.6,
+                      "width": 1756,
+                      "height": 20.4
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.0.1",
+                "kind": "text",
+                "name": "clinical-claim",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 38.4
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 215,
+                  "width": 1756,
+                  "height": 38.4
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 216,
+                  "width": 1756,
+                  "height": 40
+                },
+                "children": [],
+                "text": "Clinical support, not automatic diagnosis.",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/c3ylc7u5",
+                  "id": "5",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.0.2",
+                "kind": "image",
+                "name": "clinical-workflow-miccai",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 492
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 492
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 275.4,
+                  "width": 1756,
+                  "height": 492
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 275.4,
+                  "width": 1756,
+                  "height": 492
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "cover",
+                "alt": "Workflow from fundus image acquisition to vessel segmentation, feature extraction, CAD suggestion, doctor review, and patient management",
+                "element": {
+                  "aid": "im/2t83itgf",
+                  "id": "6",
+                  "kind": "image"
+                }
+              },
+              {
+                "path": "0.0.3",
+                "kind": "grid",
+                "name": "clinical-stage-labels",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 130,
+                  "height": 48
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 789.4,
+                  "width": 1756,
+                  "height": 48
+                },
+                "children": [
+                  {
+                    "path": "0.0.3.0",
+                    "kind": "text",
+                    "name": "stage-fundus",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 48
+                    },
+                    "frame": {
+                      "left": 112,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    },
+                    "snappedFrame": {
+                      "left": 112,
+                      "top": 790,
+                      "width": 272,
+                      "height": 48
+                    },
+                    "children": [],
+                    "text": "Fundus\nImage",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/uxc3ylc7",
+                      "id": "7",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.3.1",
+                    "kind": "text",
+                    "name": "stage-segmentation",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 48
+                    },
+                    "frame": {
+                      "left": 397,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    },
+                    "snappedFrame": {
+                      "left": 398,
+                      "top": 790,
+                      "width": 272,
+                      "height": 48
+                    },
+                    "children": [],
+                    "text": "Vessel\nSegmentation",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/1w7mp0bi",
+                      "id": "8",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.3.2",
+                    "kind": "text",
+                    "name": "stage-features",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 48
+                    },
+                    "frame": {
+                      "left": 682,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    },
+                    "snappedFrame": {
+                      "left": 682,
+                      "top": 790,
+                      "width": 272,
+                      "height": 48
+                    },
+                    "children": [],
+                    "text": "Vascular Feature\nExtraction",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/8bat47y1",
+                      "id": "9",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.3.3",
+                    "kind": "text",
+                    "name": "stage-cad",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 48
+                    },
+                    "frame": {
+                      "left": 967,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    },
+                    "snappedFrame": {
+                      "left": 968,
+                      "top": 790,
+                      "width": 272,
+                      "height": 48
+                    },
+                    "children": [],
+                    "text": "CAD Risk /\nDisease Suggestion",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/ytsvu9kn",
+                      "id": "10",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.3.4",
+                    "kind": "text",
+                    "name": "stage-review",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 48
+                    },
+                    "frame": {
+                      "left": 1252,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    },
+                    "snappedFrame": {
+                      "left": 1252,
+                      "top": 790,
+                      "width": 272,
+                      "height": 48
+                    },
+                    "children": [],
+                    "text": "Doctor\nReview",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/neloj2t8",
+                      "id": "11",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.3.5",
+                    "kind": "text",
+                    "name": "stage-management",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 48
+                    },
+                    "frame": {
+                      "left": 1537,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    },
+                    "snappedFrame": {
+                      "left": 1538,
+                      "top": 790,
+                      "width": 272,
+                      "height": 48
+                    },
+                    "children": [],
+                    "text": "Patient\nManagement",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/czed8v6p",
+                      "id": "12",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 30,
+                  "bottom": 0,
+                  "left": 30
+                },
+                "columnGap": 14,
+                "rowGap": 0,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 112,
+                  "top": 789.4,
+                  "width": 1696,
+                  "height": 48
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  271,
+                  271,
+                  271,
+                  271,
+                  271,
+                  271
+                ],
+                "rowSizes": [
+                  48
+                ],
+                "cells": [
+                  {
+                    "path": "0.0.3.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 112,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    }
+                  },
+                  {
+                    "path": "0.0.3.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 397,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    }
+                  },
+                  {
+                    "path": "0.0.3.2",
+                    "column": 2,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 682,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    }
+                  },
+                  {
+                    "path": "0.0.3.3",
+                    "column": 3,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 967,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    }
+                  },
+                  {
+                    "path": "0.0.3.4",
+                    "column": 4,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1252,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    }
+                  },
+                  {
+                    "path": "0.0.3.5",
+                    "column": 5,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1537,
+                      "top": 789.4,
+                      "width": 271,
+                      "height": 48
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.0.4",
+                "kind": "grid",
+                "name": "clinical-bottom-takeaways",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 54,
+                  "height": 26.4
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 859.4,
+                  "width": 1756,
+                  "height": 26.4
+                },
+                "children": [
+                  {
+                    "path": "0.0.4.0",
+                    "kind": "text",
+                    "name": "clinical-takeaway-left",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 26.4
+                    },
+                    "frame": {
+                      "left": 82,
+                      "top": 859.4,
+                      "width": 851,
+                      "height": 26.4
+                    },
+                    "snappedFrame": {
+                      "left": 82,
+                      "top": 860,
+                      "width": 852,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "Segmentation provides the measurable vessel map used by later CAD modules.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/5kb6xkf6",
+                      "id": "13",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.4.1",
+                    "kind": "text",
+                    "name": "clinical-takeaway-right",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 26.4
+                    },
+                    "frame": {
+                      "left": 987,
+                      "top": 859.4,
+                      "width": 851,
+                      "height": 26.4
+                    },
+                    "snappedFrame": {
+                      "left": 988,
+                      "top": 860,
+                      "width": 852,
+                      "height": 28
+                    },
+                    "children": [],
+                    "text": "Final diagnosis and patient decisions remain under doctor supervision.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/u54zidon",
+                      "id": "14",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "columnGap": 54,
+                "rowGap": 0,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 82,
+                  "top": 859.4,
+                  "width": 1756,
+                  "height": 26.4
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 1
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  851,
+                  851
+                ],
+                "rowSizes": [
+                  26.4
+                ],
+                "cells": [
+                  {
+                    "path": "0.0.4.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 82,
+                      "top": 859.4,
+                      "width": 851,
+                      "height": 26.4
+                    }
+                  },
+                  {
+                    "path": "0.0.4.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 987,
+                      "top": 859.4,
+                      "width": 851,
+                      "height": 26.4
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 56,
+              "right": 82,
+              "bottom": 56,
+              "left": 82
+            },
+            "gap": 22,
+            "effectiveGap": 22,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 82,
+              "top": 56,
+              "width": 1756,
+              "height": 968
+            },
+            "items": [
+              {
+                "path": "0.0.0",
+                "frame": {
+                  "left": 82,
+                  "top": 56,
+                  "width": 1756,
+                  "height": 137
+                }
+              },
+              {
+                "path": "0.0.1",
+                "frame": {
+                  "left": 82,
+                  "top": 215,
+                  "width": 1756,
+                  "height": 38.4
+                }
+              },
+              {
+                "path": "0.0.2",
+                "frame": {
+                  "left": 82,
+                  "top": 275.4,
+                  "width": 1756,
+                  "height": 492
+                }
+              },
+              {
+                "path": "0.0.3",
+                "frame": {
+                  "left": 82,
+                  "top": 789.4,
+                  "width": 1756,
+                  "height": 48
+                }
+              },
+              {
+                "path": "0.0.4",
+                "frame": {
+                  "left": 82,
+                  "top": 859.4,
+                  "width": 1756,
+                  "height": 26.4
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "brand-mark-layer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 150
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "text",
+                "name": "brand-spacer",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 1
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "children": [],
+                "text": "",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/nqxs72x4",
+                  "id": "15",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.1.1",
+                "kind": "image",
+                "name": "glasgow-college-logo",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "snappedFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "contain",
+                "alt": "Glasgow College UESTC logo",
+                "element": {
+                  "aid": "im/z25kb6xk",
+                  "id": "16",
+                  "kind": "image"
+                }
+              }
+            ],
+            "padding": {
+              "top": 34,
+              "right": 82,
+              "bottom": 34,
+              "left": 82
+            },
+            "columnGap": 0,
+            "rowGap": 0,
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 82,
+              "top": 34,
+              "width": 1756,
+              "height": 1012
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1
+              },
+              {
+                "mode": "fixed",
+                "value": 238
+              }
+            ],
+            "rows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "columnSizes": [
+              1518,
+              238
+            ],
+            "rowSizes": [
+              82,
+              930
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 82
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

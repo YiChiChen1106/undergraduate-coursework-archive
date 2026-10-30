@@ -1,0 +1,778 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,top=2cm,bottom=2cm,right=2cm,left=2.5cm]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage{mathptmx}
+  \usepackage[scaled]{helvet}
+  \usepackage{courier}
+\else
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \setmainfont{Times New Roman}
+  \setsansfont{Arial}
+  \setmonofont{Consolas}
+  \setmathfont{Cambria Math}
+\fi
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage[section]{placeins}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+
+\begin{document}
+\onehalfspacing
+
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+Retinal vessel segmentation is an important step in computer-aided fundus image analysis because the vascular tree carries useful information about diabetic retinopathy, hypertension, arteriosclerosis, and other systemic or ophthalmic conditions. In practice, however, this task remains difficult. Retinal vessels are thin, curved, highly branched, and unevenly distributed across the image. Peripheral vessels often have weak contrast and are easily confused with background texture, illumination variation, or local noise. A useful model therefore has to recover fine vessels while still controlling false positives and preserving the continuity of the vascular tree.
+
+This thesis studies retinal vessel segmentation within the nnU-Net framework. Instead of replacing nnU-Net with a completely new system, the work asks what kinds of task-oriented changes can still bring useful improvement on top of a strong and self-configuring baseline. The study focuses on three related issues: thin-vessel recovery, cross-level feature use, and structural continuity modeling. The experiments are organized in two stages. The early stage examines input enhancement and loss-function adjustment, but these changes do not bring clear or stable final gains over nnU-Net's own preprocessing and training pipeline. The later stage therefore shifts to structural modification under a unified five-fold validation protocol.
+
+Along this later route, the thesis first tests PA-Net module migration and then screens the contribution of its related components. The subsequent experiments focus on the LPT-based line of development, including deformable sampling, multi-scale feature aggregation, Coordinate Attention, Dynamic Snake Convolution, and light connected-component post-processing. The final retained scheme is MS-DSConv + CA with a small post-processing threshold. Under the later unified protocol, this scheme achieves an F1-score of 0.8027, compared with 0.7891 for the later-stage nnU-Net baseline. The absolute gain is 0.0136. This result should not be read as a large performance jump, but it does indicate a stable small improvement under the same comparison setting.
+
+The analysis suggests that continuous geometric trajectory modeling is useful for recovering slender and curved vessel structures, especially when it is combined with multi-scale feature support and positional attention. At the same time, the experiments also show the trade-off behind this improvement: a model that becomes more sensitive to weak vessel regions can introduce additional scattered false positives. Light post-processing is therefore retained as a practical correction step. Overall, the thesis provides a controlled experimental account of how several structural choices affect retinal vessel segmentation within nnU-Net, and identifies a modest but workable improvement path for the current setting.
+
+\noindent\textbf{Keywords:} retinal vessel segmentation, nnU-Net, medical image segmentation, deformable sampling, dynamic snake convolution
+
+\clearpage
+
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+I would like to express my sincere gratitude to Professor Jiali Yu of the School of Mathematical Sciences, University of Electronic Science and Technology of China, for her guidance and support throughout this graduation project. At the beginning of the project, I had only limited understanding of medical image segmentation and was not yet familiar with how a complete research project should be planned and carried out. Professor Yu helped me identify a suitable topic, clarify the research direction, and gradually enter this field. Her advice also reminded me to pay attention not only to experimental results, but also to the logic of the report, the reliability of the protocol, and the way in which conclusions should be stated.
+
+I am especially grateful to Mr. Zhishuai Liu, a PhD student in the research group, for his patient and generous help during the whole process. Many parts of this project, including the use of nnU-Net, the design of ablation experiments, and the interpretation of unstable results, were difficult for me at first. Whenever my experiments failed to reach the expected performance, he discussed the possible reasons with me and suggested more practical directions for the next step. These discussions helped me avoid treating the project as a simple search for better numbers, and instead taught me to think more carefully about whether an experimental change was meaningful, stable, and explainable.
+
+I would also like to thank the other PhD students and technical staff in the group for their help with discussions, technical details, and the experimental environment. Their suggestions made the work less confusing when I encountered unfamiliar tools, training settings, and evaluation procedures. The atmosphere of communication in the group was also valuable to me, because it allowed me to see how research problems are discussed and revised in a more realistic way.
+
+My thanks also go to the University of Electronic Science and Technology of China and to the teachers of Glasgow College. The courses and training I received during the past years provided the mathematical and computational foundation needed for this project. The graduation project process also gave me an opportunity to connect classroom knowledge with an applied research problem, and to understand more clearly the gap between implementing a method and presenting it as a complete piece of academic work.
+
+Finally, I would like to thank my family, classmates, and friends for their encouragement and support. During the months of experiments and writing, their patience and companionship helped me keep a steady mindset. This project was a demanding but meaningful experience for me. I am grateful for the guidance and help I received along the way, and I will carry these lessons into my future study and work.
+
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+
+\section{Introduction}
+
+\subsection{Research Background and Significance}
+
+The retina is one of the few tissues in the human body where microvascular status can be observed directly through non-invasive imaging. Because of this, the vascular morphology in fundus images has long been used in disease screening, computer-aided diagnosis, and clinical assessment \cite{staal2004drive,hoover2000locating}. In practice, diabetic retinopathy, hypertension, arteriosclerosis, and some cardio-cerebrovascular diseases are often associated with changes in vessel calibre, branching pattern, tortuosity, and continuity. Reliable retinal vessel segmentation therefore supports later steps such as vessel width measurement, artery-vein analysis, lesion localization, and quantitative fundus evaluation, while also improving the automation and stability of ophthalmic diagnostic systems \cite{fraz2012ensemble,budai2013robust}.
+
+Retinal vessel segmentation remains a difficult problem. Retinal vessels are slender, curved, and distributed across multiple scales. Peripheral micro-vessels are especially hard to recover because they are narrow, low in contrast, and easily affected by imaging noise, uneven illumination, and background texture interference \cite{staal2004drive,hoover2000locating}. Bifurcations, crossings, and locally disconnected regions add further difficulty. If continuity and topological consistency are not preserved well, the reliability of subsequent quantitative analysis is reduced. Improving thin-vessel detection without sacrificing structural continuity is therefore one of the central concerns in this task.
+
+Deep learning has become the dominant paradigm in medical image segmentation, and encoder-decoder networks are now widely used in this area. U-Net and its variants, in particular, have shown strong performance because of their end-to-end learning framework and pixel-level prediction ability \cite{ronneberger2015unet,cicek2016unet3d,milletari2016vnet}. On top of this line of work, nnU-Net introduced a self-configuring pipeline that adapts preprocessing, network configuration, training strategy, and post-processing to specific biomedical segmentation tasks \cite{isensee2021nnunet}. That design greatly reduces the amount of manual tuning required and makes nnU-Net a practical and credible baseline for retinal vessel segmentation, where both global semantic consistency and fine structural recovery matter.
+
+However, a general-purpose framework does not by itself resolve the difficulties of a specific task. Retinal vessel segmentation requires more than multi-scale feature extraction. The model also needs to capture long-range dependency, important spatial locations, cross-level feature interaction, and geometric continuity. Previous studies suggest that attention mechanisms, feature fusion strategies, and more flexible sampling methods can help alleviate the limitations of conventional encoder-decoder models in recovering thin vessels, preserving boundaries, and maintaining structural continuity \cite{luo2025panet,oktay2018attentionunet,zhu2021deformabledetr}. These observations make it worthwhile to explore task-oriented structural improvements on top of nnU-Net rather than treat the baseline as a final answer.
+
+Against this background, this thesis takes nnU-Net as the basic framework and focuses on three closely related issues in retinal vessel segmentation: insufficient thin-vessel detection, limited cross-level information utilization, and inadequate structural continuity modeling. It examines different structural modules, sampling mechanisms, attention strategies, and output refinement methods in stages, with the aim of providing experimental evidence and practical reference points for building a segmentation model better suited to retinal vessel analysis.
+
+\subsection{Related Work}
+Retinal vessel segmentation has been studied for many years and early work was largely based on image enhancement and hand-crafted rules. Common examples include matched filtering, thresholding, region growing, morphological processing, Gabor-wavelet features, and line-operator responses. These methods can work when vessel responses are clear and imaging conditions are stable, but they are usually sensitive to image quality, noise, and parameter selection. Their weaknesses become more obvious in low-contrast regions, complex backgrounds, and thin peripheral vessels \cite{soares2006gabor,ricci2007line}. As public datasets and evaluation protocols became more established, machine-learning and ensemble-classification methods were introduced to improve vessel-background discrimination, although this line of work still depended heavily on manually designed features \cite{fraz2012ensemble,budai2013robust}.
+
+Deep learning changed the field quite quickly. Convolutional neural networks can learn hierarchical representations directly from raw images and have shown much stronger adaptability in medical image segmentation. U-Net and related encoder-decoder architectures became especially influential because they combine semantic feature extraction during downsampling with spatial detail recovery through skip connections \cite{ronneberger2015unet,cicek2016unet3d,milletari2016vnet}. In retinal vessel segmentation, patch-based and cross-modality CNN approaches were among the early deep-learning directions \cite{li2016crossmodality,liskowski2016segmenting}. Later work further developed fully convolutional, multi-scale, and context-aware formulations for fundus vessel analysis \cite{maninis2016driu,fu2016deepvessel,oliveira2018fcn}.
+
+However, standard CNNs and the original U-Net do not fully address these difficulties. Retinal vessels are slender, curved, and spread across multiple scales rather than appearing as regular compact targets. With local convolution alone, a model may segment major vessels reasonably well but still miss thin vessels, weak-response regions, and difficult bifurcations. Conventional encoder-decoder architectures also rely heavily on fixed skip connections, which limits their ability to model long-range dependency, key spatial locations, and cross-level structural continuity. Further task-specific refinement is therefore still necessary even when the U-Net framework already performs well.
+
+Many later studies kept the U-Net backbone but modified specific parts of it. Some focused on the connection pattern between encoder and decoder or on multi-scale feature fusion. UNet++, for example, used nested skip connections to reduce the semantic gap between encoder and decoder features \cite{zhou2018unetpp}, while MultiResUNet introduced multi-resolution blocks to strengthen feature representation under varied biomedical image conditions \cite{ibtehaz2020multiresunet}. Others added attention mechanisms to the network. Attention U-Net is a representative case; it uses attention gates to suppress irrelevant responses and highlight target regions \cite{oktay2018attentionunet}. Rather than replacing U-Net outright, these studies mainly refine it where the original framework remains weak, especially in feature fusion, spatial selection, and structural recovery.
+
+This issue is especially important in retinal vessel segmentation. Vessels are continuous, directional structures, and local convolution alone does not make full use of features that are far apart spatially but still related topologically. Weak vessel responses often appear in such regions. If the model handles them poorly, a vessel that should remain continuous may be broken into several disconnected pieces. This helps explain why attention mechanisms, multi-scale fusion, and more flexible sampling strategies have become common directions in this area.
+
+nnU-Net moved the field in a somewhat different direction by standardizing much of the overall pipeline. It is better understood as a task-adaptive configuration framework than as a single new network, since it automatically adjusts preprocessing, network topology, training plans, and post-processing for a given dataset \cite{isensee2021nnunet}. It has shown strong robustness across many medical image segmentation tasks and is therefore widely treated as a stable baseline. This thesis uses nnU-Net as its starting point for the same reason: if an improvement still holds on top of nnU-Net, it is more likely to be meaningful.
+
+Recent work on retinal vessel segmentation has also moved more directly toward feature fusion and sampling design. PA-Net is a representative example. It introduces the Lightweight Parallel Transformer (LPT) and the Adaptive Vascular Feature Fusion Module (AFFM) into a U-Net-style backbone and combines them with a preprocessing pipeline designed for fundus images \cite{luo2025panet}. The aim is to improve both global structural modeling and multi-level vascular feature fusion. Work of this kind suggests that a standard encoder-decoder structure alone is often not enough for stable recovery of thin vessels, especially when key locations and structural continuity need to be modeled more carefully.
+
+Beyond architectural changes, recent studies have paid more attention to the topological consistency of slender structures. Deep supervision can strengthen multi-scale feature learning through auxiliary outputs at multiple levels \cite{lee2015dsn}. Deformable attention and modulation mechanisms increase spatial flexibility by learning sampling offsets and weights \cite{zhu2021deformabledetr,zhu2019dcnv2}, and related retinal-vessel work has also used deformable U-Net-style designs to adapt to changes in vessel scale and shape \cite{jin2019dunet}. Attention-based and scale-sensitive models further show that spatial selection, channel weighting, and context aggregation are useful for curvilinear or retinal vessel structures \cite{mou2019csnet,wu2021scsnet}. Coordinate Attention supplements positional representation through direction-aware encoding \cite{hou2021coordatt}, while Dynamic Snake Convolution attempts to follow the geometry of slender targets through continuous trajectory-based sampling \cite{qi2023dsc}. Topology-related loss functions, iterative refinement, and output post-processing strategies have also been used to compensate for limits in structural modeling \cite{li2020iternet,shit2021cldice}. The focus of recent work has therefore shifted from segmenting vessels alone to preserving thin vessels more reliably, maintaining continuity, and limiting false positives.
+
+Recent research has already provided a strong methodological basis for retinal vessel segmentation. Yet there is still room for improvement in thin-vessel detection, cross-level information use, preservation of topological continuity, and the balance among evaluation metrics. With this in mind, this thesis adopts nnU-Net as a unified baseline framework and further explores model designs and optimization strategies that are better suited to retinal vessel segmentation.
+
+\subsection{Major Challenges in Retinal Vessel Segmentation}
+Retinal vessel segmentation is often described as a pixel-level classification task, but in practice the harder part is preserving fine vascular structure under non-ideal imaging conditions. Compared with the segmentation of organs or compact lesions, it places greater demands on delicate branch recovery and the preservation of vascular continuity. The main difficulties usually appear together, involving image quality, feature representation, and metric trade-offs.
+
+One source of difficulty comes from the vessels themselves. Retinal vessels are slender, curved, and distributed across multiple scales. Major vessels are usually easier to detect, but peripheral micro-vessels, weak responses, and complex bifurcations are much less stable. These regions are narrow, low in contrast, and easily mixed with background texture \cite{staal2004drive,hoover2000locating}. When they are not recovered well, the result is often more than slight under-segmentation. Local discontinuities appear, fine branches disappear, and parts of a vessel tree that should remain continuous become fragmented.
+
+Imaging variation adds further difficulty. Fundus images acquired with different devices, under different settings, or from different patients can differ substantially in brightness, contrast, noise level, and background appearance \cite{fraz2012ensemble,budai2013robust}. Public retinal datasets are also limited in number, which makes generalization harder to assess. Even within a single dataset, optic-disc highlights, lesion reflections, local shadows, and color variation may distort vessel responses. In practice, the model must separate fine vessels from a visually cluttered background rather than from a clean and regular target distribution.
+
+Feature representation is another source of difficulty. Convolutional neural networks are effective at local texture extraction, but long-range dependency, key spatial locations, and cross-level structural continuity are harder to model. Encoder-decoder architectures can recover part of the lost spatial detail through skip connections, yet they may still preserve high-level semantics more readily than fine low-level structure. In retinal vessel segmentation, this often means that local vessel evidence is present while the overall continuity of the vascular tree remains weak. This helps explain why cross-level interaction and structure-aware spatial modeling continue to receive attention \cite{zhu2021deformabledetr,zhu2019dcnv2,hou2021coordatt}.
+
+Evaluation brings its own tension. A model that becomes more sensitive to thin vessels and weak responses often improves recall, but it may also mistake noise or background texture for vessels and lose precision. A more conservative model can produce cleaner outputs, yet it may also miss fine branches. For this task, no single metric is enough. Sensitivity, precision, specificity, and F1-score usually need to be considered together.
+
+A further practical difficulty is that stable improvement remains hard even on top of a mature baseline such as nnU-Net. nnU-Net already provides a mature preprocessing, training, and inference pipeline \cite{isensee2021nnunet}. Meaningful gains therefore tend to come from changes that address these task-specific difficulties directly, rather than from superficial module stacking or minor parameter tuning. Recent work has largely moved in this direction, especially in structure-aware spatial modeling, the use of cross-level information, and output refinement \cite{luo2025panet,qi2023dsc,hou2021coordatt}.
+
+Across these settings, the same issues appear repeatedly: thin vessels and weak responses are hard to recover stably, robustness remains vulnerable under complex imaging conditions, local detail and global structure are difficult to preserve at the same time, and stronger detection still comes with the risk of more false positives. The later discussion of model design and optimization in this thesis is organized largely around these issues.
+
+\subsection{Main Research Content and Technical Route}
+This thesis uses nnU-Net as a unified baseline framework and examines how retinal vessel segmentation can be improved under the difficulties discussed above. The main concerns are thin-vessel recovery, the use of cross-level information, and the preservation of structural continuity. Instead of moving outside an established framework and building a completely new network from scratch, the study compares a series of modifications under a unified experimental setting and uses those comparisons to identify designs and optimization strategies that are better suited to the present task.
+
+The work begins with a baseline and a set of preliminary experiments on input enhancement and loss-function adjustment. These early experiments are meant to clarify how much additional gain can still be obtained on top of nnU-Net's existing preprocessing and training pipeline. After that, the later experiments are conducted on a unified dataset under a consistent training protocol, so that differences among models can be interpreted with fewer confounding factors \cite{isensee2021nnunet}.
+
+The focus then shifts to the network structure itself. Relevant design ideas are first transferred and adapted to the current framework, and their actual contribution is then examined through ablation. As the study moves forward, more attention is given to high-level feature modeling and cross-level interaction, with particular attention to spatial sampling, multi-scale feature use, and representations that better match slender vascular structures \cite{luo2025panet,zhu2019dcnv2,qi2023dsc}. The technical route is guided more by repeated comparison, selection, and adjustment than by simple module accumulation.
+
+The thesis also includes supplementary exploration at the output and optimization levels, including post-processing and topology-related constraints. These parts are introduced to seek a more workable balance among thin-vessel recovery, structural continuity, and false-positive control, rather than only to raise one metric. The later chapters follow this progression and present the theoretical background, model implementation, and experimental analysis accordingly.
+
+The main contribution of this thesis is to organize the improvement work into a staged nnU-Net-based experimental route for retinal vessel segmentation.
+The early part separates training-side exploration from the later structural comparison, while the later part compares PA-Net migration, LPT-based screening, deformable sampling, multi-scale aggregation, positional attention, and continuous geometric trajectory modeling within the same framework.
+This design makes it possible to judge these changes in relation to the same baseline and protocol, rather than treating each module as an isolated addition.
+Through this process, the thesis identifies MS-DSConv + CA with light connected-component post-processing as the final retained solution, producing a modest F1-score increase from 0.7891 for the later-stage nnU-Net baseline to 0.8027 under the later five-fold validation protocol.
+
+\subsection{Organization of the Thesis}
+This thesis is organized into five chapters. Chapter 1 introduces the research background and significance of retinal vessel segmentation, reviews the related literature, outlines the main challenges of the task, and presents the main research content and technical route of this work. Chapter 2 provides the theoretical foundations and related methods, including the retinal vessel segmentation task itself, the basic principles of U-Net and nnU-Net, and the methods involved in the later model improvements. Chapter 3 focuses on the improved model design and implementation. Following the main experimental line of the thesis, it explains the establishment of the baseline, the migration and screening of candidate structures, the main structural improvements, and the process of result refinement. Chapter 4 reports the experimental results and analysis, comparing the models at different stages and discussing model performance and the structural evolution path in light of the changes in key metrics. Chapter 5 concludes the thesis, summarizes the main work, and discusses the limitations of the current study together with possible directions for further improvement.
+
+\section{Theoretical Foundations and Related Methods}
+
+\subsection{Overview of Retinal Vessel Segmentation}
+Retinal vessel segmentation aims to extract the vascular tree from fundus images and to produce vessel masks aligned with the original image. Formally, it is usually treated as a pixel-level classification problem, with each pixel assigned to either vessel or background. In practice, though, it is more than a foreground extraction task. The output is often used in later analyses such as vessel-width measurement, artery-vein analysis, lesion localization, and quantitative fundus assessment. For that reason, the value of a segmentation result depends not only on pixel-level accuracy, but also on whether continuity and branch completeness are preserved \cite{staal2004drive,hoover2000locating}.
+
+Most current studies take a color fundus image as input and produce a vessel mask with the same spatial layout as the original image. The mask is usually obtained through manual annotation or expert revision and serves as the reference during training and evaluation. This task has an inherent class-imbalance problem because vessel pixels occupy only a small portion of the image, while the background dominates most of the field. Retinal vessels are also slender, curved, highly branched, and distributed across multiple scales. A useful model therefore needs to capture local texture cues without disrupting the global tree-like structure.
+
+Commonly used public datasets include DRIVE and STARE \cite{staal2004drive,hoover2000locating}, together with CHASE\_DB1 and HRF \cite{chasedb12013,budai2013robust}. These datasets provide a familiar testing basis for retinal vessel segmentation research, but they are not identical in imaging device, resolution, field of view, pathological presentation, or annotation style. For that reason, results reported in the literature still need to be understood in light of the specific dataset conditions under which they were obtained.
+
+Evaluation usually relies on a combination of sensitivity, specificity, accuracy, precision, and F1-score \cite{staal2004drive,hoover2000locating}. Sensitivity is more informative for thin vessels and weak responses, while F1-score is useful for judging the balance between vessel detection and false-positive control. Precision and specificity, by contrast, say more directly how well false positives are suppressed. Because this thesis is particularly concerned with vessel recovery and false-positive control, the later analysis places more weight on changes in sensitivity, precision, and F1-score, while using specificity and accuracy as supporting indicators of overall prediction balance.
+
+For this thesis, these task characteristics impose several demands at once. A model should recover thin vessels and complex bifurcations as completely as possible, reduce missed detections, avoid mistaking background texture or noise for vessels, and preserve the spatial continuity of the vascular tree. Much of the later work on network structure, feature interaction, and result refinement can be read as a direct response to these requirements.
+
+\subsection{Basic Principles of U-Net and nnU-Net}
+U-Net is one of the standard encoder-decoder architectures in medical image segmentation \cite{ronneberger2015unet}. Its basic idea is direct: the encoder extracts contextual information, while the decoder restores spatial detail for pixel-level prediction. This design is well suited to medical images, where annotated data are often limited and the target boundary or fine structure matters as much as the semantic class itself.
+
+Structurally, U-Net consists of a contracting path and an expanding path. The contracting path enlarges the receptive field through convolution and downsampling, and the expanding path restores the feature map to the input scale through upsampling \cite{ronneberger2015unet}. The skip connection is the key element between them. It transfers shallow encoder features to the corresponding decoder stages, helping recover boundary and texture details that may be weakened during downsampling. A schematic illustration of the overall U-Net architecture is shown in Fig. \ref{fig:unet_arch_en}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.82\textwidth]{pic/unet.png}
+    \caption[Classic U-Net architecture]{Schematic illustration of the classic U-Net architecture. The left side is the encoder path, which progressively extracts higher-level semantic features through convolution and downsampling; the right side is the decoder path, which gradually restores spatial resolution through upsampling; and the skip connections transmit shallow-detail information to the corresponding decoding stages. Image source: reproduced from \cite{ronneberger2015unet}.}
+    \label{fig:unet_arch_en}
+\end{figure}
+
+This encoder-decoder design is a good fit for retinal vessel segmentation, but it is not enough on its own. Downsampling gives useful context, and skip connections help recover boundaries, yet thin peripheral vessels and discontinuous branches can still be lost. This is why the later work in this thesis keeps the U-Net logic but adds more task-specific structural modeling.
+
+Many later U-Net variants improve particular parts of the network, but their settings often need to be retuned for each dataset. nnU-Net addresses this practical problem from a different angle \cite{isensee2021nnunet}. It is better understood as a self-configuring segmentation framework than as a single new backbone: given a dataset, it organizes preprocessing, network configuration, training strategy, and post-processing in a standardized way.
+
+One reason nnU-Net is useful as a baseline is that it first summarizes task-related dataset properties, such as spacing or resolution, image size, class distribution, and target-region size. These properties then guide the later choices of network configuration and training plan \cite{isensee2021nnunet}. In this sense, nnU-Net does not force every dataset into one fixed setting. It starts by characterizing the dataset and then builds the segmentation process around that characterization.
+
+In practice, nnU-Net handles several steps that otherwise require manual tuning, including normalization, patch-size and batch-size selection, network-depth configuration, model selection, and post-processing \cite{isensee2021nnunet}. During training, it also commonly uses deep supervision through auxiliary outputs at multiple levels to strengthen multi-scale feature learning \cite{isensee2021nnunet,lee2015dsn}. Its advantage therefore lies not only in the network body itself, but in the unified organization of the workflow from preprocessing and training to validation, inference, and post-processing.
+
+For this thesis, U-Net provides the structural starting point, while nnU-Net provides the controlled experimental framework. That distinction is important: the goal is not to replace nnU-Net, but to test whether specific structural changes still help when the baseline pipeline is already strong.
+
+\subsection{Attention Mechanisms and Feature Fusion Methods}
+In retinal vessel segmentation, local texture is only part of the problem. The model also has to follow long, thin, and branched structures whose appearance changes across the image. Convolution is good at local feature extraction, but it is less direct at selecting important locations and coordinating information across levels. This is where attention and feature fusion become relevant.
+
+The basic idea of attention is to give more weight to useful locations or channels and less weight to background interference. Attention U-Net is a typical example: it adds attention gates to the skip connections so that decoder features receive more target-related information \cite{oktay2018attentionunet}. For retinal vessels, this matters because weak vessel responses often sit next to texture that looks deceptively similar.
+
+Broader attention mechanisms and Transformer-like modules extend this idea by allowing features to interact over a larger spatial range \cite{chen2024transunet,cao2021swinunet}. For retinal vessels, the attraction is not the Transformer form itself, but the ability to use evidence that may be spread across more than one local window. This is also why channel-spatial attention and scale-context modeling have been explored in curvilinear and retinal vessel segmentation \cite{mou2019csnet,wu2021scsnet}.
+
+Feature fusion addresses a related issue. Deep features carry more stable semantic information, while shallow features preserve boundary and texture details. Standard U-Net passes shallow features to the decoder through skip connections, but simple concatenation does not always make the two levels work well together. UNet++ responds to this by redesigning the connection pattern between encoder and decoder \cite{zhou2018unetpp}. For this thesis, the useful point is that cross-level information needs to be fused without washing out fine vessel detail.
+
+Among the methods closest to the later work in this thesis, PA-Net introduced LPT and AFFM \cite{luo2025panet}. LPT combines local feature extraction with broader dependency modeling in order to strengthen structural representation in high-level semantic space, whereas AFFM focuses on multi-level feature fusion in the decoder and aims to reduce the loss of vascular information caused by downsampling. The former is more closely related to attention and high-level structure modeling, while the latter relates more directly to feature fusion. The overall PA-Net architecture together with these related modules is illustrated in Fig. \ref{fig:panet_lpt_affm_en}.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{pic/panet.png}\\
+        (a) Overall PA-Net architecture
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.18\textwidth}
+        \centering
+        \includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{pic/LPT.png}\\
+        (b) LPT module
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.32\textwidth}
+        \centering
+        \includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{pic/AFFM.png}\\
+        (c) AFFM module
+    \end{minipage}
+    \caption[PA-Net, LPT and AFFM structures]{PA-Net and two representative modules closely related to the later improvements in this thesis. The overall PA-Net structure shows where LPT and AFFM are located in the network; LPT is intended to strengthen structural modeling in high-level semantic space, whereas AFFM is designed to improve the effectiveness of multi-level feature fusion during decoding. Image source: reproduced from \cite{luo2025panet}.}
+    \label{fig:panet_lpt_affm_en}
+\end{figure}
+
+In the later chapters, attention and feature fusion are therefore treated as parts of the same problem: how to select useful vessel information and pass it across levels without losing thin structures.
+
+\subsection{Deformable Sampling and Multi-scale Modeling}
+In standard convolution or fixed-receptive-field modeling, feature extraction is usually carried out on a regular grid, with sampling locations predetermined by the kernel shape. This is often not flexible enough for targets that are slender, curved, and variable in direction. Retinal vessels fall into this category: they extend, bifurcate, and change width across space, so sampling only at preset locations may miss part of the actual vessel geometry.
+
+The basic idea of deformable sampling is to move beyond predefined regular sampling positions by learning offsets that let feature aggregation adapt to the target structure. This idea appears in methods such as deformable convolution and deformable attention \cite{zhu2019dcnv2,zhu2021deformabledetr}, and has also been adapted to retinal vessel segmentation through deformable U-Net-style modeling \cite{jin2019dunet}. If the reference position is denoted by \(p\), the \(k\)-th sampling offset by \(\Delta p_k\), and the corresponding weight by \(w_k\), the aggregation can be written in simplified form as
+\begin{equation}
+y(p)=\sum_{k=1}^{K} w_k\,x(p+\Delta p_k),
+\end{equation}
+where \(x(\cdot)\) denotes the input feature and \(K\) is the number of sampled locations involved in aggregation. Compared with standard convolution or fixed attention windows, deformable sampling places more emphasis on where to sample. By adjusting sampling positions dynamically, it allows the model to obtain more targeted responses around curved boundaries, slender branches, and complex bifurcations. In retinal vessel segmentation, that matters because the continuous trajectory of vessels is difficult to capture with only a small number of fixed grid locations.
+
+In practice, deformable convolution mainly learns flexible sampling offsets within local neighborhoods, whereas deformable attention extends the same idea to broader feature interaction. Although the two are used in different contexts, both try to reduce the mismatch caused by fixed sampling and make feature representation better aligned with the target geometry. A schematic comparison between fixed sampling and deformable sampling is shown in Fig. \ref{fig:deformable_attention_theory_en}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{pic/Deformable_Attention_fundus.png}
+    \caption[Fixed and deformable sampling in retinal vessels]{Schematic comparison between rigid sampling and deformable vessel-aligned sampling in a retinal fundus context. The left side illustrates how fixed axial-style sampling may miss curved vessel connectivity, whereas the right side shows adaptive sampling locations that better follow vessel contours and branches. Author's schematic based on the principles of deformable sampling \cite{zhu2019dcnv2,zhu2021deformabledetr}.}
+    \label{fig:deformable_attention_theory_en}
+\end{figure}
+
+If deformable sampling is mainly about flexible sampling positions, multi-scale modeling is about using information from different feature levels. In retinal vessel segmentation, major trunks, fine peripheral vessels, and bifurcations often rely on different scales. Deep features support more stable global judgment, while shallow features retain more boundary and texture detail. If the input feature at scale \(l\) is denoted by \(x_l\), the corresponding sampling offset by \(\Delta p_{l,k}\), and the aggregation weight by \(w_{l,k}\), then multi-scale deformable aggregation can be written as
+\begin{equation}
+y(p)=\sum_{l=1}^{L}\sum_{k=1}^{K} w_{l,k}\,x_l(p+\Delta p_{l,k}),
+\end{equation}
+where \(L\) denotes the number of participating scales and \(K\) denotes the number of sampled locations at each scale. Compared with the earlier single-scale form, this expression emphasizes the joint participation of features from different levels around the same reference position.
+
+For the later work in this thesis, deformable sampling and multi-scale modeling are not separate ideas. Adaptive offsets make the sampling positions more flexible, while cross-level aggregation brings back information from different resolutions. This combination is used later to make high-level features less dependent on a single coarse representation of the vessel tree.
+
+\subsection{Topology-oriented Methods for Slender Structures}
+For slender-structure segmentation tasks such as retinal vessel segmentation, pixel-level correctness does not necessarily imply structural correctness. Vascular networks are characterized by connectivity, bifurcation, and spatial extension. If a model produces strong local responses but fails to preserve continuity, the final result may still contain breaks, adhesions, or isolated noisy regions. For this reason, structural consistency has to be considered alongside ordinary pixel-level accuracy.
+
+From a structural modeling perspective, Dynamic Snake Convolution (DSConv) represents a line of work that places stronger emphasis on continuous geometric constraints \cite{qi2023dsc}. Unlike regular convolution or discrete point-based sampling, this kind of method attempts to form a continuously unfolding trajectory between neighboring sampling positions, so that aggregation is no longer performed around a set of independent locations but instead follows the actual extension pattern of a slender target more closely. For structures such as vessels, which are curved, branched, and locally variable in width, the appeal of this design lies in its ability to preserve connectivity and directionality during feature extraction rather than merely reinforcing local responses.
+
+More specifically, the key to DSConv is not only that individual sampling points are movable, but that later sampling positions depend on the offsets of earlier ones. If the reference position is denoted by \(p\), the horizontal step of the \(k\)-th sampled point by \(\Delta x_k\), and the vertical increment by \(\delta y_k\), then the sampling position along the snake-like trajectory can be written as
+\begin{equation}
+\tilde{p}_k = p + \left(\Delta x_k,\; \sum_{t=1}^{k}\delta y_t\right).
+\end{equation}
+This expression shows the main difference from discrete point-based sampling. Instead of treating each sampled position independently, DSConv unfolds later positions from earlier ones and thereby forms a continuous trajectory. If local aggregation along that trajectory is further written as
+\begin{equation}
+y(p)=\sum_{k=1}^{K} w_k\,x(\tilde{p}_k),
+\end{equation}
+then the role of DSConv becomes clearer: sampling points are first aligned more closely with the direction of the slender target, and feature aggregation is then performed along that continuous path. This makes the method relevant to structures such as vessels, roads, and nerve fibers, where topology and continuity matter as much as local response.
+
+Besides geometric constraints inside the network, post-processing can also improve the final mask. In retinal vessel segmentation, small isolated connected components often come from background noise, reflections, or local false positives. A simple connected-component filter can remove part of this noise without changing the network itself. It is not an elegant substitute for better representation learning, but it is useful when the remaining error is mostly scattered false-positive regions.
+
+Corresponding to structural constraints and output correction, another line of work introduces topology-aware information through the loss function. clDice is a representative example because it incorporates connectivity constraints into the optimization target through skeleton-level overlap \cite{shit2021cldice}. If the prediction is denoted by \(P\) and the ground truth by \(G\), clDice is written as
+\begin{equation}
+\mathrm{clDice}(P,G)=
+\frac{2\,T_{\mathrm{prec}}(P,G)\,T_{\mathrm{sens}}(P,G)}
+{T_{\mathrm{prec}}(P,G)+T_{\mathrm{sens}}(P,G)},
+\end{equation}
+where \(T_{\mathrm{prec}}\) and \(T_{\mathrm{sens}}\) denote topology-aware precision and topology-aware sensitivity defined on the basis of skeleton overlap. Compared with losses that mainly measure regional overlap, clDice pays more attention to whether the predicted centerline structure agrees with the reference. This makes it relevant to vessel segmentation, where a small break in a branch can matter even if the pixel-level score remains acceptable.
+
+The later experiments use these topology-oriented ideas in different ways. DSConv changes feature extraction, post-processing cleans the output, and clDice changes the training objective. They are not equally successful in the experiments, but they all address the same question: whether the predicted mask remains close to the structure of the real vascular network.
+
+\subsection{Chapter Summary}
+This chapter introduced the background needed for the later experiments: the characteristics of retinal vessel segmentation, the U-Net and nnU-Net framework, attention and feature fusion, deformable and multi-scale sampling, and topology-oriented methods. The common thread is that thin-vessel segmentation requires both local detail and structural continuity. The next chapter turns this background into concrete model designs under a unified experimental framework.
+
+\section{Improved Model Design and Implementation}
+
+\subsection{Dataset, Preprocessing and Experimental Protocol}
+Before turning to specific structural improvements, this thesis first establishes a relatively clear experimental framework so that the later models can be compared on a common basis. The overall strategy is not to test different modules under scattered settings, but to move from preliminary exploration toward a unified protocol and then carry out later structural improvement and result refinement under the same experimental conditions. In broad terms, the experiments fall into two stages: an early exploration stage, used to establish an initial reference and to examine routine training-side adjustments, and a later main-experiment stage, where subsequent structural modifications are compared under unified data conditions and training protocols.
+
+The early exploration stage corresponds to the earliest control experiments. Its role is to establish an initial baseline and to observe how input enhancement and loss-function adjustment affect segmentation performance. At this stage, training and validation are based on multi-source samples collected from public fundus datasets, mainly STARE, CHASE\_DB1, and HRF \cite{hoover2000locating,chasedb12013,budai2013robust}, following the existing split, while DRIVE is used as the test set so that the initial model behavior can be observed on a relatively unified target domain. To preserve as much original color information as possible, the input is organized in a three-channel separated form: the fundus image is first converted into the NIfTI format used by nnU-Net, and the red, green, and blue channels are then treated as separate inputs. The purpose here is to provide a somewhat broader preliminary reference before the later formal comparison, rather than to define the final solution directly.
+
+The later main-experiment stage begins with the establishment of a unified protocol, and the focus correspondingly shifts from early feasibility assessment to structural improvement. At this stage, the experiments keep the data source fixed to the same public benchmark (DRIVE) and adopt five-fold cross-validation to reduce dependence on a single split. Unlike the earlier stage, these experiments no longer use three-channel color input, but instead rely on enhanced single-channel images. More specifically, the original fundus images are processed through grayscale transformation, normalization, adaptive histogram equalization, and gamma correction before being saved as single-channel NIfTI inputs. This preprocessing pipeline follows the general idea used in PA-Net \cite{luo2025panet} and is intended to improve the distinguishability of thin vessels and low-contrast regions while reducing irrelevant color information. Once the later baseline is established, all subsequent structural-improvement experiments are carried out under this unified benchmark so that data-condition differences are controlled as much as possible and horizontal comparison among structures remains grounded on the same basis.
+
+All experiments are implemented on the nnU-Net v2 framework \cite{isensee2021nnunet}. The early exploration stage is used mainly for rapid reference building and trend observation, and therefore retains the fixed split together with a relatively simplified comparison setting. The later main experiments uniformly adopt the 2D configuration of nnU-Net v2, with an input patch size of \(512 \times 512\). Most structural experiments are trained for 100 epochs. The baseline trainer follows the default nnU-Net optimization setting, while the PA-Net-related structural variants use their corresponding custom trainers required by the migrated modules. For this reason, the later analysis treats the common data split, input organization, inference procedure, and evaluation script as the main basis for comparison, and avoids attributing performance changes to a single hyperparameter in isolation.
+
+Table \ref{tab:protocol_overview_en} summarizes the two experimental stages and clarifies how their roles differ.
+
+\begin{table}[!htbp]
+\centering
+\caption{Overview of the two experimental stages}
+\label{tab:protocol_overview_en}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llll}
+\hline
+Stage & Input and comparison setting & Training setting & Main role \\
+\hline
+Early exploration & Multi-source public fundus samples with three-channel NIfTI input & Fixed split; 150 epochs in the preliminary settings & Establish an initial reference and test input/loss adjustment \\
+Later main experiments & Unified public benchmark with enhanced single-channel NIfTI input & Five-fold validation; mainly 100 epochs & Compare structural variants and final result refinement \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+The evaluation strategy also differs slightly between the two stages. The early exploration stage mainly uses IoU, mIoU, Recall, Precision, Accuracy, mPA, and F1-score to establish an initial basis for comparison, whereas the later main-experiment stage uniformly adopts Sensitivity (SE), Specificity (SP), Accuracy (ACC), Precision (PR), and F1-score. Because the present task is more concerned with thin-vessel recovery and false-positive control, the later analysis places greater weight on changes in SE, PR, and F1-score, while using SP and ACC to describe the overall prediction balance. For the five-fold cross-validation results, conclusions are not drawn from any single fold in isolation. Predictions from all folds are aggregated before the final metrics are computed, reducing the fluctuation caused by any one split and improving consistency in model comparison. Where tables report values with ``\(\pm\)'', the numbers describe fold-level mean and standard deviation; where a table reports a single value, it summarizes the aggregated prediction-level result used for final comparison.
+
+\subsection{Baseline Model and Preliminary Exploration}
+After establishing the overall experimental framework, this thesis begins with the early baseline experiments together with input enhancement and loss-function exploration around that baseline. This stage is not meant to define the final solution directly. It addresses a more basic question first: how much improvement can routine training-side adjustments actually bring to the present task. Since it still functions mainly as an early feasibility check, the existing training and validation split is retained, and DRIVE is used uniformly as the test set so that different settings can be compared under the same data conditions.
+
+The first experiment adopts the standard nnU-Net baseline model \cite{isensee2021nnunet} as the initial performance reference. It is trained with the original input form and standard training settings in order to see what level of segmentation performance the current framework can achieve before any additional structural modification is introduced. Standard nnU-Net already provides a relatively stable overall performance at this stage and can therefore serve as a reasonable starting point for later exploration.
+
+The second experiment introduces CLAHE-based enhancement within the same framework to examine the effect of input enhancement on vessel segmentation. Thin vessels and low-contrast regions in fundus images are often not sufficiently clear, so moderate local contrast enhancement may improve the model's perception of these areas. Fig. \ref{fig:clahe_compare_en} provides a direct comparison between the original fundus image and the CLAHE-preprocessed result. After CLAHE, local contrast becomes stronger and some fine-vessel regions appear more clearly, although part of the non-vessel texture and background response is also enhanced. CLAHE does help improve early-stage convergence, but its effect on final segmentation performance remains limited. For this early-stage setting, a more suitable explanation is not that such enhancement is meaningless, but that nnU-Net already provides a fairly mature internal preprocessing pipeline, so additional manual enhancement before the image enters the network does not bring the clear gain one might expect.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{minipage}{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pic/original_image.jpg}\\
+        (a) Original fundus image
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.42\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pic/CLAHE_image.jpg}\\
+        (b) CLAHE-preprocessed image
+    \end{minipage}
+    \caption[Original and CLAHE-preprocessed fundus image]{Comparison between the original fundus image and the CLAHE-preprocessed result. CLAHE enhances local contrast and makes some thin-vessel regions more visible, but it also strengthens part of the non-vessel texture and background response.}
+    \label{fig:clahe_compare_en}
+\end{figure}
+
+The third experiment further introduces Focal Loss on top of CLAHE so as to examine the effect of loss-function adjustment on hard samples and class imbalance. Compared with the baseline and with input enhancement alone, this setting leads to faster convergence, but the final performance does not improve further. When the underlying structure remains unchanged, the influence of loss-function adjustment still falls mainly on the training process itself rather than on a stable improvement in the final result.
+
+Table \ref{tab:early_experiments_en} summarizes the settings and representative results of these three early experiments.
+
+\begin{table}[!htbp]
+\centering
+\caption{Summary of preliminary exploration experiments}
+\label{tab:early_experiments_en}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllll}
+\hline
+Experiment & Method & Training setup & Convergence & Representative result & Main observation \\
+\hline
+Exp1 & nnU-Net baseline & Dice, 150 epochs & converged at epoch 69 & F1 = 0.7924 & established the initial baseline \\
+Exp2 & CLAHE + nnU-Net & Dice, 150 epochs & converged at epoch 60 & F1 = 0.7827 & improved early convergence, but limited final gain \\
+Exp3 & CLAHE + nnU-Net + Focal Loss & Focal Loss, 150 epochs & converged at epoch 53 & F1 = 0.7802 & faster convergence, but no further performance improvement \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+Looking back at this stage, input enhancement and loss-function adjustment do affect the training process and produce changes in some local metrics, but they do not translate into sufficiently stable gains in the final result. In particular, the extra input-side preprocessing does not bring the clear benefit that might have been expected, which is consistent with the fact that nnU-Net already has a relatively complete internal preprocessing pipeline. For that reason, the focus of the later study shifts gradually from local training-side adjustment to structural improvement of the network itself.
+
+The early F1-score is not used as the direct baseline for the later five-fold comparisons, because the dataset composition, input form, and evaluation setting are different. The later nnU-Net v2 baseline under the unified protocol is therefore used as the reference point for the main structural comparisons.
+
+\subsection{PA-Net Module Migration and Ablation Experiments}
+After the preliminary exploration showed that extra input-side preprocessing did not bring clear gain and that loss-function adjustment also failed to produce stable improvement, the focus of this study shifted to the network structure itself. The first step at this stage was to draw on the design of PA-Net and attempt to migrate two of its core modules that are particularly relevant to retinal vessel segmentation into the nnU-Net framework, namely the Lightweight Parallel Transformer (LPT) and the Adaptive Vascular Feature Fusion Module (AFFM) \cite{luo2025panet}. These two modules were chosen because they correspond to the two issues that matter most for the later study: structural representation in high-level feature space and effective fusion of different feature levels during decoding.
+
+From a functional perspective, LPT is placed at the bottleneck and is intended to strengthen the modeling of long-range dependency and global structural information, whereas AFFM replaces the standard skip-connection fusion pattern and is expected to reduce the loss of detail caused by downsampling through adaptive weighting. Since the basic principles of these modules have already been introduced in Chapter 2, the focus here is not on their internal mechanism as such, but on whether they can produce stable gains once migrated into nnU-Net under a unified protocol. At this point, the goal is not to identify the final model immediately, but to test whether the structural ideas behind PA-Net can actually hold in the present framework.
+
+With this in mind, the thesis first constructs a full PA-Net migration model and then splits it into two single-module variants under the same experimental setting, namely LPT Only and AFFM Only, in order to determine which part of the complete migration is most responsible for the observed performance changes. The corresponding results are listed in Table \ref{tab:lpt_affm_ablation_en}.
+
+\begin{table}[!htbp]
+\centering
+\caption{Results of PA-Net module migration and ablation experiments}
+\label{tab:lpt_affm_ablation_en}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+nnU-Net v2 Baseline & $0.7627 \pm 0.0446$ & $0.9852 \pm 0.0050$ & $0.9659 \pm 0.0045$ & $0.8238 \pm 0.0646$ & $0.7891 \pm 0.0320$ \\
+PA-Net (Full) & $0.7211 \pm 0.0763$ & $0.9888 \pm 0.0050$ & $0.9659 \pm 0.0059$ & $0.8570 \pm 0.0621$ & $0.7782 \pm 0.0464$ \\
+LPT Only & $0.7597 \pm 0.0492$ & $0.9864 \pm 0.0041$ & $0.9669 \pm 0.0044$ & $0.8361 \pm 0.0546$ & $0.7935 \pm 0.0297$ \\
+AFFM Only & $0.7573 \pm 0.0475$ & $0.9868 \pm 0.0039$ & $0.9672 \pm 0.0045$ & $0.8400 \pm 0.0517$ & $0.7942 \pm 0.0300$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+Table \ref{tab:lpt_affm_ablation_en} shows that the full PA-Net migration does not outperform the baseline. Although PA-Net (Full) has higher PR, suggesting a more conservative prediction pattern, its SE drops noticeably, and its final F1-score also falls below the baseline. The fully migrated model therefore tends to retain high-confidence vessel regions at the expense of detecting some thin vessels and weak-response areas. By contrast, the two single-module ablations remain more stable overall. LPT Only slightly raises PR and F1-score while largely maintaining SE, which suggests that stronger high-level structural modeling at the bottleneck may be useful. AFFM Only achieves a relatively high ACC and F1-score within this local comparison, but its F1-score advantage over LPT Only is very small and does not by itself justify making decoder-side fusion the later main direction. AFFM is therefore checked further through the deep-supervision control below, while LPT remains the more relevant branch for the later bottleneck-sampling route.
+
+At that point, the question narrows to AFFM itself. As a multi-level feature fusion module operating in the decoder, could its gain be affected by the default deep-supervision mechanism in nnU-Net? Since deep supervision also acts on multiple decoder outputs and reinforces multi-scale feature learning through auxiliary segmentation heads \cite{isensee2021nnunet,lee2015dsn}, the thesis further constructs an AFFM w/o DS model by turning off deep supervision on top of AFFM Only, in order to examine whether a potential conflict exists between the two. If the main output loss is denoted by \(\mathcal{L}_{\mathrm{main}}\) and the \(s\)-th auxiliary loss by \(\mathcal{L}_{\mathrm{aux}}^{(s)}\), the total loss under deep supervision can be written as
+\begin{equation}
+\mathcal{L} = \mathcal{L}_{\mathrm{main}} + \sum_{s=1}^{S}\lambda_s \mathcal{L}_{\mathrm{aux}}^{(s)},
+\end{equation}
+where \(\lambda_s\) denotes the weight of each auxiliary branch. The training mechanism is illustrated in Fig. \ref{fig:deep_supervision_en_33}.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{pic/deep_supervision.png}
+\caption[Deep supervision in the nnU-Net decoder]{Schematic illustration of deep supervision in the nnU-Net decoder. During training, auxiliary segmentation heads are attached to multiple decoding stages and jointly contribute to the weighted loss, while only the main output is retained at inference time.}
+\label{fig:deep_supervision_en_33}
+\end{figure}
+
+The corresponding results are shown in Table \ref{tab:affm_ds_en_33}.
+
+\begin{table}[!htbp]
+\centering
+\caption{Comparison of AFFM with and without deep supervision}
+\label{tab:affm_ds_en_33}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+AFFM Only (with DS) & $0.7573 \pm 0.0475$ & $0.9868 \pm 0.0039$ & $0.9672 \pm 0.0045$ & $0.8400 \pm 0.0517$ & $0.7942 \pm 0.0300$ \\
+AFFM w/o DS & $0.7401 \pm 0.0493$ & $0.9880 \pm 0.0038$ & $0.9667 \pm 0.0048$ & $0.8490 \pm 0.0534$ & $0.7883 \pm 0.0308$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+As shown in Table \ref{tab:affm_ds_en_33}, removing deep supervision leads to slight improvements in SP and PR but reduces SE and F1-score, suggesting a more conservative model overall. Turning off deep supervision reduces some false positives, but it also weakens the detection of thin vessels and weak responses. This means that simply disabling deep supervision does not improve the overall behavior of AFFM, and the earlier performance pattern should not be attributed only to deep-supervision conflict.
+
+The results of this section suggest that the individual design ideas in PA-Net do have some value, but directly migrating the complete structure into nnU-Net does not yield a better solution. AFFM shows some local promise, but its gain is not stable, and the control experiment with deep supervision does not reveal a clearer advantage. By contrast, LPT shows a more convincing value for further exploration at this stage. The importance of this section is therefore not that it identifies the final model, but that it completes the first round of structural screening: directions worth pursuing are retained, while the next stage of improvement can move forward on a clearer basis around LPT.
+
+\subsection{Structural Improvements Based on LPT}
+After the first round of structural screening, the later improvement path of this thesis narrowed to the LPT module. Compared with the full PA-Net migration and the AFFM-centered exploration, LPT showed more stable value for continued optimization within the present framework. The point, then, is not that PA-Net as a whole was useless, but that the part most worth retaining for the later study was the one more directly related to high-level structural modeling. For that reason, this section moves away from decoder-side fusion and returns to the bottleneck LPT, tracing the later improvements built around its sampling mechanism and feature aggregation.
+
+The first step in this round of improvement is deformable sampling. Drawing on the idea of deformable attention \cite{zhu2021deformabledetr}, the thesis replaces the original Gated axial-attention (GAA) operation in the LPT module of PA-Net with a more flexible deformable sampling mechanism. In PA-Net, GAA performs gated multi-head attention along the width and height directions and combines this axial attention response with a local convolution branch \cite{luo2025panet}. This design helps organize feature interaction in two main spatial directions, but its spatial interaction pattern is still less flexible when vessels are strongly curved, bifurcated, or very thin. Deformable sampling, by contrast, allows the sampling positions to shift adaptively around a reference point, giving the model more opportunity to follow curved vessel trajectories in high-level semantic space. Since Chapter 2 has already introduced the difference between fixed and deformable sampling, the emphasis here is not to restate the method, but to examine what this replacement actually changes in experiment.
+
+To evaluate this replacement, three comparison models are constructed in succession: first, Deformable LPT (4 point) without AFFM, to judge whether the deformable replacement itself is effective; second, Deformable LPT with AFFM reintroduced under the same structure, to determine whether AFFM still needs to be retained in the new LPT form; and third, a version in which the number of sampled points is expanded from 4 point to 8 point, to observe the effect of sampling scale. The corresponding results are shown in Table \ref{tab:deformable_lpt_en_34}.
+
+\begin{table}[!htbp]
+\centering
+\caption{Results of deformable LPT-related experiments}
+\label{tab:deformable_lpt_en_34}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+LPT Only & $0.7597 \pm 0.0492$ & $0.9864 \pm 0.0041$ & $0.9669 \pm 0.0044$ & $0.8361 \pm 0.0546$ & $0.7935 \pm 0.0297$ \\
+Deformable LPT (No AFFM, 4 point) & $0.7634 \pm 0.0540$ & $0.9863 \pm 0.0043$ & $0.9672 \pm 0.0044$ & $0.8371 \pm 0.0511$ & $0.7958 \pm 0.0275$ \\
+Deformable LPT + AFFM & $0.7571 \pm 0.0495$ & $0.9867 \pm 0.0042$ & $0.9670 \pm 0.0044$ & $0.8388 \pm 0.0545$ & $0.7933 \pm 0.0301$ \\
+Deformable LPT (No AFFM, 8 point) & $0.7573 \pm 0.0506$ & $0.9869 \pm 0.0038$ & $0.9672 \pm 0.0047$ & $0.8412 \pm 0.0504$ & $0.7946 \pm 0.0296$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+As shown in Table \ref{tab:deformable_lpt_en_34}, replacing LPT with deformable sampling without AFFM raises SE and F1-score relative to LPT Only, and the 4 point setting gives the highest F1-score within this group. SP and ACC remain close to the LPT Only setting, so the gain is not obtained through an obvious loss of background rejection. The table therefore supports keeping a more flexible bottleneck sampling mechanism for the next round of experiments. Reintroducing AFFM does not lead to further improvement: F1-score drops from 0.7958 to 0.7933, which again suggests that AFFM does not provide stable gain in the present framework. The 8 point setting raises PR slightly, but SE and F1-score both remain below the 4 point version. The later experiments therefore retain Deformable LPT (4 point) without AFFM as the new improvement baseline.
+
+With that baseline in place, the thesis continues along the same line. The next step introduces a modulation mask within the single-scale deformable sampling framework, yielding Modulated Deformable (4 point). On top of that structure, the sampling range is further extended from the current layer to multiple encoder levels, so that cross-level access and aggregation can provide more high-resolution information, yielding MS-Modulated (4 point). In this chapter, MS-Modulated is therefore treated as the form obtained by adding multi-scale sampling to Modulated Deformable. Figures \ref{fig:modulated_deformable_en_34} and \ref{fig:ms_modulated_en_34} illustrate these two steps.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{pic/Modulated_Deformable_Sampling_fundus.png}
+\caption[Single-scale Modulated Deformable sampling]{Schematic illustration of single-scale Modulated Deformable sampling. The query position accesses nearby locations through deformable offsets, and a modulation mask further adjusts the contribution of different sampled points. Author's schematic based on the implementation used in this thesis and the principle of deformable sampling \cite{zhu2019dcnv2,zhu2021deformabledetr}.}
+\label{fig:modulated_deformable_en_34}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{pic/MS_modulated_DF.png}
+\caption[Multi-scale Modulated Deformable sampling]{Schematic illustration of multi-scale Modulated Deformable sampling. Bottleneck features act as queries, access multi-scale encoder features across levels, and form an enhanced bottleneck representation through weighted aggregation. Author's schematic based on the implementation used in this thesis.}
+\label{fig:ms_modulated_en_34}
+\end{figure}
+
+On the basis of this progression, the thesis further constructs the Modulated Deformable (4 point) and MS-Modulated (4 point) models and compares them under the same experimental setting. The corresponding results are listed in Table \ref{tab:modulated_msdeform_en_34}.
+
+\begin{table}[!htbp]
+\centering
+\caption{Results of Modulated and multi-scale deformable LPT experiments}
+\label{tab:modulated_msdeform_en_34}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+Deformable LPT (No AFFM, 4 point) & $0.7634 \pm 0.0540$ & $0.9863 \pm 0.0043$ & $0.9672 \pm 0.0044$ & $0.8371 \pm 0.0511$ & $0.7958 \pm 0.0275$ \\
+Deformable LPT (No AFFM, 8 point) & $0.7573 \pm 0.0506$ & $0.9869 \pm 0.0038$ & $0.9672 \pm 0.0047$ & $0.8412 \pm 0.0504$ & $0.7946 \pm 0.0296$ \\
+Modulated Deformable (4 point) & $0.7660 \pm 0.0511$ & $0.9858 \pm 0.0048$ & $0.9669 \pm 0.0046$ & $0.8324 \pm 0.0560$ & $0.7950 \pm 0.0305$ \\
+MS-Modulated (4 point) & $0.7582 \pm 0.0509$ & $0.9870 \pm 0.0038$ & $0.9673 \pm 0.0046$ & $0.8419 \pm 0.0497$ & $0.7954 \pm 0.0283$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+\FloatBarrier
+
+Table \ref{tab:modulated_msdeform_en_34} shows that Modulated Deformable (4 point) achieves the highest SE in this group, suggesting that the modulation mask is associated with stronger detection of thin vessels and weak-response regions. Within single-scale deformable sampling, the additional selection mechanism appears to alter the sampling distribution and push the model toward positions more closely related to vascular continuity. Once multi-scale sampling is introduced on top of this structure, MS-Modulated (4 point) no longer raises SE, but it performs better in SP, ACC, and PR. This suggests that cross-level multi-scale sampling helps suppress background noise and improve the overall prediction balance. The move from Modulated Deformable to MS-Modulated therefore shifts the emphasis from stronger detection toward richer cross-level feature integration.
+
+This section therefore presents a clearer progression in the LPT line: deformable sampling first addresses the limitation of fixed sampling for slender vessels, modulation then strengthens key-position selection within the single-scale setting, and multi-scale sampling finally introduces richer feature support from different levels. Although the performance differences at this stage are still limited, the research line has already moved from asking whether a module can be migrated at all to asking how a more stable logic of structural improvement can be formed within a unified framework. On that basis, the next section continues along the multi-scale direction and further introduces attention enhancement and continuous geometric modeling.
+
+\subsection{Multi-scale Modeling and Attention Enhancement}
+At the end of the previous section, the improvement mainline had already reached the MS-Modulated stage. By that point, the model was able to access and aggregate multi-scale features across levels, but a new issue also became apparent. Although multi-scale sampling helps recover shallow detail and improves the overall prediction balance, cross-level aggregation alone may still be insufficient for the selective representation of vessel direction and spatial location. On that basis, the thesis first introduces Coordinate Attention (CA) into the MS-Modulated structure \cite{hou2021coordatt}, with the aim of enhancing directional and positional modeling on top of the existing multi-scale design.
+
+Unlike ordinary channel attention, Coordinate Attention preserves both channel relationships and spatial directional information. Its basic procedure is to aggregate features separately along the horizontal and vertical directions and then produce two direction-sensitive attention maps through a shared transformation. If the input feature is denoted by \(X \in \mathbb{R}^{C\times H\times W}\), the output can be summarized as
+\begin{equation}
+Y_{\mathrm{CA}} = X \odot a_h \odot a_w,
+\end{equation}
+where \(a_h\) and \(a_w\) denote the attention responses generated along the two spatial directions. For retinal vessel segmentation, this design is useful because it avoids uniform enhancement across all channels and instead emphasizes regions related to vessel direction, location, and continuity on top of the existing multi-scale aggregation result. In implementation, CA is placed at the entrance of the multi-scale LPT module: the bottleneck feature is first recalibrated in a direction-aware manner and is then sent to the later local feature extraction and multi-scale deformable aggregation stages. Figure \ref{fig:ms_ca_en_35} illustrates the combined structure of MS-Modulated and Coordinate Attention.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.84\textwidth]{pic/MS_CA.png}
+\caption[MS-Modulated with Coordinate Attention]{Structure of MS-Modulated combined with Coordinate Attention. Multi-scale deformable sampling first completes cross-level information aggregation, after which Coordinate Attention further recalibrates the feature response along spatial directions. Author's schematic based on the implementation used in this thesis and Coordinate Attention \cite{hou2021coordatt}.}
+\label{fig:ms_ca_en_35}
+\end{figure}
+
+On this basis, the thesis uses MS-Modulated (4 point) as the direct reference model and further constructs MS-Modulated + CA in order to examine whether introducing explicit positional attention on top of cross-level multi-scale sampling can produce a more stable overall improvement. The corresponding results are shown in Table \ref{tab:msmod_ca_en_35}.
+
+\begin{table}[!htbp]
+\centering
+\caption{Comparison between MS-Modulated and MS-Modulated + CA}
+\label{tab:msmod_ca_en_35}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+MS-Modulated (4 point) & $0.7582$ & $0.9870$ & $0.9673$ & $0.8419$ & $0.7954$ \\
+MS-Modulated + CA & $0.7697$ & $0.9857$ & $0.9673$ & $0.8324$ & $0.7973$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+Table \ref{tab:msmod_ca_en_35} shows that, after CA is introduced on top of MS-Modulated, the model improves further in SE and F1-score, with SE reaching 0.7697 and F1-score increasing to 0.7973. This pattern suggests that, once cross-level deformable sampling is already in place, explicit positional attention may further support the detection of thin vessels and weak responses while improving the overall segmentation quality. Compared with the previous section, MS-Modulated tends to improve SP, ACC, and PR, whereas the addition of CA leads to better SE and F1-score. In that sense, CA is not just pushing false positives down further. It also strengthens representations related to vessel direction and position on top of the existing multi-scale interaction.
+
+Another issue becomes hard to ignore at this stage. Although multi-scale deformable sampling and Coordinate Attention have already strengthened cross-level interaction and spatial selection, the current sampling mechanism is still closer to a discrete point-based model: it can locate useful positions, but it does not yet describe the slender, continuous, and curved geometry of retinal vessels sufficiently well. This is why the later experiment introduces Dynamic Snake Convolution (DSConv) \cite{qi2023dsc}, with the intention of imposing continuous trajectory constraints among sampled points so that the sampling process can better follow the actual course of retinal vessels. This step does not replace ordinary convolution throughout the whole network. Instead, DSConv is introduced into the multi-scale sampling branch of the bottleneck LPT module, replacing the discrete cross-level deformable sampling used in the previous MS-Modulated + CA stage.
+
+Unlike the earlier discrete sampling scheme, where sampled points are relatively independent, the key idea of DSConv is that later sampling positions depend on the offsets accumulated from earlier ones. If the vertical increment of the \(k\)-th sampled point is denoted by \(\delta y_k\) and the horizontal base step by \(\Delta x_k\), then the snake-like sampling position can be written as
+\begin{equation}
+\tilde{p}_k = p + \left(\Delta x_k,\; \sum_{t=1}^{k}\delta y_t\right).
+\end{equation}
+This formulation shows that DSConv no longer treats the sampled points as independent discrete positions, but lets them participate in feature extraction along a gradually unfolding trajectory. For retinal vessel segmentation, that matters because vessel direction, bifurcation, and local width variation are all closer to a continuous geometric form than to a scattered set of isolated points.
+
+In the present implementation, this continuous trajectory is not confined to local single-scale sampling, but is further embedded into multi-scale aggregation. If the input feature at the \(l\)-th scale is denoted by \(x_l\), the linearly projected representation by \(P_l(x_l)\), and the corresponding weights by \(A_{l,k}\) and \(m_{l,k}\), then multi-scale dynamic snake aggregation can be summarized as
+\begin{equation}
+\mathrm{MSDSConv}(p) = \sum_{l=1}^{L}\sum_{k=1}^{K} A_{l,k} m_{l,k}\,P_l\big(x_l(\tilde{p}_{l,k})\big).
+\end{equation}
+Compared with the multi-scale modulated deformable form used in the previous stage, the main change here is not merely that multi-scale aggregation continues, but that the formerly discrete cross-level sampled positions are replaced by a sequence of positions unfolding along a continuous trajectory. The model therefore no longer seeks only a number of isolated responses when accessing features across levels, but instead aggregates along a path that is more consistent with the geometry of the vessel itself. Figure \ref{fig:msds_ca_en_35} shows the combined structure of MS-DSConv and Coordinate Attention.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.84\textwidth]{pic/MSDS.png}
+\caption[MS-DSConv with Coordinate Attention]{Structure of MS-DSConv combined with Coordinate Attention. The sampled points in the multi-scale branch unfold along a continuous snake-like trajectory; after cross-level weighted aggregation, Coordinate Attention further recalibrates the spatial response. Author's schematic based on the implementation used in this thesis, Dynamic Snake Convolution \cite{qi2023dsc}, and Coordinate Attention \cite{hou2021coordatt}.}
+\label{fig:msds_ca_en_35}
+\end{figure}
+
+On that basis, the thesis uses MS-Modulated + CA as the direct comparison model and further constructs MS-DSConv + CA, in order to examine whether introducing continuous geometric trajectory modeling on top of multi-scale sampling and spatial attention can further improve the recovery of thin vessels and the integrity of the overall structure. The corresponding results are shown in Table \ref{tab:msdsconv_ca_en_35}.
+
+\begin{table}[!htbp]
+\centering
+\caption{Comparison between MS-Modulated + CA and MS-DSConv + CA}
+\label{tab:msdsconv_ca_en_35}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+MS-Modulated + CA & $0.7697$ & $0.9857$ & $0.9673$ & $0.8324$ & $0.7973$ \\
+MS-DSConv + CA & $0.8083$ & $0.9815$ & $0.9666$ & $0.7997$ & $0.8020$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+As shown in Table \ref{tab:msdsconv_ca_en_35}, introducing Dynamic Snake Convolution on top of MS-Modulated + CA leads to gains in SE and F1-score, with SE increasing to 0.8083 and F1-score rising to 0.8020. This pattern is consistent with the purpose of DSConv: when the sampling mechanism shifts from discrete point-based aggregation toward continuous trajectory modeling, the model tends to recover more thin vessels, disconnected regions, and structurally continuous topology. At the same time, SP and PR decrease relative to the previous stage, and PR falls to 0.7997. Stronger geometric continuity therefore appears to make the model more willing to label potential vessel pixels, which in turn increases some false positives and small noisy regions.
+
+The results of this section support continuing the structural-representation route on top of the multi-scale modeling line. The key additions are explicit positional attention and continuous geometric trajectory constraints. MS-Modulated + CA raises thin-vessel sensitivity while preserving reasonable overall balance, whereas MS-DSConv + CA pushes structural continuity modeling further and achieves the best F1-score at this stage. At the same time, its lower PR indicates that some false-positive regions still remain. This is why the next section turns to output refinement and loss-based constraints to check whether the final outputs can be made cleaner and more stable.
+
+\subsection{Post-processing and Loss-function Exploration}
+In the previous section, MS-DSConv + CA achieved the best F1-score at the current stage and produced higher SE, suggesting that the mainline built around multi-scale modeling, positional attention, and continuous geometric trajectory constraints is useful for modeling thin vessels and structural continuity. At the same time, however, a new problem became more visible: although this model performs well in SE and F1-score, its PR still remains below 0.8. This means that, while the model becomes more aggressive in recovering thin vessels and continuous structures, it also retains some small noisy connected components and false-positive regions. The next step, therefore, is to deal more directly with these residual errors, first at the output level and then at the level of the loss function.
+
+The first attempt in this direction is post-processing. Unlike the structural modifications in the previous sections, post-processing does not change the backbone network and does not directly affect feature extraction. Instead, it applies rule-based correction to the binarized prediction result. In retinal vessel segmentation, one common problem is the appearance of small, spatially isolated connected components, which often come from background noise, local reflections, or false positives. The thesis therefore adopts an area-threshold-based connected-component filtering strategy, with the aim of removing clearly unreasonable small regions while preserving the main vascular structure as much as possible. If a connected component in the prediction is denoted by \(C_i\), its pixel area by \(|C_i|\), and the area threshold by \(X\), then the post-processing rule can be written as
+\begin{equation}
+\hat{Y}_{\mathrm{post}}(C_i)=
+\begin{cases}
+1, & |C_i| \ge X,\\
+0, & |C_i| < X.
+\end{cases}
+\end{equation}
+Here, \(X=0\) means that no post-processing is applied; as \(X\) increases, more small connected components are removed. Figure \ref{fig:postprocess_threshold_en_36} shows how the main metrics change under different thresholds, and Table \ref{tab:postprocess_en_36} reports the corresponding results.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.72\textwidth]{pic/Postprocess_Threshold_Metrics_dual_axis.png}
+\caption[Influence of post-processing threshold]{Influence of the post-processing area threshold on the main metrics. The left vertical axis shows SE, PR, and F1-score, while the right vertical axis shows SP, allowing the trends of different metrics to be viewed more clearly.}
+\label{fig:postprocess_threshold_en_36}
+\end{figure}
+
+\begin{table}[!htbp]
+\centering
+\caption{Results of MS-DSConv + CA under different post-processing thresholds}
+\label{tab:postprocess_en_36}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+MS-DSConv + CA ($X=0$) & $0.8083$ & $0.9815$ & $0.9666$ & $0.7997$ & $0.8020$ \\
+MS-DSConv + CA ($X=20$) & $0.8059$ & $0.9819$ & $0.9668$ & $0.8035$ & $0.8027$ \\
+MS-DSConv + CA ($X=30$) & $0.8046$ & $0.9821$ & $0.9669$ & $0.8048$ & $0.8026$ \\
+MS-DSConv + CA ($X=90$) & $0.7995$ & $0.9827$ & $0.9670$ & $0.8089$ & $0.8021$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+\FloatBarrier
+
+Table \ref{tab:postprocess_en_36} shows that, without post-processing, namely at \(X=0\), the model already has the strongest vessel detection ability, with SE = 0.8083 and F1-score = 0.8020, but PR is only 0.7997. As the threshold rises from 0 to 20, 30, and 90, SP, PR, and ACC gradually increase, while SE gradually decreases. This pattern suggests that post-processing does remove some small noisy regions, but it can also remove some genuine thin vessels. Among the reported candidate thresholds, \(X=20\) gives the highest F1-score of 0.8027. It is therefore retained as a light correction rather than as a heavily tuned post-processing rule. As the threshold becomes larger still, the result becomes cleaner and more conservative, but the ability to retain thin vessels declines accordingly.
+
+The thesis then asks whether structural continuity can be strengthened from the loss-function side. Unlike output correction, clDice is concerned with how connectivity information at the skeleton level can be incorporated into the optimization target during training \cite{shit2021cldice}. Keeping the MS-DSConv + CA backbone unchanged, the thesis adds clDice on top of the original base loss in order to strengthen the modeling of skeleton consistency and connectivity in slender structures. If the prediction is denoted by \(P\) and the ground truth by \(G\), clDice can be written as
+\begin{equation}
+\mathrm{clDice}(P,G)=
+\frac{2\,T_{\mathrm{prec}}(P,G)\,T_{\mathrm{sens}}(P,G)}
+{T_{\mathrm{prec}}(P,G)+T_{\mathrm{sens}}(P,G)},
+\end{equation}
+where \(T_{\mathrm{prec}}\) and \(T_{\mathrm{sens}}\) denote topology-aware precision and topology-aware sensitivity defined on the basis of skeleton overlap. In the present implementation, clDice is applied only to the highest-resolution output branch and is optimized jointly with the original loss as an additional term. For direct comparison with the previous part, the thesis again evaluates the model under different area thresholds \(X\), and the results are shown in Table \ref{tab:cldice_en_36}.
+
+\begin{table}[!htbp]
+\centering
+\caption{Results after adding clDice under different post-processing thresholds}
+\label{tab:cldice_en_36}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+MS-DSConv + CA + clDice ($X=0$) & $0.8110 \pm 0.0477$ & $0.9806 \pm 0.0052$ & $0.9661 \pm 0.0041$ & $0.7944 \pm 0.0500$ & $0.8003 \pm 0.0243$ \\
+MS-DSConv + CA + clDice ($X=20$) & $0.8079 \pm 0.0484$ & $0.9810 \pm 0.0052$ & $0.9663 \pm 0.0041$ & $0.7976 \pm 0.0500$ & $0.8004 \pm 0.0244$ \\
+MS-DSConv + CA + clDice ($X=30$) & $0.8061 \pm 0.0486$ & $0.9812 \pm 0.0052$ & $0.9663 \pm 0.0041$ & $0.7990 \pm 0.0499$ & $0.8002 \pm 0.0245$ \\
+MS-DSConv + CA + clDice ($X=90$) & $0.8002 \pm 0.0498$ & $0.9817 \pm 0.0051$ & $0.9663 \pm 0.0042$ & $0.8025 \pm 0.0496$ & $0.7989 \pm 0.0243$ \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+Table \ref{tab:cldice_en_36} shows that, after clDice is added, the model generally achieves slightly higher SE under different thresholds. For example, at \(X=0\), SE rises to 0.8110; at \(X=20\), SE reaches 0.8079. This suggests that clDice, as an auxiliary loss aimed at topological consistency in slender structures, can indeed strengthen the model's sensitivity to thin vessels and continuous structures to some extent. However, compared with the results without clDice in the previous part, this modification does not lead to better overall performance. At the best post-processing threshold \(X=20\), the F1-score after adding clDice is 0.8004, lower than the 0.8027 obtained without it, and PR also drops from 0.8035 to 0.7976. Although clDice moves in the right direction by strengthening structural continuity, it also introduces more false-positive regions and weakens the overall balance.
+
+This comparison shows that post-processing and clDice represent two different kinds of supplementary strategy: the former corrects local false positives at the output level, whereas the latter tries to strengthen structural continuity through the optimization objective itself. At the present stage of this study, the main limitation is not that topological constraints are entirely missing, but that local false positives produced by a high-sensitivity structural model still need to be corrected effectively. Under the current experimental conditions, post-processing provides a more direct and stable gain, whereas clDice remains a reasonable exploration but does not outperform the post-processing-based solution as a whole. The thesis therefore retains post-processing as an important part of later result refinement, while treating clDice as an exploratory but unretained attempt.
+
+\subsection{Chapter Summary}
+This chapter presented the design and implementation of the improved models under a unified experimental framework. It first established the two-stage setup and showed in the early exploratory experiments that input enhancement and loss-function adjustment can affect convergence and some local metrics, but do not yield stable enough gains in the final result. From there, the focus shifts away from routine training-side adjustment and toward structural improvement of the network itself.
+
+The later implementation path begins with PA-Net migration and ablation, which provide a first round of structural screening. The overall pattern is that the complete PA-Net migration does not yield a better solution, AFFM does not provide stable gain, and the later improvements that remain useful come from the line built around LPT. On that basis, the mainline develops through deformable sampling, modulation, multi-scale aggregation, positional attention, and continuous geometric trajectory modeling.
+
+The chapter also clarifies the remaining trade-off. As sensitivity rises, local false positives become harder to ignore. Under the present conditions, area-threshold post-processing handles that problem more effectively than clDice and therefore remains part of the final retained version. What emerges from this chapter is a later mainline centered on MS-DSConv + CA together with the refinement step that best matches its error pattern.
+
+The next chapter compares these representative models under a common reference and analyzes their overall results, metric trade-offs, and structural evolution.
+
+\section{Experimental Results and Analysis}
+
+\subsection{Overall Comparison of Results}
+This section compares the representative models selected from different stages of the study in order to establish a common point of reference. It includes both the early contrast from direct PA-Net migration and the key models that emerged later along the LPT mainline, so that the overall trajectory of the performance changes can be seen more clearly. The discussion focuses mainly on SE, PR, and F1-score, while SP and ACC are used as supporting indicators of overall prediction balance.
+
+\begin{table}[!htbp]
+\centering
+\caption{Overall comparison of representative models in Chapter 4}
+\label{tab:chapter4_overall_en}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\hline
+Model & SE & SP & ACC & PR & F1-score \\
+\hline
+nnU-Net v2 Baseline & $0.7627$ & $0.9852$ & $0.9659$ & $0.8238$ & $0.7891$ \\
+PA-Net (Full) & $0.7211$ & $0.9888$ & $0.9659$ & $0.8570$ & $0.7782$ \\
+Deformable LPT (No AFFM, 4 point) & $0.7634$ & $0.9863$ & $0.9672$ & $0.8371$ & $0.7958$ \\
+MS-Modulated (4 point) & $0.7582$ & $0.9870$ & $0.9673$ & $0.8419$ & $0.7954$ \\
+MS-Modulated + CA & $0.7697$ & $0.9857$ & $0.9673$ & $0.8324$ & $0.7973$ \\
+MS-DSConv + CA & $0.8083$ & $0.9815$ & $0.9666$ & $0.7997$ & $0.8020$ \\
+MS-DSConv + CA ($X=20$) & $0.8059$ & $0.9819$ & $0.9668$ & $0.8035$ & $0.8027$ \\
+\hline
+\end{tabular}}
+\end{table}
+
+Table \ref{tab:chapter4_overall_en} shows that the full PA-Net migration does not outperform the nnU-Net v2 baseline. Although PA-Net (Full) reaches a PR of 0.8570, which suggests a more conservative output with fewer false positives, its SE is only 0.7211, lower than the baseline value of 0.7627, and its final F1-score also drops to 0.7782. The fully migrated model tends to preserve high-confidence vessel regions at the cost of losing many thin vessels and weak-response areas. The design ideas themselves are therefore not without value, but a direct transfer into the nnU-Net framework does not automatically produce a better solution.
+
+The later improvements along the LPT line do not raise every metric monotonically, but the changes become easier to interpret in terms of the SE-PR trade-off. Deformable LPT (No AFFM, 4 point) raises F1-score to 0.7958, suggesting that more flexible sampling at the bottleneck is useful for high-level vessel-structure modeling. MS-Modulated does not further increase SE, but it performs better in SP, ACC, and PR, which reflects a more conservative and cleaner prediction style. Adding CA on top of that raises SE and F1-score again, suggesting that explicit directional and positional information still contributes to the recovery of slender vessels. A further step to MS-DSConv increases SE to 0.8083 and F1-score to 0.8020, suggesting that continuous geometric trajectory modeling is better matched to the observed thin-vessel recovery pattern than the earlier discrete sampling form.
+
+The final result appears in the MS-DSConv + CA model with post-processing at \(X=20\), where F1-score reaches 0.8027, representing a modest improvement of 0.0136 over the baseline value of 0.7891. This gain is not large in absolute terms, but it is meaningful because it is obtained under the same later-stage protocol and follows a consistent pattern in the SE-PR trade-off. It is not produced by post-processing alone. It first relies on the stronger vessel-detection tendency established through the earlier structural modifications and then on the correction of the low-PR problem through lightweight output filtering. The final retained solution should therefore be read as the result of a sequence of structural choices and result screening, rather than as the effect of one isolated module.
+
+\subsection{Analysis of Metric Trade-offs}
+From the perspective of retinal vessel segmentation, SE mainly reflects the detection of thin vessels and weak-response regions, PR more directly reflects the suppression of false positives, and F1-score represents the balance between the two. Model comparison therefore cannot rely on whether one metric is simply higher than another. What matters more is whether a structural modification pushes the model toward a more sensitive or a more conservative prediction pattern. The figures in this section focus on the later mainline models, namely the structures that evolved after the baseline along the LPT route and were eventually retained.
+
+\begin{figure}[!htbp]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pic/comparion_of_se.png}\\
+(a) SE comparison
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{pic/Comparison of F1-score.png}\\
+(b) F1-score comparison
+\end{minipage}
+\caption[SE and F1-score across representative models]{Changes in SE and F1-score across representative models on the later mainline. The figure shows the key structural versions that emerged along the LPT route after the baseline.}
+\label{fig:chapter4_metric_pair_en}
+\end{figure}
+
+Figure \ref{fig:chapter4_metric_pair_en} first shows the overall changes in SE and F1-score along the later mainline. Deformable LPT and Modulated Deformable are both more inclined toward stronger detection of thin vessels. Deformable LPT raises F1-score to 0.7958 relative to the baseline and also slightly improves SE, which suggests that more flexible sampling can help high-level structural modeling. Modulated Deformable pushes SE further to 0.7660. From the perspective of F1-score, however, this step does not bring a more obvious overall advantage than Deformable LPT, so it is better understood as a further move in the direction of stronger detection rather than a major improvement in balance.
+
+The later half of the mainline is reflected more clearly in the SE-PR relationship shown in Fig. \ref{fig:chapter4_balance_en}. MS-Modulated lies further to the right, corresponding to relatively high PR but comparatively limited SE. This suggests that cross-level multi-scale sampling is more helpful for suppressing background noise and maintaining a conservative prediction style. After CA is introduced, the point moves upward, which means that SE recovers while PR remains relatively high. Combined with Fig. \ref{fig:chapter4_metric_pair_en} and Table \ref{tab:chapter4_overall_en}, this step raises F1-score while keeping a relatively controlled false-positive pattern. CA is therefore interpreted as strengthening the representation of vessel direction and position on top of the existing multi-scale feature interaction, rather than merely pushing false positives down.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.43\textwidth]{pic/performace_balance_comparison.png}
+\caption[Sensitivity-precision balance of representative models]{Performance balance between sensitivity and precision for the representative later-mainline models, including the final post-processed version.}
+\label{fig:chapter4_balance_en}
+\end{figure}
+\FloatBarrier
+
+On this basis, MS-DSConv + CA shows an even clearer tendency to trade stronger structural continuity for stronger detection. Figure \ref{fig:chapter4_metric_pair_en} shows that it reaches higher SE and F1-score, with SE increasing to 0.8083 and F1-score to 0.8020. Fig. \ref{fig:chapter4_balance_en} also shows that these gains come with a drop in PR. DSConv therefore appears to make the model more willing to identify potential vessel pixels. This is beneficial for recovering thin vessels and continuous structures, but it can also introduce more small noisy regions.
+
+The final point in Fig. \ref{fig:chapter4_balance_en} further clarifies the role of post-processing. For MS-DSConv + CA, post-processing does not fundamentally alter the model's high-sensitivity character. Instead, it removes some isolated noise, raising PR from 0.7997 to 0.8035 while causing only a small loss in SE. Together with Table \ref{tab:chapter4_overall_en}, this also explains why the post-processed version reaches the highest F1-score of the current stage, namely 0.8027. The strength of the final retained solution, then, does not lie in making one single metric absolutely optimal, but in reaching a more suitable compromise between vessel detection, false-positive control, and overall balance.
+
+\subsection{Analysis of the Structural Evolution Path}
+
+The previous two sections focus mainly on what the models achieved; this section further considers why the final route settled where it did. Chapter 3 shows that the work did not move toward a fixed endpoint by steadily adding modules. The direction became clearer only after several rounds of trial and screening. The early PA-Net migration indicated that directly transplanting an existing design did not produce a better model under the present framework. The part that continued to justify further work was the bottleneck LPT. Once that became clear, the attention moved away from decoder-side fusion and back to the vessel structure itself, especially how high-level features could better describe curved, thin, and heavily branched vessels.
+
+Seen from that angle, Deformable LPT and Modulated Deformable first address a direct problem: the sampling mechanism is not flexible enough. Fixed local aggregation is not weak in ordinary regions, but it becomes less suitable when vessel trajectories change quickly and scale differences become obvious. Deformable sampling loosens the reliance on fixed positions. The added modulation mask then encourages the model to respond more readily to potential vessel regions. In the results, the earliest sign of this shift is the rise in SE. Even so, this stage is better understood as a step toward more active vessel detection rather than a complete solution, because the recovery of shallow details is not yet stable enough.
+
+The emphasis changes again from Modulated Deformable to MS-Modulated and then to MS-Modulated + CA. At that point, the issue is no longer just whether sampling is flexible, but whether information from different levels can work together more effectively. Multi-scale sampling matters not just because more feature maps are involved, but because shallow details are brought back into high-level structural judgment. That reduces the model's dependence on deep semantic abstraction alone when it has to infer vessel trajectories. CA builds on that adjustment rather than changing the route itself. Its role is smaller and more specific: it makes the model more responsive to directional and positional cues. By then, the goal is no longer only to push detection upward, but to make structural expression steadier while keeping false positives under control.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{pic/overlay_case_comparison_24_25_34_36.png}
+\caption[Visual comparison of representative segmentation cases]{Visual comparison of segmentation results for four representative cases. From left to right: original image, ground truth, nnU-Net baseline, MS-Modulated + CA, MS-DSConv + CA, and its post-processed result.}
+\label{fig:chapter4_overlay_en}
+\end{figure}
+\FloatBarrier
+
+The four cases in Fig. \ref{fig:chapter4_overlay_en} should be interpreted as examples of different prediction styles rather than as proof of a strict ranking among the intermediate models. They were selected to show several common situations in the DRIVE images, including fine peripheral vessels, relatively weak vessel contrast, lesion-like background interference, and dense branching. In broad terms, the baseline remains more conservative, while the later mainline models respond more actively to potential vessel regions. Cases 24 and 25 show this most directly: the baseline misses more weak vessels, whereas MS-DSConv + CA preserves a larger part of the vessel tree. Case 34 is useful because the background is less clean, so the improvement is not simply a matter of adding more vessel pixels. Case 36 shows a denser vascular pattern where the later models recover more continuous branches, although some extra local responses also appear. Across these cases, MS-Modulated + CA often gives a cleaner but more restrained prediction, while MS-DSConv + CA is more willing to preserve slender vessel regions. The last column gives post-processing a limited role: it removes scattered small regions without changing the main structural tendency already visible in the previous result.
+
+These visual differences are consistent with the metric trend and help explain why DSConv was retained. It was kept not just because a few metrics rise again, but because it fits the direction established by the earlier steps. Multi-scale sampling and CA provide a more suitable feature basis, and DSConv extends that line by carrying the preference for thin and continuous structures down to the local modeling level. Under those conditions, the model is more willing to produce continuous responses when vessels are strongly curved or densely branched. The trade-off is also clear: more scattered noise appears, so post-processing still has a practical role. The final convergence to MS-DSConv + CA with post-processing therefore reflects a choice of the combination that best matches the problem addressed in this thesis, rather than a preference for the version with the largest number of modules.
+
+\subsection{Supplementary Discussion on Post-processing and clDice}
+
+The previous section shows why the main line settles on MS-DSConv + CA. Even at that stage, however, some problems remain. Figure \ref{fig:chapter4_balance_en} and Table \ref{tab:chapter4_overall_en} show that MS-DSConv + CA already reaches relatively high SE and F1-score, while PR still lags behind. At this point, the main limitation is no longer the recovery of major vessel trunks or a simple lack of topology-aware constraints. The more immediate issue is the scattered noise and local false positives that appear when vessel regions are recovered more aggressively.
+
+Post-processing therefore remains part of the final solution. Its role is limited but useful: it makes a light correction at the output stage, where the current error pattern is easiest to address. For a high-sensitivity model such as MS-DSConv + CA, the vascular tree is usually not grossly wrong. The more common problem is the presence of small connected components near the boundary that remain isolated from the main structure. Errors of this kind are easier to remove at the output level than to suppress by forcing the backbone to become more conservative again. Table \ref{tab:postprocess_en_36} supports this interpretation. At \(X=0\), the model reaches an F1-score of 0.8020 with PR = 0.7997. When an area threshold of \(X=20\) is applied, PR rises to 0.8035 and F1-score to 0.8027, while SE falls only slightly from 0.8083 to 0.8059. The improvement is modest, but it targets the error pattern that still matters at this stage, supporting the decision to keep post-processing in the final version.
+
+clDice is less convincing under the same criterion. It was not removed because it had no effect; rather, the gains it brings do not line up well with the main problem at this stage. As shown in Table \ref{tab:cldice_en_36}, adding clDice does lead to slightly higher SE in some settings. At \(X=0\), for example, SE rises from 0.8083 to 0.8110. This suggests that introducing skeleton-level connectivity into the training objective can make the model more responsive to slender structures. But the overall balance does not improve. Under the more representative setting of \(X=20\), F1-score falls to 0.8004 from 0.8027, and PR drops from 0.8035 to 0.7976. In practical terms, clDice makes the model more sensitive to potential vessel regions without reducing local false positives enough.
+
+Seen together, post-processing and clDice reflect two different ways of dealing with what remains. Post-processing works at the output stage and cleans up local errors after they appear. clDice works during training and tries to promote structural continuity through the objective itself. Along the present main line, once the model reaches MS-DSConv + CA, structural continuity is no longer the weakest part of the system. The more pressing issue is how to tidy the predictions produced by a high-sensitivity model. In that setting, post-processing gives the more direct and more reliable gain. clDice is still a useful exploration, but it does not outperform the post-processing-based version as a whole. The final retained combination is therefore MS-DSConv + CA with light post-processing, while clDice remains an informative attempt rather than part of the final model.
+
+\subsection{Chapter Summary}
+
+This chapter brought the stagewise models back under a common reference and looked beyond raw ranking. Under the present framework, a full PA-Net migration does not move past the baseline. The path that remains useful is the one built around LPT. As deformable sampling, modulation, multi-scale modeling, positional attention, and continuous geometric trajectory modeling are added, the model becomes better at handling thin vessels and structural continuity. That is why MS-DSConv + CA ends up as the later-stage structure worth keeping.
+
+The chapter is therefore not only about naming a single winning module. Read together, the metrics and qualitative results show the same balance being negotiated: stronger detection, fewer false positives, and steadier overall behavior. Deformable LPT and Modulated Deformable lean more toward finding vessel regions. Multi-scale modeling and CA make the output more stable. By the time the model reaches MS-DSConv + CA, thin and continuous structures are recovered more effectively, but local false positives become harder to ignore. The final result is therefore a mainline solution that gradually emerges through repeated comparison.
+
+The discussion of post-processing and clDice sharpens that point. At this stage, the real issue is no longer whether vessels can be segmented at all, but how to clean up the extra small noisy regions left behind by a high-sensitivity prediction. Area-threshold post-processing addresses that problem directly, so it brings the more immediate and more stable gain. clDice makes sense in principle and does make the model more responsive to slender structures, but it does not improve the overall balance. In the end, the solution retained in Chapter 4 is a result-refinement scheme built around MS-DSConv + CA with light post-processing.
+
+\section{Conclusions and Future Work}
+
+\subsection{Overall Conclusions}
+This thesis investigated retinal vessel segmentation within the nnU-Net framework, with particular attention to thin-vessel recovery, structural continuity, and false-positive control. Instead of building a completely new framework, the work kept nnU-Net as the starting point and examined what different structural changes and result-refinement strategies add under controlled experimental settings.
+
+The study was carried out in two stages. The early exploration stage showed that extra input enhancement and loss-function adjustment can affect convergence, but do not bring clear final gains in that setting. The later main-experiment stage therefore shifted to structural modification under a unified five-fold protocol. Through PA-Net migration, module screening, deformable and multi-scale sampling, Coordinate Attention, and Dynamic Snake Convolution, the retained mainline gradually converged on MS-DSConv + CA.
+
+The final retained version combines MS-DSConv + CA with light post-processing. Under the later unified protocol, its F1-score reaches 0.8027, which is 0.0136 higher than the later-stage nnU-Net baseline of 0.7891. This improvement is modest in absolute value, but it is consistent with the observed SE-PR trade-off: the structural changes are associated with better vessel recovery, while the post-processing step corrects part of the remaining local false positives.
+
+\subsection{Main Findings}
+The main findings of this thesis suggest that the more useful improvement path is structural rather than input- or loss-driven.
+The early experiments show that routine input enhancement and loss-function adjustment do not produce stable final gains on top of nnU-Net in this setting, which explains the later shift toward structural design.
+Directly migrating the complete PA-Net structure also does not outperform the later nnU-Net baseline, but this screening stage is still useful because it points to the bottleneck LPT line as a more suitable direction than full module transplantation.
+Along this route, the later improvements mainly change the balance between vessel recovery and false-positive control: deformable sampling and DSConv make the model more responsive to slender vessels, while multi-scale modeling, CA, and light post-processing help prevent the output from becoming too noisy.
+The best retained result is therefore MS-DSConv + CA with \(X=20\) post-processing.
+Its advantage should be understood as a small but stable improvement under the unified protocol rather than as a large performance jump.
+clDice is informative but not retained in the final scheme, since it increases sensitivity to slender structures in some settings but lowers PR and F1-score compared with the post-processing-based solution in the present experiments.
+
+\subsection{Limitations and Possible Improvements}
+Although the thesis develops a fairly clear later-stage mainline solution within the nnU-Net framework, several limitations remain.
+
+A first limitation concerns how the study handles nnU-Net's internal preprocessing pipeline. The early experiments show that extra input-side preprocessing before the image enters the network does not bring obvious gain, which suggests that nnU-Net already has a fairly complete preprocessing mechanism of its own. However, the thesis does not go further and unpack the role of each internal preprocessing step for the present task, nor does it attempt more targeted adjustment of normalization, channel organization, or low-contrast enhancement for retinal vessel segmentation. At this stage, the explanation for why extra preprocessing fails to help remains tied mostly to observed behavior rather than to a finer-grained analysis of the pipeline itself.
+
+The scope of validation is also limited. The early exploration stage and the later main-experiment stage both establish relatively clear comparison references, and the later experiments also compare structures under a unified protocol. Even so, the findings are still built mainly on the public benchmark conditions used here. That helps keep the horizontal comparison interpretable, but it also limits how much can be said about generalization. Whether the retained solution would keep the same advantage across data from different imaging devices, different pathological conditions, or different annotation styles still needs broader verification.
+
+The final retained solution also has a methodological limitation. It still relies on light post-processing to correct local false-positive regions. This means that, although the structural mainline is associated with better thin-vessel recovery and continuous-structure representation, false-positive control has not been handled entirely in an end-to-end way. In the current result, the final balance comes partly from the structural design itself and partly from additional filtering at the output stage. This combination is effective in the reported setting, but it still leaves open the question of whether this correction ability could be absorbed more directly into the network structure or the training objective.
+
+Interpretation remains incomplete as well. The present conclusions rely mainly on metric changes, qualitative comparison, and contrast among different structures. That is enough to show which modifications are useful and which ones are not retained, but it does not fully explain why some of these patterns appear. For example, it is still unclear why certain structures produce more sensitive or more conservative predictions on particular cases, or how DSConv interacts internally with multi-scale sampling and positional attention. These questions would need more detailed intermediate-feature analysis and stronger interpretability support. The qualitative results point in the same direction. Even though the retained models show better recovery of the main vessel structures and improve thin-vessel detection to some extent, they still miss some fine branches, leave local discontinuities, and remain weak in some low-response regions when compared with the ground truth. There is therefore still room for improvement in fine-grained structural completeness. The conclusions of this thesis are best read as stage-specific findings under the current experimental conditions rather than as a complete account of every mechanism involved.
+
+\subsection{Future Work}
+One obvious next step is to look more closely at nnU-Net's internal preprocessing pipeline from the perspective of this task. The early experiments show that extra input-side preprocessing does not bring obvious gain, but that does not mean the preprocessing side has nothing left to offer. A more useful follow-up would be to examine the role of the internal preprocessing steps one by one in retinal vessel segmentation, and then explore refinements that better match the task, especially in normalization, channel organization, and the handling of low-contrast regions.
+
+It would also be worth pushing false-positive control further toward an end-to-end solution. In the retained scheme, local false positives are corrected effectively by light post-processing, but that correction still happens after the network has already produced its output. If a similar cleaning effect could be brought more directly into the network structure or the training objective, the model might keep its ability to recover thin vessels while depending less on extra rule-based filtering. That would make the overall method more self-contained.
+
+The architecture itself also leaves an interesting question open. The retained mainline already performs well in thin-vessel recovery and continuous-structure representation, but the multi-scale sampling and related structural enhancement remain concentrated mainly on the bottleneck and encoder-side feature aggregation, without a corresponding mirrored design on the decoder side. So while the model still keeps the basic encoder-decoder framework of U-Net, the actual distribution of the main modifications has become somewhat asymmetric. A natural extension would be to test whether a more coordinated symmetric design can be built without giving up the strengths of the current mainline, and then examine how such a symmetric variant affects performance, structural representation, and result stability. This matters not just for architectural neatness. It may also help clarify which parts of the present mainline are truly doing the heavy lifting.
+
+The retained solution should also be tested under broader data conditions. At present, the main conclusions still rest on the public datasets used here and on a unified experimental protocol. Extending the evaluation to data from different imaging devices, different pathological conditions, and different annotation styles would give a clearer picture of the model's generalization ability and its practical value.
+
+\clearpage
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "bottle",
+      "points": [
+        [
+          170.4144144144144,
+          45.15315315315315
+        ],
+        [
+          395.18918918918916,
+          267.6756756756757
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "plastic31.jpg",
+  "imageHeight": 384,
+  "imageWidth": 512
+}

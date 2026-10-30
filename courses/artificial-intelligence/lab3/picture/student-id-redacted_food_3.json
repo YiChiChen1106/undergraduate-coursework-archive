@@ -1,0 +1,27 @@
+{
+  "version": "5.5.0",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "food",
+      "points": [
+        [
+          201.42857142857133,
+          698.5714285714287
+        ],
+        [
+          898.5714285714284,
+          1744.[student-id-redacted]
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "[student-id-redacted]_food_3.jpg",
+  "imageHeight": 1920,
+  "imageWidth": 1080
+}

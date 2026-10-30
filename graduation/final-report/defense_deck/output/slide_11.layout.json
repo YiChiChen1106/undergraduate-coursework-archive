@@ -1,0 +1,1459 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/gm41wz",
+    "id": "gm41wz",
+    "slide": 11,
+    "layoutId": "2042a543-9850-4cab-9138-76ceac1c0217",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2042a543-9850-4cab-9138-76ceac1c0217",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kjm1cfa9",
+      "id": "1",
+      "name": "slide-kicker",
+      "bbox": [
+        70,
+        50,
+        1780,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.0"
+      },
+      "geometry": "rect",
+      "text": "Representative prediction behavior",
+      "textPreview": "Representative prediction behavior",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Representative prediction behavior"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Representative prediction behavior",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Representative prediction behavior",
+              "fontSize": 20,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r2p8nqxs",
+      "id": "2",
+      "name": "slide-title",
+      "bbox": [
+        70,
+        84,
+        1780,
+        58
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.1"
+      },
+      "geometry": "rect",
+      "text": "Qualitative Results",
+      "textPreview": "Qualitative Results",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "fontSize": 48,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Qualitative Results"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Qualitative Results",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Qualitative Results",
+              "fontSize": 48,
+              "color": "#171A33",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2hwfyxob",
+      "id": "3",
+      "name": "title-rule",
+      "bbox": [
+        70,
+        152,
+        180,
+        5
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gr2p8nq",
+      "id": "4",
+      "name": "slide-cue",
+      "bbox": [
+        70,
+        166,
+        1780,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0.3"
+      },
+      "geometry": "rect",
+      "text": "Talk track: The baseline is cleaner but misses branches; the final model recovers more fine vessels with light correction.",
+      "textPreview": "Talk track: The baseline is cleaner but misses branches; the final model recovers more fine vessels with light correction.",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Talk track: The baseline is cleaner but misses branches; the final model recovers more fine vessels with light correction."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Talk track: The baseline is cleaner but misses branches; the final model recovers more fine vessels with light correction.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Talk track: The baseline is cleaner but misses branches; the final model recovers more fine vessels with light correction.",
+              "fontSize": 17,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/donyd0z6",
+      "id": "5",
+      "name": "qual-case24",
+      "bbox": [
+        70,
+        209,
+        1780,
+        325
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0"
+      },
+      "alt": "Visual comparison for case 24",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "8e67d13d-6ab9-428e-82d3-0ae1ccd26b90",
+        "contentType": "image/png",
+        "byteLength": 758374
+      }
+    },
+    {
+      "order": 6,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/2x4nap4r",
+      "id": "6",
+      "name": "qual-case36",
+      "bbox": [
+        70,
+        552,
+        1780,
+        285
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1"
+      },
+      "alt": "Visual comparison for case 36",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "7bb40f31-27b4-4a88-b7e5-84ca09666b51",
+        "contentType": "image/png",
+        "byteLength": 496669
+      }
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2p8nqxs7",
+      "id": "7",
+      "name": "qual-note1",
+      "bbox": [
+        70,
+        855,
+        877,
+        58.4
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.2.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#EAF1F9",
+      "lineColor": "#EAF1F9",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9knih4by",
+      "id": "8",
+      "name": "qual-note1-text",
+      "bbox": [
+        90,
+        872,
+        838,
+        28
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.2.0.0"
+      },
+      "geometry": "rect",
+      "text": "Baseline predictions are cleaner but often miss weak fine vessels.",
+      "textPreview": "Baseline predictions are cleaner but often miss weak fine vessels.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Baseline predictions are cleaner but often miss weak fine vessels."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Baseline predictions are cleaner but often miss weak fine vessels.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Baseline predictions are cleaner but often miss weak fine vessels.",
+              "fontSize": 22,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kzupwb2h",
+      "id": "9",
+      "name": "qual-note2",
+      "bbox": [
+        973,
+        855,
+        877,
+        84.8
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.2.1"
+      },
+      "geometry": "rect",
+      "fillColor": "#F5EBCB",
+      "lineColor": "#F5EBCB",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ulwval87",
+      "id": "10",
+      "name": "qual-note2-text",
+      "bbox": [
+        994,
+        872,
+        838,
+        54
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.2.1.0"
+      },
+      "geometry": "rect",
+      "text": "MS-DSConv + CA recovers more continuous branches; post-processing only makes a light correction.",
+      "textPreview": "MS-DSConv + CA recovers more continuous branches; post-processing only makes a light correction.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MS-DSConv + CA recovers more continuous branches; post-processing only makes a light"
+          },
+          {
+            "index": 2,
+            "text": "correction."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MS-DSConv + CA recovers more continuous branches; post-processing only makes a light correction.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "MS-DSConv + CA recovers more continuous branches; post-processing only makes a light correction.",
+              "fontSize": 22,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6tovaho",
+      "id": "11",
+      "name": "brand-spacer",
+      "bbox": [
+        82,
+        34,
+        1518,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 1,
+      "resolvedTextStyle": {
+        "fontSize": 75,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 12,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/vmtwra5g",
+      "id": "12",
+      "name": "glasgow-college-logo",
+      "bbox": [
+        1600,
+        34,
+        238,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1"
+      },
+      "alt": "Glasgow College UESTC logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "77777b91-3254-4a2c-8fb7-d15bd9e930b0",
+        "contentType": "image/png",
+        "byteLength": 281917
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "branded-slide-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "column",
+            "name": "slide10-root",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 140,
+              "height": 259
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.0.0",
+                "kind": "column",
+                "name": "title-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "hug"
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 180,
+                  "height": 137
+                },
+                "frame": {
+                  "left": 70,
+                  "top": 50,
+                  "width": 1780,
+                  "height": 137
+                },
+                "children": [
+                  {
+                    "path": "0.0.0.0",
+                    "kind": "text",
+                    "name": "slide-kicker",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 24
+                    },
+                    "frame": {
+                      "left": 70,
+                      "top": 50,
+                      "width": 1780,
+                      "height": 24
+                    },
+                    "snappedFrame": {
+                      "left": 70,
+                      "top": 50,
+                      "width": 1780,
+                      "height": 24
+                    },
+                    "children": [],
+                    "text": "Representative prediction behavior",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/kjm1cfa9",
+                      "id": "1",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "kind": "text",
+                    "name": "slide-title",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 57.6
+                    },
+                    "frame": {
+                      "left": 70,
+                      "top": 84,
+                      "width": 1780,
+                      "height": 57.6
+                    },
+                    "snappedFrame": {
+                      "left": 70,
+                      "top": 84,
+                      "width": 1780,
+                      "height": 58
+                    },
+                    "children": [],
+                    "text": "Qualitative Results",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/r2p8nqxs",
+                      "id": "2",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "kind": "rule",
+                    "name": "title-rule",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fixed",
+                        "value": 180
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 5
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 180,
+                      "height": 5
+                    },
+                    "frame": {
+                      "left": 70,
+                      "top": 151.6,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "snappedFrame": {
+                      "left": 70,
+                      "top": 152,
+                      "width": 180,
+                      "height": 5
+                    },
+                    "children": [],
+                    "weight": 5,
+                    "element": {
+                      "aid": "sh/2hwfyxob",
+                      "id": "3",
+                      "kind": "shape"
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "kind": "text",
+                    "name": "slide-cue",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 20.4
+                    },
+                    "frame": {
+                      "left": 70,
+                      "top": 166.6,
+                      "width": 1780,
+                      "height": 20.4
+                    },
+                    "snappedFrame": {
+                      "left": 70,
+                      "top": 166,
+                      "width": 1780,
+                      "height": 22
+                    },
+                    "children": [],
+                    "text": "Talk track: The baseline is cleaner but misses branches; the final model recovers more fine vessels with light correction.",
+                    "transform": "none",
+                    "element": {
+                      "aid": "sh/9gr2p8nq",
+                      "id": "4",
+                      "kind": "shape"
+                    }
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 10,
+                "effectiveGap": 10,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 70,
+                  "top": 50,
+                  "width": 1780,
+                  "height": 137
+                },
+                "items": [
+                  {
+                    "path": "0.0.0.0",
+                    "frame": {
+                      "left": 70,
+                      "top": 50,
+                      "width": 1780,
+                      "height": 24
+                    }
+                  },
+                  {
+                    "path": "0.0.0.1",
+                    "frame": {
+                      "left": 70,
+                      "top": 84,
+                      "width": 1780,
+                      "height": 57.6
+                    }
+                  },
+                  {
+                    "path": "0.0.0.2",
+                    "frame": {
+                      "left": 70,
+                      "top": 151.6,
+                      "width": 180,
+                      "height": 5
+                    }
+                  },
+                  {
+                    "path": "0.0.0.3",
+                    "frame": {
+                      "left": 70,
+                      "top": 166.6,
+                      "width": 1780,
+                      "height": 20.4
+                    }
+                  }
+                ]
+              },
+              {
+                "path": "0.0.1",
+                "kind": "column",
+                "name": "qual-stack",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 704.4
+                },
+                "frame": {
+                  "left": 70,
+                  "top": 209,
+                  "width": 1780,
+                  "height": 821
+                },
+                "children": [
+                  {
+                    "path": "0.0.1.0",
+                    "kind": "image",
+                    "name": "qual-case24",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 325
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 325
+                    },
+                    "frame": {
+                      "left": 70,
+                      "top": 209,
+                      "width": 1780,
+                      "height": 325
+                    },
+                    "snappedFrame": {
+                      "left": 70,
+                      "top": 209,
+                      "width": 1780,
+                      "height": 325
+                    },
+                    "children": [],
+                    "source": {
+                      "kind": "dataUrl"
+                    },
+                    "fit": "contain",
+                    "alt": "Visual comparison for case 24",
+                    "element": {
+                      "aid": "im/donyd0z6",
+                      "id": "5",
+                      "kind": "image"
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "kind": "image",
+                    "name": "qual-case36",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fixed",
+                        "value": 285
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 285
+                    },
+                    "frame": {
+                      "left": 70,
+                      "top": 552,
+                      "width": 1780,
+                      "height": 285
+                    },
+                    "snappedFrame": {
+                      "left": 70,
+                      "top": 552,
+                      "width": 1780,
+                      "height": 285
+                    },
+                    "children": [],
+                    "source": {
+                      "kind": "dataUrl"
+                    },
+                    "fit": "contain",
+                    "alt": "Visual comparison for case 36",
+                    "element": {
+                      "aid": "im/2x4nap4r",
+                      "id": "6",
+                      "kind": "image"
+                    }
+                  },
+                  {
+                    "path": "0.0.1.2",
+                    "kind": "row",
+                    "name": "qual-notes",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "hug"
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 26,
+                      "height": 58.4
+                    },
+                    "frame": {
+                      "left": 70,
+                      "top": 855,
+                      "width": 1780,
+                      "height": 84.8
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.2.0",
+                        "kind": "panel",
+                        "name": "qual-note1",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 40,
+                          "height": 58.4
+                        },
+                        "frame": {
+                          "left": 70,
+                          "top": 855,
+                          "width": 877,
+                          "height": 58.4
+                        },
+                        "snappedFrame": {
+                          "left": 70,
+                          "top": 855,
+                          "width": 877,
+                          "height": 58.4
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.2.0.0",
+                            "kind": "text",
+                            "name": "qual-note1-text",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 26.4
+                            },
+                            "frame": {
+                              "left": 90,
+                              "top": 871,
+                              "width": 837,
+                              "height": 26.4
+                            },
+                            "snappedFrame": {
+                              "left": 90,
+                              "top": 872,
+                              "width": 838,
+                              "height": 28
+                            },
+                            "children": [],
+                            "text": "Baseline predictions are cleaner but often miss weak fine vessels.",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/9knih4by",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 16,
+                          "right": 20,
+                          "bottom": 16,
+                          "left": 20
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 90,
+                          "top": 871,
+                          "width": 837,
+                          "height": 26.4
+                        },
+                        "element": {
+                          "aid": "sh/2p8nqxs7",
+                          "id": "7",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.2.1",
+                        "kind": "panel",
+                        "name": "qual-note2",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 40,
+                          "height": 58.4
+                        },
+                        "frame": {
+                          "left": 973,
+                          "top": 855,
+                          "width": 877,
+                          "height": 84.8
+                        },
+                        "snappedFrame": {
+                          "left": 973,
+                          "top": 855,
+                          "width": 877,
+                          "height": 84.8
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.2.1.0",
+                            "kind": "text",
+                            "name": "qual-note2-text",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 26.4
+                            },
+                            "frame": {
+                              "left": 993,
+                              "top": 871,
+                              "width": 837,
+                              "height": 52.8
+                            },
+                            "snappedFrame": {
+                              "left": 994,
+                              "top": 872,
+                              "width": 838,
+                              "height": 54
+                            },
+                            "children": [],
+                            "text": "MS-DSConv + CA recovers more continuous branches; post-processing only makes a light correction.",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/ulwval87",
+                              "id": "10",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 16,
+                          "right": 20,
+                          "bottom": 16,
+                          "left": 20
+                        },
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 993,
+                          "top": 871,
+                          "width": 837,
+                          "height": 52.8
+                        },
+                        "element": {
+                          "aid": "sh/kzupwb2h",
+                          "id": "9",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 26,
+                    "effectiveGap": 26,
+                    "justifyOffset": 0,
+                    "align": "start",
+                    "justify": "start",
+                    "contentFrame": {
+                      "left": 70,
+                      "top": 855,
+                      "width": 1780,
+                      "height": 84.8
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.2.0",
+                        "frame": {
+                          "left": 70,
+                          "top": 855,
+                          "width": 877,
+                          "height": 58.4
+                        }
+                      },
+                      {
+                        "path": "0.0.1.2.1",
+                        "frame": {
+                          "left": 973,
+                          "top": 855,
+                          "width": 877,
+                          "height": 84.8
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 0,
+                  "right": 0,
+                  "bottom": 0,
+                  "left": 0
+                },
+                "gap": 18,
+                "effectiveGap": 18,
+                "justifyOffset": 0,
+                "align": "start",
+                "justify": "start",
+                "contentFrame": {
+                  "left": 70,
+                  "top": 209,
+                  "width": 1780,
+                  "height": 821
+                },
+                "items": [
+                  {
+                    "path": "0.0.1.0",
+                    "frame": {
+                      "left": 70,
+                      "top": 209,
+                      "width": 1780,
+                      "height": 325
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "frame": {
+                      "left": 70,
+                      "top": 552,
+                      "width": 1780,
+                      "height": 285
+                    }
+                  },
+                  {
+                    "path": "0.0.1.2",
+                    "frame": {
+                      "left": 70,
+                      "top": 855,
+                      "width": 1780,
+                      "height": 84.8
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 50,
+              "right": 70,
+              "bottom": 50,
+              "left": 70
+            },
+            "gap": 22,
+            "effectiveGap": 22,
+            "justifyOffset": 0,
+            "align": "start",
+            "justify": "start",
+            "contentFrame": {
+              "left": 70,
+              "top": 50,
+              "width": 1780,
+              "height": 980
+            },
+            "items": [
+              {
+                "path": "0.0.0",
+                "frame": {
+                  "left": 70,
+                  "top": 50,
+                  "width": 1780,
+                  "height": 137
+                }
+              },
+              {
+                "path": "0.0.1",
+                "frame": {
+                  "left": 70,
+                  "top": 209,
+                  "width": 1780,
+                  "height": 821
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "brand-mark-layer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 150
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "text",
+                "name": "brand-spacer",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 1
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "children": [],
+                "text": "",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/j6tovaho",
+                  "id": "11",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.1.1",
+                "kind": "image",
+                "name": "glasgow-college-logo",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "snappedFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "contain",
+                "alt": "Glasgow College UESTC logo",
+                "element": {
+                  "aid": "im/vmtwra5g",
+                  "id": "12",
+                  "kind": "image"
+                }
+              }
+            ],
+            "padding": {
+              "top": 34,
+              "right": 82,
+              "bottom": 34,
+              "left": 82
+            },
+            "columnGap": 0,
+            "rowGap": 0,
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 82,
+              "top": 34,
+              "width": 1756,
+              "height": 1012
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1
+              },
+              {
+                "mode": "fixed",
+                "value": 238
+              }
+            ],
+            "rows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "columnSizes": [
+              1518,
+              238
+            ],
+            "rowSizes": [
+              82,
+              930
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 82
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

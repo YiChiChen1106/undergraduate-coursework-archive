@@ -1,0 +1,5 @@
+clc
+clear all
+b1=[1 -2];
+a1=[1 3/2 1/2]; 
+[r1,p1]=residue(b1,a1)

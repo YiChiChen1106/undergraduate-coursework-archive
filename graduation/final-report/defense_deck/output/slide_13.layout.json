@@ -1,0 +1,1709 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/vsmev0",
+    "id": "vsmev0",
+    "slide": 13,
+    "layoutId": "2042a543-9850-4cab-9138-76ceac1c0217",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2042a543-9850-4cab-9138-76ceac1c0217",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3f819fc0-a9fd-42ce-bbb0-3ac199ebbaa3",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7y1kre1w",
+      "id": "1",
+      "name": "conclusion-bg",
+      "bbox": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.0"
+      },
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wjudg7ad",
+      "id": "2",
+      "name": "conclusion-kicker",
+      "bbox": [
+        96,
+        350,
+        898,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "Conclusion",
+      "textPreview": "Conclusion",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Conclusion"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Conclusion",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Conclusion",
+              "fontSize": 30,
+              "color": "#2F5FA8",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p4r65wju",
+      "id": "3",
+      "name": "conclusion-title",
+      "bbox": [
+        96,
+        412,
+        898,
+        140
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "A modest but stable improvement path was identified within nnU-Net.",
+      "textPreview": "A modest but stable improvement path was identified within nnU-Net.",
+      "resolvedFontSize": 58,
+      "resolvedTextStyle": {
+        "fontSize": 58,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A modest but stable improvement"
+          },
+          {
+            "index": 2,
+            "text": "path was identified within nnU-Net."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A modest but stable improvement path was identified within nnU-Net.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "A modest but stable improvement path was identified within nnU-Net.",
+              "fontSize": 58,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i5sneloj",
+      "id": "4",
+      "name": "conclusion-rule",
+      "bbox": [
+        96,
+        578,
+        240,
+        6
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.2"
+      },
+      "geometry": "rect",
+      "fillColor": "#C8A33A",
+      "lineColor": "#C8A33A",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7qpg3ex0",
+      "id": "5",
+      "name": "final-scheme",
+      "bbox": [
+        96,
+        610,
+        790,
+        72
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.3"
+      },
+      "geometry": "rect",
+      "text": "Final retained scheme: MS-DSConv + Coordinate Attention + light connected-component post-processing.",
+      "textPreview": "Final retained scheme: MS-DSConv + Coordinate Attention + light connected-component post-processing.",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Final retained scheme: MS-DSConv + Coordinate Attention + light"
+          },
+          {
+            "index": 2,
+            "text": "connected-component post-processing."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Final retained scheme: MS-DSConv + Coordinate Attention + light connected-component post-processing.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Final retained scheme: MS-DSConv + Coordinate Attention + light connected-component post-processing.",
+              "fontSize": 30,
+              "color": "#171A33"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0bi9s36h",
+      "id": "6",
+      "name": "conclusion-cue",
+      "bbox": [
+        96,
+        708,
+        644,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.0.4"
+      },
+      "geometry": "rect",
+      "text": "Talk track: The final method reaches F1 = 0.8027; the improvement is modest but stable.",
+      "textPreview": "Talk track: The final method reaches F1 = 0.8027; the improvement is modest but stable.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Talk track: The final method reaches F1 = 0.8027; the improvement is modest but"
+          },
+          {
+            "index": 2,
+            "text": "stable."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Talk track: The final method reaches F1 = 0.8027; the improvement is modest but stable.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Talk track: The final method reaches F1 = 0.8027; the improvement is modest but stable.",
+              "fontSize": 18,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pwb2hwfy",
+      "id": "7",
+      "name": "final-f1-dark-value",
+      "bbox": [
+        1058,
+        376,
+        766,
+        68
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.0"
+      },
+      "geometry": "rect",
+      "text": "0.8027",
+      "textPreview": "0.8027",
+      "resolvedFontSize": 56,
+      "resolvedTextStyle": {
+        "fontSize": 56,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0.8027"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0.8027",
+          "runs": [
+            {
+              "index": 1,
+              "text": "0.8027",
+              "fontSize": 56,
+              "color": "#2A4F8F",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/itgfmlkj",
+      "id": "8",
+      "name": "final-f1-dark-label",
+      "bbox": [
+        1058,
+        450,
+        766,
+        24
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.1"
+      },
+      "geometry": "rect",
+      "text": "Final F1-score",
+      "textPreview": "Final F1-score",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Final F1-score"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Final F1-score",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Final F1-score",
+              "fontSize": 20,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7ed8bat4",
+      "id": "9",
+      "name": "final-f1-dark-sub",
+      "bbox": [
+        1058,
+        480,
+        766,
+        22
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.0.2"
+      },
+      "geometry": "rect",
+      "text": "vs. 0.7891 baseline",
+      "textPreview": "vs. 0.7891 baseline",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "vs. 0.7891 baseline"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "vs. 0.7891 baseline",
+          "runs": [
+            {
+              "index": 1,
+              "text": "vs. 0.7891 baseline",
+              "fontSize": 17,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r2p8nqxs",
+      "id": "10",
+      "name": "qa-text",
+      "bbox": [
+        1058,
+        534,
+        766,
+        102
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.1"
+      },
+      "geometry": "rect",
+      "text": "Q&A",
+      "textPreview": "Q&A",
+      "resolvedFontSize": 84,
+      "resolvedTextStyle": {
+        "fontSize": 84,
+        "typeface": "+mn-lt",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Q&A"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Q&A",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Q&A",
+              "fontSize": 84,
+              "color": "#202050",
+              "bold": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2hwfyxob",
+      "id": "11",
+      "name": "thanks",
+      "bbox": [
+        1058,
+        668,
+        766,
+        36
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.0.1.1.2"
+      },
+      "geometry": "rect",
+      "text": "Thank you.",
+      "textPreview": "Thank you.",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Thank you."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Thank you.",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Thank you.",
+              "fontSize": 30,
+              "color": "#596078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/94fu18jq",
+      "id": "12",
+      "name": "brand-spacer",
+      "bbox": [
+        82,
+        34,
+        1518,
+        1
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.0"
+      },
+      "geometry": "rect",
+      "resolvedFontSize": 1,
+      "resolvedTextStyle": {
+        "fontSize": 75,
+        "typeface": "+mn-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 13,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/r65wjudg",
+      "id": "13",
+      "name": "glasgow-college-logo",
+      "bbox": [
+        1600,
+        34,
+        238,
+        82
+      ],
+      "composeSource": {
+        "run": 1,
+        "path": "0.1.1"
+      },
+      "alt": "Glasgow College UESTC logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "b5440494-9bbc-4958-96b4-d89a4694b090",
+        "contentType": "image/png",
+        "byteLength": 281917
+      }
+    }
+  ],
+  "composeRuns": [
+    {
+      "index": 1,
+      "frame": {
+        "left": 0,
+        "top": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "baseUnit": 8,
+      "root": {
+        "path": "0",
+        "kind": "layers",
+        "name": "branded-slide-root",
+        "requestedSize": {
+          "width": {
+            "mode": "fill",
+            "value": 1
+          },
+          "height": {
+            "mode": "fill",
+            "value": 1
+          }
+        },
+        "intrinsicSize": {
+          "width": 0,
+          "height": 0
+        },
+        "frame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "children": [
+          {
+            "path": "0.0",
+            "kind": "layers",
+            "name": "conclusion-root",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 0,
+              "height": 0
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.0.0",
+                "kind": "shape",
+                "name": "conclusion-bg",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 0,
+                  "top": 0,
+                  "width": 1920,
+                  "height": 1080
+                },
+                "snappedFrame": {
+                  "left": 0,
+                  "top": 0,
+                  "width": 1920,
+                  "height": 1080
+                },
+                "children": [],
+                "geometry": "rect",
+                "element": {
+                  "aid": "sh/7y1kre1w",
+                  "id": "1",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.0.1",
+                "kind": "grid",
+                "name": "conclusion-grid",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 256,
+                  "height": 156
+                },
+                "frame": {
+                  "left": 0,
+                  "top": 0,
+                  "width": 1920,
+                  "height": 1080
+                },
+                "children": [
+                  {
+                    "path": "0.0.1.0",
+                    "kind": "column",
+                    "name": "conclusion-copy",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 789.65,
+                      "height": 309.2
+                    },
+                    "frame": {
+                      "left": 96,
+                      "top": 78,
+                      "width": 898.56,
+                      "height": 924
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.0.0",
+                        "kind": "text",
+                        "name": "conclusion-kicker",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 96,
+                          "top": 350.6,
+                          "width": 898.56,
+                          "height": 36
+                        },
+                        "snappedFrame": {
+                          "left": 96,
+                          "top": 350,
+                          "width": 898,
+                          "height": 36
+                        },
+                        "children": [],
+                        "text": "Conclusion",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/wjudg7ad",
+                          "id": "2",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.1",
+                        "kind": "text",
+                        "name": "conclusion-title",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 69.6
+                        },
+                        "frame": {
+                          "left": 96,
+                          "top": 412.6,
+                          "width": 898.56,
+                          "height": 139.2
+                        },
+                        "snappedFrame": {
+                          "left": 96,
+                          "top": 412,
+                          "width": 898,
+                          "height": 140
+                        },
+                        "children": [],
+                        "text": "A modest but stable improvement path was identified within nnU-Net.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/p4r65wju",
+                          "id": "3",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.2",
+                        "kind": "rule",
+                        "name": "conclusion-rule",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fixed",
+                            "value": 240
+                          },
+                          "height": {
+                            "mode": "fixed",
+                            "value": 6
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 240,
+                          "height": 6
+                        },
+                        "frame": {
+                          "left": 96,
+                          "top": 577.8,
+                          "width": 240,
+                          "height": 6
+                        },
+                        "snappedFrame": {
+                          "left": 96,
+                          "top": 578,
+                          "width": 240,
+                          "height": 6
+                        },
+                        "children": [],
+                        "weight": 6,
+                        "element": {
+                          "aid": "sh/i5sneloj",
+                          "id": "4",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.3",
+                        "kind": "text",
+                        "name": "final-scheme",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "wrap",
+                            "max": 880
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 789.65,
+                          "height": 72
+                        },
+                        "frame": {
+                          "left": 96,
+                          "top": 609.8,
+                          "width": 789.65,
+                          "height": 72
+                        },
+                        "snappedFrame": {
+                          "left": 96,
+                          "top": 610,
+                          "width": 790,
+                          "height": 72
+                        },
+                        "children": [],
+                        "text": "Final retained scheme: MS-DSConv + Coordinate Attention + light connected-component post-processing.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/7qpg3ex0",
+                          "id": "5",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.4",
+                        "kind": "text",
+                        "name": "conclusion-cue",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "wrap",
+                            "max": 820
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 644.02,
+                          "height": 21.6
+                        },
+                        "frame": {
+                          "left": 96,
+                          "top": 707.8,
+                          "width": 644.02,
+                          "height": 21.6
+                        },
+                        "snappedFrame": {
+                          "left": 96,
+                          "top": 708,
+                          "width": 644,
+                          "height": 22
+                        },
+                        "children": [],
+                        "text": "Talk track: The final method reaches F1 = 0.8027; the improvement is modest but stable.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/0bi9s36h",
+                          "id": "6",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 26,
+                    "effectiveGap": 26,
+                    "justifyOffset": 272.6,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 96,
+                      "top": 78,
+                      "width": 898.56,
+                      "height": 924
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.0.0",
+                        "frame": {
+                          "left": 96,
+                          "top": 350.6,
+                          "width": 898.56,
+                          "height": 36
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.1",
+                        "frame": {
+                          "left": 96,
+                          "top": 412.6,
+                          "width": 898.56,
+                          "height": 139.2
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.2",
+                        "frame": {
+                          "left": 96,
+                          "top": 577.8,
+                          "width": 240,
+                          "height": 6
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.3",
+                        "frame": {
+                          "left": 96,
+                          "top": 609.8,
+                          "width": 789.65,
+                          "height": 72
+                        }
+                      },
+                      {
+                        "path": "0.0.1.0.4",
+                        "frame": {
+                          "left": 96,
+                          "top": 707.8,
+                          "width": 644.02,
+                          "height": 21.6
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "kind": "column",
+                    "name": "qa-stack",
+                    "requestedSize": {
+                      "width": {
+                        "mode": "fill",
+                        "value": 1
+                      },
+                      "height": {
+                        "mode": "fill",
+                        "value": 1
+                      }
+                    },
+                    "intrinsicSize": {
+                      "width": 0,
+                      "height": 328.4
+                    },
+                    "frame": {
+                      "left": 1058.56,
+                      "top": 78,
+                      "width": 765.44,
+                      "height": 924
+                    },
+                    "children": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "kind": "column",
+                        "name": "final-f1-dark",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 123.6
+                        },
+                        "frame": {
+                          "left": 1058.56,
+                          "top": 375.8,
+                          "width": 765.44,
+                          "height": 123.6
+                        },
+                        "children": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "kind": "text",
+                            "name": "final-f1-dark-value",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 67.2
+                            },
+                            "frame": {
+                              "left": 1058.56,
+                              "top": 375.8,
+                              "width": 765.44,
+                              "height": 67.2
+                            },
+                            "snappedFrame": {
+                              "left": 1058,
+                              "top": 376,
+                              "width": 766,
+                              "height": 68
+                            },
+                            "children": [],
+                            "text": "0.8027",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/pwb2hwfy",
+                              "id": "7",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "kind": "text",
+                            "name": "final-f1-dark-label",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 24
+                            },
+                            "frame": {
+                              "left": 1058.56,
+                              "top": 449,
+                              "width": 765.44,
+                              "height": 24
+                            },
+                            "snappedFrame": {
+                              "left": 1058,
+                              "top": 450,
+                              "width": 766,
+                              "height": 24
+                            },
+                            "children": [],
+                            "text": "Final F1-score",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/itgfmlkj",
+                              "id": "8",
+                              "kind": "shape"
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.2",
+                            "kind": "text",
+                            "name": "final-f1-dark-sub",
+                            "requestedSize": {
+                              "width": {
+                                "mode": "fill",
+                                "value": 1
+                              },
+                              "height": {
+                                "mode": "hug"
+                              }
+                            },
+                            "intrinsicSize": {
+                              "width": 0,
+                              "height": 20.4
+                            },
+                            "frame": {
+                              "left": 1058.56,
+                              "top": 479,
+                              "width": 765.44,
+                              "height": 20.4
+                            },
+                            "snappedFrame": {
+                              "left": 1058,
+                              "top": 480,
+                              "width": 766,
+                              "height": 22
+                            },
+                            "children": [],
+                            "text": "vs. 0.7891 baseline",
+                            "transform": "none",
+                            "element": {
+                              "aid": "sh/7ed8bat4",
+                              "id": "9",
+                              "kind": "shape"
+                            }
+                          }
+                        ],
+                        "padding": {
+                          "top": 0,
+                          "right": 0,
+                          "bottom": 0,
+                          "left": 0
+                        },
+                        "gap": 6,
+                        "effectiveGap": 6,
+                        "justifyOffset": 0,
+                        "align": "start",
+                        "justify": "start",
+                        "contentFrame": {
+                          "left": 1058.56,
+                          "top": 375.8,
+                          "width": 765.44,
+                          "height": 123.6
+                        },
+                        "items": [
+                          {
+                            "path": "0.0.1.1.0.0",
+                            "frame": {
+                              "left": 1058.56,
+                              "top": 375.8,
+                              "width": 765.44,
+                              "height": 67.2
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.1",
+                            "frame": {
+                              "left": 1058.56,
+                              "top": 449,
+                              "width": 765.44,
+                              "height": 24
+                            }
+                          },
+                          {
+                            "path": "0.0.1.1.0.2",
+                            "frame": {
+                              "left": 1058.56,
+                              "top": 479,
+                              "width": 765.44,
+                              "height": 20.4
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "kind": "text",
+                        "name": "qa-text",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 100.8
+                        },
+                        "frame": {
+                          "left": 1058.56,
+                          "top": 533.4,
+                          "width": 765.44,
+                          "height": 100.8
+                        },
+                        "snappedFrame": {
+                          "left": 1058,
+                          "top": 534,
+                          "width": 766,
+                          "height": 102
+                        },
+                        "children": [],
+                        "text": "Q&A",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/r2p8nqxs",
+                          "id": "10",
+                          "kind": "shape"
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "kind": "text",
+                        "name": "thanks",
+                        "requestedSize": {
+                          "width": {
+                            "mode": "fill",
+                            "value": 1
+                          },
+                          "height": {
+                            "mode": "hug"
+                          }
+                        },
+                        "intrinsicSize": {
+                          "width": 0,
+                          "height": 36
+                        },
+                        "frame": {
+                          "left": 1058.56,
+                          "top": 668.2,
+                          "width": 765.44,
+                          "height": 36
+                        },
+                        "snappedFrame": {
+                          "left": 1058,
+                          "top": 668,
+                          "width": 766,
+                          "height": 36
+                        },
+                        "children": [],
+                        "text": "Thank you.",
+                        "transform": "none",
+                        "element": {
+                          "aid": "sh/2hwfyxob",
+                          "id": "11",
+                          "kind": "shape"
+                        }
+                      }
+                    ],
+                    "padding": {
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0
+                    },
+                    "gap": 34,
+                    "effectiveGap": 34,
+                    "justifyOffset": 297.8,
+                    "align": "start",
+                    "justify": "center",
+                    "contentFrame": {
+                      "left": 1058.56,
+                      "top": 78,
+                      "width": 765.44,
+                      "height": 924
+                    },
+                    "items": [
+                      {
+                        "path": "0.0.1.1.0",
+                        "frame": {
+                          "left": 1058.56,
+                          "top": 375.8,
+                          "width": 765.44,
+                          "height": 123.6
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.1",
+                        "frame": {
+                          "left": 1058.56,
+                          "top": 533.4,
+                          "width": 765.44,
+                          "height": 100.8
+                        }
+                      },
+                      {
+                        "path": "0.0.1.1.2",
+                        "frame": {
+                          "left": 1058.56,
+                          "top": 668.2,
+                          "width": 765.44,
+                          "height": 36
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": {
+                  "top": 78,
+                  "right": 96,
+                  "bottom": 78,
+                  "left": 96
+                },
+                "columnGap": 64,
+                "rowGap": 0,
+                "alignItems": "stretch",
+                "justifyItems": "stretch",
+                "contentFrame": {
+                  "left": 96,
+                  "top": 78,
+                  "width": 1728,
+                  "height": 924
+                },
+                "columns": [
+                  {
+                    "mode": "fr",
+                    "value": 1.08
+                  },
+                  {
+                    "mode": "fr",
+                    "value": 0.92
+                  }
+                ],
+                "autoRows": "auto",
+                "resolvedRows": [
+                  "auto"
+                ],
+                "columnSizes": [
+                  898.56,
+                  765.44
+                ],
+                "rowSizes": [
+                  924
+                ],
+                "cells": [
+                  {
+                    "path": "0.0.1.0",
+                    "column": 0,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 96,
+                      "top": 78,
+                      "width": 898.56,
+                      "height": 924
+                    }
+                  },
+                  {
+                    "path": "0.0.1.1",
+                    "column": 1,
+                    "row": 0,
+                    "columnSpan": 1,
+                    "rowSpan": 1,
+                    "cellFrame": {
+                      "left": 1058.56,
+                      "top": 78,
+                      "width": 765.44,
+                      "height": 924
+                    }
+                  }
+                ]
+              }
+            ],
+            "padding": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "items": [
+              {
+                "path": "0.0.0",
+                "frame": {
+                  "left": 0,
+                  "top": 0,
+                  "width": 1920,
+                  "height": 1080
+                }
+              },
+              {
+                "path": "0.0.1",
+                "frame": {
+                  "left": 0,
+                  "top": 0,
+                  "width": 1920,
+                  "height": 1080
+                }
+              }
+            ]
+          },
+          {
+            "path": "0.1",
+            "kind": "grid",
+            "name": "brand-mark-layer",
+            "requestedSize": {
+              "width": {
+                "mode": "fill",
+                "value": 1
+              },
+              "height": {
+                "mode": "fill",
+                "value": 1
+              }
+            },
+            "intrinsicSize": {
+              "width": 402,
+              "height": 150
+            },
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            },
+            "children": [
+              {
+                "path": "0.1.0",
+                "kind": "text",
+                "name": "brand-spacer",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fixed",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 1
+                },
+                "frame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "snappedFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 1
+                },
+                "children": [],
+                "text": "",
+                "transform": "none",
+                "element": {
+                  "aid": "sh/94fu18jq",
+                  "id": "12",
+                  "kind": "shape"
+                }
+              },
+              {
+                "path": "0.1.1",
+                "kind": "image",
+                "name": "glasgow-college-logo",
+                "requestedSize": {
+                  "width": {
+                    "mode": "fill",
+                    "value": 1
+                  },
+                  "height": {
+                    "mode": "fill",
+                    "value": 1
+                  }
+                },
+                "intrinsicSize": {
+                  "width": 0,
+                  "height": 0
+                },
+                "frame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "snappedFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                },
+                "children": [],
+                "source": {
+                  "kind": "dataUrl"
+                },
+                "fit": "contain",
+                "alt": "Glasgow College UESTC logo",
+                "element": {
+                  "aid": "im/r65wjudg",
+                  "id": "13",
+                  "kind": "image"
+                }
+              }
+            ],
+            "padding": {
+              "top": 34,
+              "right": 82,
+              "bottom": 34,
+              "left": 82
+            },
+            "columnGap": 0,
+            "rowGap": 0,
+            "alignItems": "stretch",
+            "justifyItems": "stretch",
+            "contentFrame": {
+              "left": 82,
+              "top": 34,
+              "width": 1756,
+              "height": 1012
+            },
+            "columns": [
+              {
+                "mode": "fr",
+                "value": 1
+              },
+              {
+                "mode": "fixed",
+                "value": 238
+              }
+            ],
+            "rows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "autoRows": "auto",
+            "resolvedRows": [
+              {
+                "mode": "fixed",
+                "value": 82
+              },
+              {
+                "mode": "fr",
+                "value": 1
+              }
+            ],
+            "columnSizes": [
+              1518,
+              238
+            ],
+            "rowSizes": [
+              82,
+              930
+            ],
+            "cells": [
+              {
+                "path": "0.1.0",
+                "column": 0,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 82,
+                  "top": 34,
+                  "width": 1518,
+                  "height": 82
+                }
+              },
+              {
+                "path": "0.1.1",
+                "column": 1,
+                "row": 0,
+                "columnSpan": 1,
+                "rowSpan": 1,
+                "cellFrame": {
+                  "left": 1600,
+                  "top": 34,
+                  "width": 238,
+                  "height": 82
+                }
+              }
+            ]
+          }
+        ],
+        "padding": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "alignItems": "stretch",
+        "justifyItems": "stretch",
+        "contentFrame": {
+          "left": 0,
+          "top": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "items": [
+          {
+            "path": "0.0",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          },
+          {
+            "path": "0.1",
+            "frame": {
+              "left": 0,
+              "top": 0,
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
