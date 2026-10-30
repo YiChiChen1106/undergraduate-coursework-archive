@@ -31,7 +31,7 @@ jobs:
           git config core.filemode false
           git config user.name YiChiChen1106
           git config user.email 272391300+YiChiChen1106@users.noreply.github.com
-          unzip -q -o "$archive_dir/undergraduate-coursework-public-2026-10-30.zip"
+          python3 -m zipfile -e "$archive_dir/undergraduate-coursework-public-2026-10-30.zip" "$checkout_dir"
           python3 - "$archive_dir/undergraduate-coursework-public-2026-10-30.zip" <<'PY'
           import pathlib
           import subprocess
