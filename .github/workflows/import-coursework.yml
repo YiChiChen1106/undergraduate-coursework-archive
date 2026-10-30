@@ -1,0 +1,42 @@
+name: Import verified coursework archive
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download, verify, and commit the prepared archive
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          export LC_ALL=C.UTF-8
+          archive_dir="$RUNNER_TEMP/coursework-download"
+          checkout_dir="$RUNNER_TEMP/coursework-checkout"
+          mkdir -p "$archive_dir"
+          gh release download archive-2026-10-30 --repo YiChiChen1106/undergraduate-coursework-archive --pattern undergraduate-coursework-public-2026-10-30.zip --dir "$archive_dir"
+          cd "$archive_dir"
+          printf '%s\n' 'a8994eb07294a8ce2a91e7e1b1488d8a0a53111f5877d6a0c6e92fd5c808e2fc  undergraduate-coursework-public-2026-10-30.zip' | sha256sum --check --strict
+          gh auth setup-git
+          git clone --depth=1 https://github.com/YiChiChen1106/undergraduate-coursework-archive.git "$checkout_dir"
+          cd "$checkout_dir"
+          git config core.autocrlf false
+          git config user.name YiChiChen1106
+          git config user.email 272391300+YiChiChen1106@users.noreply.github.com
+          unzip -q -o "$archive_dir/undergraduate-coursework-public-2026-10-30.zip"
+          git add --all
+          git rm --cached -- .github/workflows/import-coursework.yml
+          test "$(git ls-files | wc -l | tr -d ' ')" = 2111
+          actual_tree="$(git write-tree)"
+          test "$actual_tree" = d618ec2c310e475ad39c69cf6b151ddd27c891a9
+          git add -- .github/workflows/import-coursework.yml
+          git commit -m 'Import organized coursework and graduation projects with privacy redactions'
+          git push origin HEAD:main
+          printf 'Verified material tree: %s\n' "$actual_tree"
